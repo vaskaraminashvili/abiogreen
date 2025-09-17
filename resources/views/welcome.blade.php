@@ -140,33 +140,7 @@
                                         fill="currentcolor" />
                                 </svg>
                             </a>
-                            <a href="#">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.5 1H4.5C2.567 1 1 2.567 1 4.5V11.5C1 13.433 2.567 15 4.5 15H11.5C13.433 15 15 13.433 15 11.5V4.5C15 2.567 13.433 1 11.5 1Z"
-                                        stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M10.7963 7.55921C10.8827 8.14178 10.7832 8.73676 10.5119 9.25952C10.2407 9.78228 9.81148 10.2062 9.28542 10.471C8.75935 10.7358 8.16319 10.8279 7.58173 10.7344C7.00027 10.6408 6.46311 10.3663 6.04667 9.94982C5.63022 9.53338 5.35569 8.99622 5.26213 8.41476C5.16856 7.8333 5.26073 7.23714 5.52551 6.71107C5.79029 6.18501 6.21421 5.75583 6.73697 5.48458C7.25973 5.21333 7.85471 5.11382 8.43728 5.20021C9.03152 5.28833 9.58167 5.56524 10.0065 5.99003C10.4313 6.41482 10.7082 6.96496 10.7963 7.55921Z"
-                                        stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M11.8477 4.15039H11.8577" stroke="currentcolor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                            <a href="#">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M10.2579 4.73828C11.5141 4.73828 12.7188 5.2373 13.6071 6.12555C14.4954 7.01381 14.9944 8.21854 14.9944 9.47473V15.0006H11.8367V9.47473C11.8367 9.056 11.6704 8.65442 11.3743 8.35834C11.0782 8.06225 10.6767 7.89591 10.2579 7.89591C9.8392 7.89591 9.43762 8.06225 9.14154 8.35834C8.84545 8.65442 8.67911 9.056 8.67911 9.47473V15.0006H5.52148V9.47473C5.52148 8.21854 6.0205 7.01381 6.90876 6.12555C7.79701 5.2373 9.00174 4.73828 10.2579 4.73828Z"
-                                        fill="currentcolor" />
-                                    <path d="M3.15763 5.52734H0V15.0002H3.15763V5.52734Z" fill="currentcolor" />
-                                    <path
-                                        d="M1.57881 3.15763C2.45077 3.15763 3.15763 2.45077 3.15763 1.57881C3.15763 0.706859 2.45077 0 1.57881 0C0.706859 0 0 0.706859 0 1.57881C0 2.45077 0.706859 3.15763 1.57881 3.15763Z"
-                                        fill="currentcolor" />
-                                </svg>
-                            </a>
+
                         </div>
                     </div>
                     <div class="col-xxl-7 col-xl-8 col-lg-7 col-md-6 col-sm-5">
@@ -240,7 +214,7 @@
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-2 col-lg-6 col-md-6 col-6">
                             <div class="it-header-logo">
-                                <a href="index.html"><img src="assets/img/logo/logo-white.png" alt=""></a>
+                                <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt=""></a>
                             </div>
                             <div class="it-header-logo-3 d-none">
                                 <a href="index.html"><img src="assets/img/logo/logo-black.png" alt=""></a>
@@ -250,184 +224,8 @@
                             <div class="it-header-menu it-header-dropdown">
                                 <nav class="it-menu-content">
                                     <ul>
-                                        <li class="has-dropdown p-static">
-                                            <a href="index.html">Home</a>
-                                            <div class="it-submenu submenu has-home-img">
-                                                <div class="it-homemenu-wrapper">
-                                                    <div
-                                                        class="row gx-6 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-5">
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb home-img-overly mb-20">
-                                                                <img src="assets/img/menu/home-1.jpg" alt>
-                                                                <div class="home-img-btn">
-                                                                    <a class="it-btn-sm" href="index.html">
-                                                                        <span>
-                                                                            <span class="text-1">Multi Page</span>
-                                                                            <span class="text-2">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="it-btn-sm" href="index-one-page.html">
-                                                                        <span>
-                                                                            <span class="text-1">One Page</span>
-                                                                            <span class="text-2">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index.html">Oil Energy</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb home-img-overly mb-20">
-                                                                <img src="assets/img/menu/home-2.jpg" alt>
-                                                                <div class="home-img-btn">
-                                                                    <a class="it-btn-sm" href="index-2.html">
-                                                                        <span>
-                                                                            <span class="text-1">Multi Page</span>
-                                                                            <span class="text-2">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="it-btn-sm" href="index-2-one-page.html">
-                                                                        <span>
-                                                                            <span class="text-1">One Page</span>
-                                                                            <span class="text-2">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-2.html">Solar Service</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb home-img-overly mb-20">
-                                                                <img src="assets/img/menu/home-3.jpg" alt>
-                                                                <div class="home-img-btn">
-                                                                    <a class="it-btn-sm" href="index-3.html">
-                                                                        <span>
-                                                                            <span class="text-1">Multi Page</span>
-                                                                            <span class="text-2">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="it-btn-sm" href="index-3-one-page.html">
-                                                                        <span>
-                                                                            <span class="text-1">One Page</span>
-                                                                            <span class="text-2">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-3.html">Solar Instalment</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb home-img-overly mb-20">
-                                                                <img src="assets/img/menu/home-4.jpg" alt>
-                                                                <div class="home-img-btn">
-                                                                    <a class="it-btn-sm" href="index-4.html">
-                                                                        <span>
-                                                                            <span class="text-1">Multi Page</span>
-                                                                            <span class="text-2">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="it-btn-sm" href="index-4-one-page.html">
-                                                                        <span>
-                                                                            <span class="text-1">One Page</span>
-                                                                            <span class="text-2">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-4.html">Hydro Energy</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col home-img">
-                                                            <div class="home-img-thumb home-img-overly mb-20">
-                                                                <img src="assets/img/menu/home-5.jpg" alt>
-                                                                <div class="home-img-btn">
-                                                                    <a class="it-btn-sm" href="index-5.html">
-                                                                        <span>
-                                                                            <span class="text-1">Multi Page</span>
-                                                                            <span class="text-2">Multi Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="it-btn-sm" href="index-5-one-page.html">
-                                                                        <span>
-                                                                            <span class="text-1">One Page</span>
-                                                                            <span class="text-2">One Page</span>
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="home-img-content text-center">
-                                                                <h4 class="home-img-title">
-                                                                    <a href="index-5.html">Wind Energy</a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="about-us-v1.html">About Us</a>
-                                            <ul class="it-submenu submenu">
-                                                <li><a href="about-us-v1.html">About Us V1</a></li>
-                                                <li><a href="about-us-v2.html">About Us V2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="#">Pages</a>
-                                            <ul class="it-submenu submenu">
-                                                <li><a href="project.html">Project</a></li>
-                                                <li><a href="project-details.html">Project Details</a></li>
-                                                <li><a href="team.html">Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="testimonial.html">Testimonial</a></li>
-                                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a></li>
-                                                <li><a href="faq.html">Faq</a></li>
-                                                <li><a href="career.html">Career</a></li>
-                                                <li><a href="sign-in.html">Sign In</a></li>
-                                                <li><a href="sign-up.html">Sign Up</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="cost-calculation.html">Cost Calculation</a></li>
-                                                <li><a href="404.html">Error</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="service-v1.html">Services</a>
-                                            <ul class="it-submenu submenu">
-                                                <li><a href="service-v1.html">Service 01</a></li>
-                                                <li><a href="service-v2.html">Service 02</a></li>
-                                                <li><a href="service-details.html">Service details</a></li>
-                                                <li><a href="service-details-no-sidebar.html">Service No Sidebar</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="it-submenu submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                                <li><a href="blog-details-no-sidebar.html">Blog No Sidebar</a></li>
-                                            </ul>
-                                        </li>
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="{{ route('home') }}">Home</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -435,25 +233,8 @@
                         </div>
                         <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-6">
                             <div class="it-header-right-action d-flex justify-content-end align-items-center">
-                                <div class="it-header-user d-none d-xxl-block">
-                                    <a href="sign-in.html">
-                                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8 10C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0C5.23858 0 3 2.23858 3 5C3 7.76142 5.23858 10 8 10Z"
-                                                fill="currentcolor" />
-                                            <path
-                                                d="M8 11.666C3.85977 11.6706 0.504609 15.0258 0.5 19.166C0.5 19.6262 0.873086 19.9993 1.33332 19.9993H14.6666C15.1269 19.9993 15.5 19.6262 15.5 19.166C15.4954 15.0258 12.1402 11.6706 8 11.666Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <a href="contact.html" class="it-btn-theme d-none d-md-flex">
-                                    <span>
-                                        <span class="text-1">Get a Free Call</span>
-                                        <span class="text-2">Get a Free Call</span>
-                                    </span>
-                                </a>
+
+
                                 <div class="it-header-bar d-xl-none">
                                     <button class="it-menu-bar">
                                         <span>
@@ -478,7 +259,7 @@
 
     <main>
 
-      {{-- <x-home.slider />
+      <x-home.slider />
 
       <x-home.about-us />
 
@@ -486,7 +267,7 @@
 
       <x-home.step-area />
 
-      <x-home.project-area /> --}}
+      <x-home.project-area />
 
 
       <x-home.brand-area />
