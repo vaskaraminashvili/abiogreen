@@ -14,7 +14,7 @@ use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use IbrahimBougaoua\FilamentSortOrder\Actions\DownStepAction;
 use IbrahimBougaoua\FilamentSortOrder\Actions\UpStepAction;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\HtmlString;
 
 class SlideResource extends Resource
 {
@@ -47,6 +47,10 @@ class SlideResource extends Resource
                                 '1:1',
                             ])
                             ->reorderable()
+                            ->maxSize(1024 * 1024 * 10)
+                            ->hint(new HtmlString('<p class="text-danger">Best image size is 1920x850</p>'))
+                            ->hintColor('danger')
+                            ->helperText('You can use the image editor to crop the image to the desired size')
                             ->columnSpanFull(),
 
                         Forms\Components\Toggle::make('status')
@@ -155,11 +159,10 @@ class SlideResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([
-                    Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
-                    DownStepAction::make(),
                     UpStepAction::make(),
+                    DownStepAction::make(),
                 ])
                     ->icon('heroicon-m-ellipsis-vertical')
                     ->size('sm')
