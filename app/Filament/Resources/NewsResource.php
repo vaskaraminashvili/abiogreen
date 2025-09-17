@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\NewsResource\Pages;
 use App\Filament\Resources\NewsResource\RelationManagers;
 use App\Models\News;
+use App\NewsStatus;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
@@ -35,9 +36,9 @@ class NewsResource extends Resource
             ->schema([
                 Forms\Components\Section::make('News Information')
                     ->schema([
-                        Forms\Components\Toggle::make('status')
-                            ->label('Active')
-                            ->default(true)
+                        Forms\Components\Select::make('status')
+                            ->label('Status')
+                            ->options(NewsStatus::class)
                             ->columnSpanFull()
                             ->required(),
 

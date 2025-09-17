@@ -16,7 +16,7 @@ class AdminUserSeeder extends Seeder
     {
         User::create([
             'name' => 'admin',
-            'email' => 'admin@gdpa.ge',
+            'email' => 'admin@abio.ge',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
         ]);

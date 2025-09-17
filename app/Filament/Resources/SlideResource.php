@@ -46,7 +46,6 @@ class SlideResource extends Resource
                                 '4:3',
                                 '1:1',
                             ])
-                            ->multiple()
                             ->reorderable()
                             ->columnSpanFull(),
 

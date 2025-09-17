@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use App\NewsStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\HasTranslations;
-use Illuminate\Support\Str;
 
 class News extends Model implements HasMedia
 {
@@ -29,7 +30,7 @@ class News extends Model implements HasMedia
     ];
 
     protected $casts = [
-        'status' => 'boolean',
+        'status' => NewsStatus::class,
         'publish_date' => 'datetime',
         'title' => 'array',
         'description' => 'array',

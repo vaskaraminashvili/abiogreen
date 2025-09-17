@@ -53,7 +53,7 @@ class User extends Authenticatable implements FilamentUser
      */
     public function canAccessPanel(Panel $panel): bool
     {
-        // Allow access only to users with @gdpa.ge email addresses
-        return str_ends_with($this->email, '@gdpa.ge');
+        // Allow access only to users with @abio.ge email addresses
+        return str_ends_with($this->email, '@abio.ge');
     }
 }

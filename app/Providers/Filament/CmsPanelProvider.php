@@ -25,6 +25,8 @@ class CmsPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('cms')
+            ->brandName('Abio CMS')
+            ->brandLogo(asset('images/logo.png'))
             ->path('cms')
             ->colors([
                 'primary' => Color::Indigo,

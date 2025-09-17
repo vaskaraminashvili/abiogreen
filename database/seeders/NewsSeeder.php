@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\News;
+use App\NewsStatus;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -23,7 +24,7 @@ class NewsSeeder extends Seeder
                     'en' => 'Scientists have made a groundbreaking discovery that could revolutionize the tech industry.',
                     'ka' => 'მეცნიერებმა გააკეთეს გარღვევითი აღმოჩენა, რომელსაც შეუძლია რევოლუცია მოახდინოს ტექნოლოგიების ინდუსტრიაში.'
                 ],
-                'status' => true,
+                'status' => NewsStatus::ACTIVE,
                 'publish_date' => now()->subDays(2),
             ],
             [
@@ -35,7 +36,7 @@ class NewsSeeder extends Seeder
                     'en' => 'The national economy shows unprecedented growth rates in the past quarter.',
                     'ka' => 'ეროვნული ეკონომიკა უჩვენებს უნიკალურ ზრდის მაჩვენებლებს ბოლო კვარტალში.'
                 ],
-                'status' => true,
+                'status' => NewsStatus::ACTIVE,
                 'publish_date' => now()->subDay(),
             ],
             [
@@ -47,7 +48,7 @@ class NewsSeeder extends Seeder
                     'en' => 'A new environmental protection program has been launched to combat climate change.',
                     'ka' => 'ახალი გარემოს დაცვის პროგრამა დაიწყო კლიმატის ცვლილებასთან საბრძოლველად.'
                 ],
-                'status' => true,
+                'status' => NewsStatus::ACTIVE,
                 'publish_date' => now(),
             ],
             [
@@ -59,7 +60,7 @@ class NewsSeeder extends Seeder
                     'en' => 'Annual cultural festival celebrating diversity and tradition will take place next month.',
                     'ka' => 'წლიური კულტურული ფესტივალი, რომელიც აღნიშნავს მრავალფეროვნებას და ტრადიციას, შემდეგ თვეს გაიმართება.'
                 ],
-                'status' => false,
+                'status' => NewsStatus::INACTIVE,
                 'publish_date' => now()->addWeek(),
             ],
         ];
