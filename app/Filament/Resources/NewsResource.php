@@ -150,12 +150,9 @@ class NewsResource extends Resource
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
 
-                Tables\Columns\ToggleColumn::make('status')
+                Tables\Columns\TextColumn::make('status')
                     ->label('Status')
-                    ->onIcon('heroicon-o-check-circle')
-                    ->offIcon('heroicon-o-x-circle')
-                    ->onColor('success')
-                    ->offColor('danger'),
+                    ->badge(),
 
                 Tables\Columns\TextColumn::make('publish_date')
                     ->label('Publish Date')

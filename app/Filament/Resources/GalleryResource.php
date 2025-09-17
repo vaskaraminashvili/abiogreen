@@ -159,12 +159,7 @@ class GalleryResource extends Resource
                 ]),
             ])
             ->reorderable('sort')
-            ->defaultSort('sort')
-            ->headerActions([
-                Tables\Actions\CreateAction::make()
-                    ->label('New Gallery')
-                    ->icon('heroicon-o-plus'),
-            ]);
+            ->defaultSort('sort');
     }
 
     public static function getRelations(): array

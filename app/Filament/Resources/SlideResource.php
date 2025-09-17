@@ -174,9 +174,9 @@ class SlideResource extends Resource
             ->reorderable('sort')
             ->defaultSort('sort')
             ->headerActions([
-                Tables\Actions\CreateAction::make()
-                    ->label('New Slide')
-                    ->icon('heroicon-o-plus'),
+                // Tables\Actions\CreateAction::make()
+                //     ->label('New Slide')
+                //     ->icon('heroicon-o-plus'),
             ]);
     }
 

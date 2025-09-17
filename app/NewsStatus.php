@@ -3,8 +3,9 @@
 namespace App;
 
 use Filament\Support\Contracts\HasLabel;
+use Filament\Support\Contracts\HasColor;
 
-enum NewsStatus: string implements HasLabel
+enum NewsStatus: string implements HasLabel, HasColor
 {
     case ACTIVE = 'active';
     case DRAFT = 'draft';
@@ -19,11 +20,11 @@ enum NewsStatus: string implements HasLabel
         };
     }
 
-    public function color(): string
+    public function getColor(): string | array | null
     {
         return match ($this) {
             self::ACTIVE => 'success',
-            self::DRAFT => 'warning',
+            self::DRAFT => 'gray',
             self::INACTIVE => 'danger',
         };
     }
