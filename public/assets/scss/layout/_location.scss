@@ -1,0 +1,142 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  21. location css start
+/*----------------------------------------*/
+
+.it-location {
+    &-area {
+        @media #{$xs}{
+           padding-bottom: 90px;
+        }
+    }
+    &-features {
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+        & span {
+            display: block;
+            margin-bottom: 27px;
+            & svg {
+                -webkit-transition: all 300ms ease;
+                transition: all 300ms ease;
+            }
+        }
+        & p {
+            margin-bottom: 0;
+            @media #{$xl}{
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+        &:hover {
+            & span svg {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+        &.ml-20 {
+            margin-left: 0;
+            & p {
+                @media #{$xl,$lg,$md,$xs}{
+                    & br {
+                        display: none;
+                    }
+                }
+            }
+        }
+        & .title {
+            font-size: 20px;
+            margin-bottom: 15px;
+             @media #{$xl}{
+                font-size: 17px;
+            }
+             @media #{$lg,$md,$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-map {
+        @media #{$lg}{
+            margin-left: -70px;
+        }
+        @media #{$md}{
+            margin-top: 70px;
+        } 
+        @media #{$xs}{
+            margin-top: 30px;
+        } 
+        & img {
+            max-width: inherit;
+            @media #{$xl,$lg,$md,$xs}{
+                width: 100%;
+            }
+        }
+        & span {
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            @media #{$xs}{
+                height: 5px;
+                width: 5px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                opacity: .8;
+                transform: translate(-50%, -50%);
+                animation: animate-pulse 1.7s infinite ease-out;
+            }
+            &.color {
+            &-1 {
+                top: 28%;
+                left: 18%;
+                --pulse-color: 67, 188, 205; 
+            }
+
+            &-2 {
+                bottom: 24%;
+                left: 30.5%;
+                --pulse-color: 102, 46, 155; 
+            }
+
+            &-3 {
+                top: 18%;
+                left: 53%;
+                --pulse-color: 160, 194, 97; 
+            }
+
+            &-4 {
+                bottom: 36%;
+                left: 54%;
+                --pulse-color: 249, 200, 14; 
+            }
+
+            &-5 {
+                top: 40%;
+                right: 22.5%;
+                --pulse-color: 248, 102, 36; 
+            }
+
+            &-6 {
+                bottom: 18%;
+                right: 10%;
+                --pulse-color: 234, 53, 70;
+            }
+            }
+
+        }
+    }
+}

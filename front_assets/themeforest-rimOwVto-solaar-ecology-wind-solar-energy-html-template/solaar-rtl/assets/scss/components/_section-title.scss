@@ -1,0 +1,78 @@
+@use '../utils' as *;
+
+.it-section {
+    &-title {
+        font-weight: 600;
+        font-size: 48px;
+        margin-bottom: 0;
+        line-height: 1.1;
+        color: var(--it-common-black);  
+        & span {
+            color: var(--it-theme-1);
+        } 
+        @media #{$xl}{
+            font-size: 44px;
+        }
+        @media #{$lg}{
+            font-size: 34px;
+        }
+        @media #{$md}{
+            font-size: 40px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$xs}{
+            font-size: 28px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$sm}{
+            font-size: 36px;
+        }
+        &.fz-45{
+            font-size: 45px;
+            @media #{$xl}{
+               font-size: 39px;
+            }
+            @media #{$lg}{
+                font-size: 34px;
+            }
+            @media #{$md}{
+                font-size: 40px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$xs}{
+                font-size: 28px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$sm}{
+                font-size: 36px;
+            }
+        } 
+    }
+    &-subtitle {
+        font-weight: 600;
+        font-size: 14px;
+        display: block;
+        padding-bottom: 17px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: var(--it-theme-1);
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin-right: 5px;
+            transform: translateY(-3px);
+            background-color: var(--it-theme-1);
+        }
+
+    }
+}

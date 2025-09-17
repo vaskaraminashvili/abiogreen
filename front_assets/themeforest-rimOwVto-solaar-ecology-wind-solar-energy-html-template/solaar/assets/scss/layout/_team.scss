@@ -1,0 +1,310 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  33. team css start
+/*----------------------------------------*/
+
+.it-team {
+    &-thumb {
+        margin-bottom: 20px;
+        overflow: hidden;
+        & img {
+            transition: all 0.7s ease-in-out;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+            background: linear-gradient(180deg, rgba(9, 18, 22, 0) 0%, #091216 100%);
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        @media #{$xl,$lg,$md}{
+            font-size: 19px;
+        }
+        @media #{$xs}{
+            font-size: 17px;
+        }
+    }
+    &-left {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & p {
+            @media #{$lg}{
+                font-size: 15px;
+                
+            }
+            @media #{$md,$xs}{
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-wrap {
+        margin-left: 60px;
+        @media #{$xl,$lg,$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &-social {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+        transform: perspective(400px) rotateX(-90deg);
+        transition: all 0.3s ease-in-out;
+        & > a {
+            width: 36px;
+            height: 36px;
+            line-height: 32px;
+            text-align: center;
+            display: inline-block;
+            transition: .3s;
+            margin: 0 1px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            color: var(--it-common-white);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            @media #{$lg,$xs}{
+                height: 35px;
+                width: 35px;
+                line-height: 35px;
+                font-size: 12px;
+            }
+            & svg,i {
+                position: relative;
+                z-index: 1;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 50%;
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                transition: 0.5s ease;
+                transform: scale(0);
+                background-color: var(--it-theme-1);
+            }
+            &:hover {
+                border: 1px solid var(--it-theme-1);
+                &::after {
+                    top: 50%;
+                    left: 50%;
+                    transform: scale(1) translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    &-item {
+        &:hover {
+            & .it-team-thumb {
+                &::after {
+                    opacity: 1;
+                }
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+            & .it-team-social {
+                transform: perspective(400px) rotateX(0deg);
+            }
+        }
+    }
+}
+
+// details css start
+
+.it-team-details {
+    &-title {
+        font-size: 34px;
+        &-sm {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    }
+    &-info {
+        & ul {
+            & li {
+                list-style-type: none;
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                & strong{
+                    color: var(--it-common-black);
+                    font-weight: 500;
+                    @media #{$xs}{
+                        font-size: 14px;
+                    }
+                }
+                & span {
+                    width: 140px;
+                    margin-right: 65px;
+                    display: inline-block;
+                    position: relative;
+                    @media #{$xs}{
+                        font-size: 14px;
+                        width: 125px;
+                        margin-right: 30px;
+                    }
+                    & i {
+                        top: 0;
+                        right: 0;
+                        font-style: normal;
+                        position: absolute;
+                        font-weight: 600;
+                        display: inline-block;
+                        color: var(--it-common-black);
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        & p {
+            line-height: 2;
+            @media #{$xl,$lg,$md,$xs}{
+                font-size: 15px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-experience {
+        & ul {
+            & li {
+                list-style-type: none;
+                line-height: 2;
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &-awards {
+        & ul {
+            & li {
+                font-size: 20px;
+                font-weight: 500;
+                padding-left: 30px;
+                position: relative;
+                list-style-type: none;
+                color: var(--it-common-black);
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+                & span {
+                    position: absolute;
+                    top: -1px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &-thumb {
+        & img {
+            border-radius: 14px;
+            @media #{$md}{
+                width: 100%;
+                margin-bottom: 45px;
+            }
+            @media #{$xs}{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &-left {
+        margin-right: -29px;
+        @media #{$lg}{
+            margin-right: 0;
+        }
+        @media #{$md,$xs}{
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+        & .it-header-top-list-text a {
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 0;
+            font-family: var(--it-ff-heading);
+            @media #{$xl,$lg,$md,$xs}{
+                font-size: 19px;
+            }            
+        }
+        & .it-header-top-list-icon span {
+            height: 80px;
+            width: 80px;
+            line-height: 77px;
+            background-color: transparent;
+            @media #{$xl,$lg,$md,$xs}{
+                height: 60px;
+                width: 60px;
+                line-height: 57px;
+            }
+            & svg {
+                @media #{$xl,$lg,$md,$xs}{
+                    height: 20px;
+                }
+            }
+        }
+        & .it-header-top-list-text span {
+            font-size: 16px;
+        }
+        & .it-header-top-list-wrap ul li {
+            margin-right: 0;
+            display: block;
+        }
+        & .it-header-top-list-wrap {
+            padding-bottom: 32px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #D9D9D9;
+            & ul li:not(:last-child) {
+                margin-bottom: 33px;
+            }
+        }
+        & .it-copyright-social {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            @media #{$xs}{
+                position: static;
+                margin-bottom: 30px;
+            }
+            @media #{$sm}{
+                position: absolute;
+                margin-bottom: 0;
+            }
+            & a {
+                border: 1px solid rgba(104, 104, 104, 0.5);
+            }
+        }
+    }
+    &-right {
+        margin-left: 75px;
+        @media #{$xl}{
+            margin-left: 40px;
+        }
+        @media #{$lg,$md,$xs}{
+            margin-left: 0;
+        }
+    }
+}

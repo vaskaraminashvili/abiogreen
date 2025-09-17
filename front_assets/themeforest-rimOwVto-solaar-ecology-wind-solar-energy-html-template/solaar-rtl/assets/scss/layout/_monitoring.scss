@@ -1,0 +1,83 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  23. monitoring css start
+/*----------------------------------------*/
+.it-monitoring{
+    &-text {
+        & p {
+            line-height: 2;
+        }
+    }
+    &-left {
+        margin-right: 95px;
+        @media #{$xl}{
+            margin-right: 40px;            
+        }        
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;    
+            & br {
+                display: none;
+            }        
+        }        
+        & .it-slider-2-contact {
+            & span {
+                background-color: var(--it-gray-3);
+                border: 1px solid rgba(98, 94, 88, 0.15);
+            }
+        }
+        & .it-slider-2-contact  {
+            @media #{$xs}{
+                margin-top: 25px;          
+            }
+            @media #{$sm}{
+                margin-top: 0;          
+            }
+        }
+    }
+    &-thumb {
+        overflow: hidden;
+        @media #{$md,$xs}{
+            margin-top: 50px;
+        }
+        & img {
+            width: 100%;
+            transform: scale(1.04) translateX(-1%);
+            transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+            @media #{$md,$xs}{
+                width: 100%;
+            }
+        }
+        &:hover {
+            & img {
+                transform: scale(1.04) translateX(1%);
+            }
+        }
+    }
+}
+.it-progress-bar-item{
+    position: relative;
+    & span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--it-common-black);
+    }
+    & label {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--it-common-black);
+    }
+    & .progress {
+        height: 10px;
+        background: rgba(45, 196, 87, 0.2);
+    }
+    & .progress-bar {
+        background-color: var(--it-theme-1);
+    }
+    & .it-progress-bar {
+        padding-top: 10px;
+    }
+}

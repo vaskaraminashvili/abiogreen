@@ -1,0 +1,212 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. faq css start
+/*--------------------------------------- -*/
+
+.it-faq {
+    &-more-info {
+        position: absolute;
+        bottom: -30px;
+        right: -5.5%;
+        display: inline-block;
+        border-radius: 20px;
+        padding: 40px 30px;
+        padding-top: 33px;
+        padding-right: 50px;
+        background-color: var(--it-theme-1);
+        animation: translateX 4s infinite alternate;
+        @media #{$xl}{
+            right: 2%;
+            animation: unset;
+        }
+        @media #{$lg}{
+            bottom: -2%;
+            right: -8%;
+            transform: scale(.8);
+            animation: unset;
+        }
+        @media #{$md,$xs}{
+            display: none;
+        }
+        & span {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.5;
+            display: block;
+            margin-bottom: 10px;
+            color: var(--it-common-white);
+        }
+        & i {
+            font-weight: 600;
+            font-size: 34px;
+            font-style: normal;
+            display: block;
+            margin-bottom: 23px;
+            color: var(--it-common-white);
+        }
+    }
+    &-thumb {
+        padding-right: 75px;
+        @media #{$xl}{
+            height: 100%;
+        }
+        @media #{$lg}{
+            height: 100%;
+            padding-right: 20px;
+        }
+        @media #{$md,$xs}{
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+        & img {
+            object-fit: cover;
+            @media #{$xl,$lg}{
+                height: 100%;
+            }
+             @media #{$md,$xs}{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &::after {
+            position: absolute;
+            top: -9%;
+            right: 4%;
+            height: 54%;
+            width: 11px;
+            content: '';
+            animation: translateY 4s infinite alternate;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(45, 196, 87, 0.6) 100%);
+            @media #{$xl}{
+                right: 7%;
+            }
+            @media #{$lg,$md,$xs}{
+                display: none;
+            }
+        }
+    }
+    &-right {
+        margin-left: 83px;
+        @media #{$xl,$lg,$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &-area {
+        @media #{$xs}{
+            padding-bottom: 110px;
+        }
+    }
+    &-2{
+        &-shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+        &-thumb {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 45.5%;
+            @media #{$xxxl,$xxl,$xl,$lg}{
+                height: 110%;
+            }
+            @media #{$md,$xs}{
+                position: relative;
+                margin-top: 50px;
+                width: 100%;
+            }
+            & img {                
+                border-radius: 0 20px 20px 0;
+                @media #{$xxxl,$xxl,$xl,$lg}{
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @media #{$md,$xs}{
+                    width: 100%;
+                    height: 110%;
+                    border-radius: 0;
+                }
+            }
+        }
+        &-video {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            & span {
+                padding-left: 4px;
+                display: inline-block;
+            }
+        }
+        &-area {
+            padding-top: 255px;
+            @media #{$md,$xs}{
+               padding-top: 180px;
+            }
+            & .it-custom-accordion .accordion-buttons {
+                position: relative;
+                text-align: left;
+                padding: 25px 35px;
+                padding-right: 65px;
+                font-size: 24px;
+                color: var(--it-common-white);
+                @media #{$xl}{
+                    font-size: 21px;
+                }
+                @media #{$lg,$md}{
+                    font-size: 18px;
+                    padding: 20px 35px;
+                    padding-right: 40px;
+                }
+                @media #{$xs}{
+                    font-size: 16px;
+                    padding: 20px 15px;
+                    padding-right: 60px;
+                }
+            }
+            & .it-custom-accordion .accordion-body {
+                @media #{$xs}{
+                    padding: 20px 15px;
+                }
+            }
+            & .it-custom-accordion .accordion-items {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            & .it-custom-accordion .accordion-body p {
+                margin-right: 90px;
+                color: rgba(255, 255, 255, 0.8);
+                @media #{$xl,$lg,$md,$xs}{
+                    margin-right: 0;
+                }
+            }
+            & .it-custom-accordion .accordion-buttons::after {
+                content: "\f106";
+                @media #{$xs}{
+                    right: 15px;
+                }
+            }
+            & .it-custom-accordion .accordion-buttons.collapsed::after {
+                content: "\f107";
+            }
+            & .it-faq-right {
+                @media #{$xl}{
+                    margin-left: 83px;
+                }
+                @media #{$xl,$lg}{
+                    margin-left: 70px;
+                }
+            }
+        }
+    }
+}
+

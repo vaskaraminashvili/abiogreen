@@ -1,0 +1,80 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  07. career css start
+/*----------------------------------------*/
+.it-career {
+    &-item {
+        padding: 40px;
+        padding-top: 30px;
+        border-radius: 20px;
+        background-color: var(--it-gray-3);
+        border: 1px solid rgba(98, 94, 88, 0.15);
+        @media #{$lg,$md,$xs}{
+            padding: 30px 25px;
+        }
+        & p {
+            line-height: 2;
+            @media #{$xl}{
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$lg,$md,$xs}{
+                font-size: 15px;
+                line-height: 1.7;
+                & br {
+                    display: none;
+                }
+            }
+        }
+        & .arrow {
+            position: absolute;
+            top: 40px;
+            right: 40px; 
+            font-size: 20px;
+            font-weight: 600;
+            padding: 0;
+            color: var(--it-theme-1);
+            font-family: var(--it-ff-heading);
+            @media #{$lg,$md}{
+                font-size: 16px;
+            }
+            @media #{$xs}{
+                position: static;
+                font-size: 16px;
+                margin-top: 25px;
+            }
+            & svg {
+                display: inline-block; 
+                margin-left: 2px;
+            }
+        }
+    }
+    &-title {
+        margin-bottom: 15px;
+        @media #{$lg,$md,$xs}{
+            font-size: 22px;
+        }
+    }
+    &-tags {
+        & span {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 20px;
+            color: var(--it-common-black);
+            border: 1px solid #625E58;
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+            & svg {
+                margin-top: -3px;
+                margin-right: 3px;
+                display: inline-block;
+            }
+            &:first-child{
+                margin-right: 15px;
+            }
+        }
+    }
+}

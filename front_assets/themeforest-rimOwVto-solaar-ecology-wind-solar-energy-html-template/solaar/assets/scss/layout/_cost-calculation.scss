@@ -1,0 +1,144 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. cost-calculation css start
+/*----------------------------------------*/
+.it-cost-calculation {
+    &-wrap {
+        margin: 0 3px;
+        padding: 80px 78px;
+        border-radius: 30px;
+        background-color: var(--it-gray-3);
+        @media #{$md}{
+            padding: 50px 40px;
+        }
+        @media #{$xs}{
+            padding: 40px 20px;
+        }
+        & label {
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--it-common-black);
+        }
+        & .contact__select .nice-select {
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 0 30px;
+            color: var(--it-common-black);
+            background-color: transparent;
+            border: 1px solid #625E58;
+            margin-bottom: 25px;
+            & label {
+                margin-bottom: 0;
+            }
+        }
+        & .contact__select .nice-select::after {
+            right: 30px;
+            margin-top: -6px;
+            border-bottom: 2px solid var(--it-common-black);
+            border-right: 2px solid var(--it-common-black);
+        }
+        & .nice-select.open .list {
+            border-radius: 5px;
+            border: 1px solid #625E58;
+        }
+        & .it-btn-theme {
+            text-transform: uppercase;
+        }
+        & .result-bar {
+            height: 8px;
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            position: relative;
+            background: rgba(45, 196, 87, 0.3);
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 20%;
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                transform: translateY(-50%);
+                background-color: var(--it-theme-1);
+            }
+        }
+        & .range-scale {
+            & span {
+                font-size: 18px;
+                @media #{$md,$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &-input-box {
+        margin-bottom: 27px;
+        & input {
+            height: 60px;
+            line-height: 60px;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 0 30px;
+            color: var(--it-common-black);
+            background-color: transparent;
+            border: 1px solid #625E58;
+            @media #{$md,$xs}{
+                height: 45px;
+                line-height: 45px;
+            }
+            &::placeholder {
+                color: var(--it-common-black);                
+            }
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 1.22;
+        text-align: center;
+        @media #{$md}{
+            font-size: 34px;
+        }
+        @media #{$xs}{
+            font-size: 26px;
+        }
+    }
+    &-bottom {
+        padding: 50px 35px;
+        border-radius: 10px;
+        border: 1px solid rgba(98, 94, 88, 0.2);
+        background-color: var(--it-common-white);
+        @media #{$xs}{
+            padding: 30px 15px;
+        }
+        & .cost-title-sm {
+            font-size: 20px;
+            margin-bottom: 12px;
+            @media #{$xs}{
+                font-size: 13px;
+            }
+            @media #{$sm}{
+                font-size: 16px;
+            }
+        }
+        & p {
+            font-weight: 600;
+            font-size: 34px;
+            margin-bottom: 0;
+            line-height: 1;
+            color: var(--it-common-black);
+            font-family: var(--it-ff-heading);
+            @media #{$xs}{
+                font-size: 18px;
+            }
+            @media #{$sm}{
+                font-size: 22px;
+            }
+        }
+    }
+}
