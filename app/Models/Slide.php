@@ -18,6 +18,8 @@ class Slide extends Model implements HasMedia
         'sort',
         'title',
         'description',
+        'bottom_title',
+        'bottom_description',
     ];
 
     protected $casts = [
@@ -25,9 +27,11 @@ class Slide extends Model implements HasMedia
         'sort' => 'integer',
         'title' => 'array',
         'description' => 'array',
-    ];
+        'bottom_title' => 'array',
+        'bottom_description' => 'array',
+        ];
 
-    public $translatable = ['title', 'description'];
+    public $translatable = ['title', 'description', 'bottom_title', 'bottom_description'];
 
     // For the filament-sort-order package
     protected function getSortOrderAttribute()
@@ -55,8 +59,7 @@ class Slide extends Model implements HasMedia
             ->sharpen(10);
 
         $this->addMediaConversion('large')
-            ->width(1200)
-            ->height(800)
+            ->width(1920)
             ->quality(90);
     }
 }

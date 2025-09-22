@@ -10,12 +10,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo_icon.png') }}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('./assets/css/bootstrap.min.css') }}">
@@ -52,17 +53,7 @@
     </button>
     <!-- back-to-top-end  -->
 
-    <!-- search popup start -->
-    <div class="search-popup">
-        <button class="close-search"><span class="flaticon-multiply"><i class="fal fa-times"></i></span></button>
-        <form method="post" action="#">
-            <div class="form-group">
-                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
-                <button type="submit"><i class="fal fa-search"></i></button>
-            </div>
-        </form>
-    </div>
-    <!-- search popup end -->
+
 
     <!-- it-offcanvus-area-start -->
     <div class="it-offcanvas-area">
@@ -71,8 +62,8 @@
                 <button class="close-btn"><i class="fal fa-times"></i></button>
             </div>
             <div class="itoffcanvas__logo">
-                <a href="index.html">
-                    <img src="assets/img/logo/logo-white.png" alt="">
+                <a href="{{ route('home') }}">
+                    <img class="logo_image" src="{{ asset('images/logo_icon.png') }}" alt="">
                 </a>
             </div>
             <div class="itoffcanvas__text">
@@ -122,26 +113,7 @@
             <div class="container container-1650">
                 <div class="row align-items-center">
                     <div class="col-xxl-5 col-xl-4 col-lg-5 col-md-6 col-sm-7 d-none d-sm-block">
-                        <div class="it-header-top-social-box d-flex align-items-center">
-                            <span>Follow On:</span>
-                            <a href="#">
-                                <svg width="12" height="16" viewBox="0 0 12 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M1.82727 6.83333C1.14284 6.83333 1 6.96763 1 7.61111V8.77778C1 9.42126 1.14284 9.55556 1.82727 9.55556H3.48182V14.2222C3.48182 14.8657 3.62466 15 4.30909 15H5.96364C6.64807 15 6.79091 14.8657 6.79091 14.2222V9.55556H8.64871C9.1678 9.55556 9.30155 9.4607 9.44416 8.99145L9.7987 7.82478C10.043 7.02095 9.89246 6.83333 9.00326 6.83333H6.79091V4.88889C6.79091 4.45933 7.16129 4.11111 7.61818 4.11111H9.97273C10.6572 4.11111 10.8 3.97681 10.8 3.33333V1.77778C10.8 1.1343 10.6572 1 9.97273 1H7.61818C5.33373 1 3.48182 2.74111 3.48182 4.88889V6.83333H1.82727Z"
-                                        stroke="currentcolor" stroke-width="1.5" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                            <a href="#">
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M4.41177 0H0L5.23083 6.87316L0.334618 12.6389H2.59681L6.29998 8.27809L9.58823 12.5988H14L8.6172 5.52593L8.62673 5.53813L13.2614 0.0802914H10.9992L7.55741 4.13336L4.41177 0ZM2.43522 1.20371H3.80866L11.5648 11.395H10.1913L2.43522 1.20371Z"
-                                        fill="currentcolor" />
-                                </svg>
-                            </a>
 
-                        </div>
                     </div>
                     <div class="col-xxl-7 col-xl-8 col-lg-7 col-md-6 col-sm-5">
                         <div
@@ -157,7 +129,7 @@
                                                     fill="currentcolor" />
                                             </svg>
                                         </span>
-                                        <a class="border-line-black" href="tel:7055690123">(705) 569-0123</a>
+                                        <a class="border-line-black" href="tel:+35722278877">(357) 22 278877</a>
                                     </div>
                                 </li>
                                 <li>
@@ -170,8 +142,7 @@
                                                     fill="currentcolor" />
                                             </svg>
                                         </span>
-                                        <a class="border-line-black" href="mailto:info@intogmail.com">info@
-                                            intogmail.com</a>
+                                        <a class="border-line-black" href="mailto:info@abio.com.cy">info@abio.com.cy</a>
                                     </div>
                                 </li>
                                 <li class="d-none d-lg-inline-block">
@@ -195,8 +166,8 @@
                                             </svg>
                                         </span>
                                         <a class="border-line-black" target="_blank"
-                                            href="https://www.google.com/maps/@23.843848,90.3081992,17.5z?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D">Tetrick
-                                            Road Fort Myers, NY</a>
+                                            href="https://maps.app.goo.gl/5846QKistNDa9q5p6">Tetrick
+                                            Larnakos Avenue 62, 2101, Aglantzia Nicosia</a>
                                     </div>
                                 </li>
                             </ul>
@@ -213,11 +184,11 @@
                 <div class="p-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-2 col-lg-6 col-md-6 col-6">
-                            <div class="it-header-logo">
-                                <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+                            <div class="it-header-logo text-lg-center py-xl-2">
+                                <a href="{{ route('home') }}"><img class="logo_image" src="{{ asset('images/logo_icon.png') }}" alt=""></a>
                             </div>
                             <div class="it-header-logo-3 d-none">
-                                <a href="index.html"><img src="assets/img/logo/logo-black.png" alt=""></a>
+                                <a href="{{ route('home') }}"><img class="logo_image" src="{{ asset('images/logo_icon.png') }}" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xxl-7 col-xl-7 d-none d-xl-block">

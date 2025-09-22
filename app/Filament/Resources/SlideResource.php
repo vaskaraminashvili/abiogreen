@@ -67,7 +67,7 @@ class SlideResource extends Resource
                     ])
                     ->columns(2),
 
-                Forms\Components\Section::make()
+                Forms\Components\Section::make('Main Content')
                     ->schema([
                         Forms\Components\TextInput::make('title.en')
                             ->label('Title (English)')
@@ -75,6 +75,7 @@ class SlideResource extends Resource
                             ->maxLength(255),
                         Forms\Components\TextInput::make('title.ka')
                             ->label('Title (Georgian)')
+                            ->hidden()
                             ->maxLength(255),
 
                         Forms\Components\RichEditor::make('description.en')
@@ -93,6 +94,7 @@ class SlideResource extends Resource
 
                         Forms\Components\RichEditor::make('description.ka')
                             ->label('Description (Georgian)')
+                            ->hidden()
                             ->toolbarButtons([
                                 'bold',
                                 'italic',
@@ -104,7 +106,46 @@ class SlideResource extends Resource
                                 'redo',
                             ]),
                     ])
-                    ->columns(2),
+                    ->columns(1),
+
+                Forms\Components\Section::make('Side Content')
+                    ->schema([
+                        Forms\Components\TextInput::make('bottom_title.en')
+                            ->label('Bottom Title (English)')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('bottom_title.ka')
+                            ->label('Bottom Title (Georgian)')
+                            ->hidden()
+                            ->maxLength(255),
+                            
+                        Forms\Components\RichEditor::make('bottom_description.en')
+                            ->label('Bottom Description (English)')
+                            ->toolbarButtons([
+                                'bold',
+                                'italic',
+                                'underline',
+                                'bulletList',
+                                'orderedList',
+                                'link',
+                                'undo',
+                                'redo',
+                            ]),
+                        Forms\Components\RichEditor::make('bottom_description.ka')
+                            ->label('Bottom Description (Georgian)')
+                            ->hidden()
+                            ->toolbarButtons([
+                                'bold',
+                                'italic',
+                                'underline',
+                                'bulletList',
+                                'orderedList',
+                                'link',
+                                'undo',
+                                'redo',
+                            ]),
+                    ])
+                    ->columns(1),
             ]);
     }
 

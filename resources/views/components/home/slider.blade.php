@@ -11,18 +11,13 @@
                                 <!-- stat-box-start -->
                                 <div class="it-slider-2-stat-box-wrap">
                                     <div class="it-slider-2-stat-box">
-                                        <p class="mb-20">The installation was fast <br>and the results speak for
-                                            <br>themselves</p>
-                                        <span class="number">4.8*</span>
-                                        <div class="it-slider-3-author d-flex align-items-center">
-                                            <div class="it-about-author-avater">
-                                                <img src="assets/img/slider/avatar.png" alt="">
-                                            </div>
-                                            <div class="it-about-author-designation">
-                                                <i>Trusteed By</i>
-                                                <span>World Leading Customer</span>
-                                            </div>
+                                        <div class="mb-20">
+                                            {{ $slide->bottom_title }}
                                         </div>
+                                        <span class="number">
+                                             {{ strip_tags($slide->bottom_description) }}
+                                        </span>
+                                        
                                     </div>
                                 </div>
                                 <!-- stat-box-end -->
