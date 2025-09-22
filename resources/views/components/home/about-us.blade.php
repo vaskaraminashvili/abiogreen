@@ -43,9 +43,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6 col-lg-6 order-1 order-lg-0">
+                    <div class="col-xl-12 col-lg-6 order-1 order-lg-0">
                         <div class="row gx-35">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 wow itfadeLeft" data-wow-duration=".9s"
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 wow itfadeLeft" data-wow-duration=".9s"
                                 data-wow-delay=".5s">
                                 <div class="it-about-stat-box z-index-1 gray-bg3 mb-35">
                                     <img class="shape" src="assets/img/shape/about-1-1.png" alt="">
@@ -54,7 +54,7 @@
                                     <span class="stat-description">Global Reach</span>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 wow itfadeLeft" data-wow-duration=".9s"
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 wow itfadeLeft" data-wow-duration=".9s"
                                 data-wow-delay=".7s">
                                 <div class="it-about-stat-box z-index-1 gray-bg3 mb-35">
                                     <img class="shape" src="assets/img/shape/about-1-1.png" alt="">
@@ -63,13 +63,8 @@
                                     <span class="stat-description">Our Total Employees</span>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 order-1 order-md-0 wow itfadeLeft"
-                                data-wow-duration=".9s" data-wow-delay=".5s">
-                                <div class="it-about-thumb thumb-sm border-radius-20">
-                                    <img class="w-100" src="assets/img/about/thumb-1-2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 order-0 order-md-1 wow itfadeLeft"
+                            
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 order-0 order-md-1 wow itfadeLeft"
                                 data-wow-duration=".9s" data-wow-delay=".7s">
                                 <div class="it-about-stat-box z-index-1 gray-bg3">
                                     <img class="shape" src="assets/img/shape/about-1-1.png" alt="">
@@ -80,12 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 order-0 order-lg-1 wow img-anim-right" data-wow-duration="1.5s"
-                        data-wow-delay="0.1s">
-                        <div class="it-about-thumb border-radius-20">
-                            <img class="w-100" src="assets/img/about/thumb-1-3.jpg" alt="">
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
