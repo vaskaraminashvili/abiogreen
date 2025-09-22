@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use IbrahimBougaoua\FilamentSortOrder\Traits\SortOrder;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -11,7 +10,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Slide extends Model implements HasMedia
 {
-    use InteractsWithMedia, HasTranslations, SortOrder;
+    use HasTranslations, InteractsWithMedia;
 
     protected $fillable = [
         'status',
@@ -29,11 +28,12 @@ class Slide extends Model implements HasMedia
         'description' => 'array',
         'bottom_title' => 'array',
         'bottom_description' => 'array',
-        ];
+    ];
 
     public $translatable = ['title', 'description', 'bottom_title', 'bottom_description'];
 
-    // For the filament-sort-order package
+
+
     protected function getSortOrderAttribute()
     {
         return $this->sort;
