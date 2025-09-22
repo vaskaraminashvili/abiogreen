@@ -16,9 +16,9 @@ class StatsRepository
         return $this->model->orderBy('sort')->get();
     }
 
-    public function active(): Collection
+    public function active($limit = null): Collection
     {
-        return $this->model->where('status', true)->orderBy('sort')->get();
+        return $this->model->where('status', true)->orderBy('sort')->limit($limit)->get();
     }
 
     public function find(int $id): ?Stats

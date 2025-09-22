@@ -202,8 +202,6 @@ class SlideResource extends Resource
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
-                    UpStepAction::make(),
-                    DownStepAction::make(),
                 ])
                     ->icon('heroicon-m-ellipsis-vertical')
                     ->size('sm')

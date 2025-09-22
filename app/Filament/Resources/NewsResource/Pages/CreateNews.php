@@ -10,10 +10,8 @@ class CreateNews extends CreateRecord
 {
     protected static string $resource = NewsResource::class;
 
-    protected function mutateFormDataBeforeCreate(array $data): array
+    protected function getRedirectUrl(): string
     {
-        // The form is already using dot notation (title.en, title.ka) 
-        // so the data structure is already correct for translatable fields
-        return $data;
+        return $this->getResource()::getUrl('index');
     }
 } 

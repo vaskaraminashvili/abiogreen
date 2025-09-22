@@ -11,10 +11,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                         <div class="it-service-item mb-35 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                            <div class="row align-items-center">
-                                <div class="col-xl-5 col-lg-4">
+                            <div class="row ">
+                                <div class="col-xl-6 col-lg-6">
                                     <div class="it-service-content">
                                         <h4 class="it-service-title"><a class="border-line"
                                                 href="service-details.html">Run-of-River System</a></h4>
@@ -22,10 +22,10 @@
                                             perfect for sustainable and consistent energy production year-round.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-7 col-lg-8">
+                                <div class="col-xl-6 col-lg-6">
                                     <div
-                                        class="it-service-content-wrap d-flex justify-content-between align-items-center">
-                                        <div class="it-service-thumb border-radius-10">
+                                        class="it-service-content-wrap d-flex flex-column justify-content-between align-items-center h-100">
+                                        <div class="it-service-thumb border-radius-10 mx-0">
                                             <img class="w-100" src="assets/img/service/service-4-1.jpg"
                                                 alt="">
                                         </div>
@@ -44,10 +44,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                         <div class="it-service-item mb-35 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                            <div class="row align-items-center">
-                                <div class="col-xl-5 col-lg-4">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
                                     <div class="it-service-content">
                                         <h4 class="it-service-title"><a class="border-line"
                                                 href="service-details.html">Micro Hydro Systems</a></h4>
@@ -55,10 +55,10 @@
                                             delivering reliable energy to remote homes and local businesses.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-7 col-lg-8">
+                                <div class="col-xl-6 col-lg-6">
                                     <div
-                                        class="it-service-content-wrap d-flex justify-content-between align-items-center">
-                                        <div class="it-service-thumb border-radius-10">
+                                        class="it-service-content-wrap d-flex flex-column justify-content-between align-items-center h-100">
+                                        <div class="it-service-thumb border-radius-10 mx-0">
                                             <img class="w-100" src="assets/img/service/service-4-2.jpg"
                                                 alt="">
                                         </div>
@@ -77,10 +77,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                         <div class="it-service-item mb-35 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                            <div class="row align-items-center">
-                                <div class="col-xl-5 col-lg-4">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
                                     <div class="it-service-content">
                                         <h4 class="it-service-title"><a class="border-line"
                                                 href="service-details.html">System Maintenance</a></h4>
@@ -89,10 +89,10 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-xl-7 col-lg-8">
+                                <div class="col-xl-6 col-lg-6">
                                     <div
-                                        class="it-service-content-wrap d-flex justify-content-between align-items-center">
-                                        <div class="it-service-thumb border-radius-10">
+                                        class="it-service-content-wrap d-flex flex-column justify-content-between align-items-center h-100">
+                                        <div class="it-service-thumb border-radius-10 mx-0">
                                             <img class="w-100" src="assets/img/service/service-4-3.jpg"
                                                 alt="">
                                         </div>
@@ -111,10 +111,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                         <div class="it-service-item mb-35 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-                            <div class="row align-items-center">
-                                <div class="col-xl-5 col-lg-4">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
                                     <div class="it-service-content">
                                         <h4 class="it-service-title"><a class="border-line"
                                                 href="service-details.html">Hydropower Installation</a></h4>
@@ -123,10 +123,10 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-xl-7 col-lg-8">
+                                <div class="col-xl-6 col-lg-6">
                                     <div
-                                        class="it-service-content-wrap d-flex justify-content-between align-items-center">
-                                        <div class="it-service-thumb border-radius-10">
+                                        class="it-service-content-wrap d-flex flex-column justify-content-between align-items-center h-100">
+                                        <div class="it-service-thumb border-radius-10 mx-0">
                                             <img class="w-100" src="assets/img/service/service-4-4.jpg"
                                                 alt="">
                                         </div>
