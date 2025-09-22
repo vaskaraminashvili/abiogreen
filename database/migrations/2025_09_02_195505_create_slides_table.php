@@ -17,6 +17,8 @@ return new class extends Migration
             $table->integer('sort')->default(0);
             $table->json('title')->nullable(); // For translatable content
             $table->json('description')->nullable(); // For translatable content
+            $table->json('bottom_title')->nullable(); // For translatable content
+            $table->json('bottom_description')->nullable(); // For translatable content
             $table->timestamps();
         });
     }

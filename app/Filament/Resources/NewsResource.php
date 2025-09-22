@@ -198,7 +198,7 @@ class NewsResource extends Resource
                 //     ->label('New Article')
                 //     ->icon('heroicon-o-plus'),
             ])
-            ->defaultSort('publish_date', 'desc');
+            ->defaultSort('id', 'desc');
     }
 
     public static function getRelations(): array

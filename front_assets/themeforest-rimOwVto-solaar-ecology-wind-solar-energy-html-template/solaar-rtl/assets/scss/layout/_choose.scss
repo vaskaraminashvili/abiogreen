@@ -1,0 +1,171 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. choose css start
+/*----------------------------------------*/
+.it-choose {
+    &-title {
+        margin-bottom: 18px;
+    }
+    &-icon {
+        display: inline-block;
+        border-radius: 5px;
+        width: 80px;
+        height: 80px;
+        line-height: 75px;
+        text-align: center;
+        margin-bottom: 25px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s ease;
+        color: var(--it-common-black);
+        background-color: var(--it-common-white);
+        border: 1px solid rgba(12, 18, 29, 0.1);
+        & svg {
+            position: relative;
+            z-index: 1;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 50%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            transition: 0.4s ease;
+            transform: scale(0);
+            background-color: var(--it-theme-1);
+        }
+    }
+    &-item {        
+        padding: 40px 30px;
+        padding-bottom: 35px;
+        margin-bottom: 5px;  
+        @media #{$lg,$md,$xs} {
+            padding: 30px 20px;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 0;
+            letter-spacing: 0.01em;
+        }
+    }
+    &-item-box{
+        position: relative;       
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 0 10px;
+            background-color: var(--it-theme-1);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            transition: .2s;
+            border-radius: 10px;
+            z-index: -1;
+            background-color: var(--it-theme-1);
+        }
+        &:hover {
+            & .it-choose-icon {
+                color: var(--it-common-white);
+                &::after {
+                    top: 50%;
+                    left: 50%;
+                    transform: scale(1) translate(-50%, -50%);
+                }
+            }
+            &::before {
+                bottom: -5px;
+            }
+        }
+    }
+    &-inner-style {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-color: var(--it-gray-3);
+        }
+        & .it-choose-item-box {
+            background-color: var(--it-common-white);
+        }
+    }
+}
+.it-choose-2 {
+    &-item {
+        padding: 40px;
+        padding-bottom: 30px;
+        border-radius: 20px;
+        background-color: var(--it-common-white);
+        border: 1px solid rgba(98, 94, 88, 0.15);
+        @media #{$xl,$lg}{
+            padding: 30px 25px;
+        }
+        @media #{$md,$xs}{
+            padding: 30px 25px;
+            margin-bottom: 35px;
+        }
+        & p {
+            margin-bottom: 0;
+            margin-right: 30px;
+            @media #{$xs}{
+                margin-right: 0;
+                font-size: 14px;
+            }
+        }
+        &:hover {
+            & .it-choose-2-icon svg {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+        &.item-style-2 {
+            height: 100%;
+            @media #{$lg,$md,$xs}{
+                height: auto;
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+            & .it-choose-2-title {
+                margin-bottom: 30px;
+            }
+            & p {
+                padding-bottom: 30px;
+                margin-bottom: 40px;
+                margin-right: 0;
+                border-bottom: 2px solid rgba($color: #d9d9d9, $alpha: .4);
+            }
+        }
+    }
+    &-title {
+        font-size: 24px;
+        margin-bottom: 17px;
+        @media #{$xs}{
+            font-size: 19px;
+        }
+    }
+    &-icon {
+        & svg {
+            height: 60px;
+            -webkit-transition: all 300ms ease;
+            transition: all 300ms ease;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  06. brand css start
+/*----------------------------------------*/
+.it-brand {
+    &-content {
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 17px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgba($color: #000000, $alpha: .1);
+            @media #{$xs}{
+                top: 11px;
+            }
+        }
+        & div > span {
+            font-weight: 600;
+            font-size: 25px;
+            padding: 0 40px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            color: var(--it-common-black);
+            background-color: var(--it-common-white);
+            & > span {
+                color: var(--it-theme-1);
+            }
+            &.style-2 {
+                background-color: var(--it-gray-3);
+            }
+            @media #{$xs}{
+                font-size: 15px;
+                padding: 0 20px;
+            }
+        }
+    }
+    &-item {
+        text-align: center;
+        padding: 0 30px;
+        height: 130px;
+        line-height: 130px;
+        margin: 0 0 0 -1px;
+        border: 1px solid #d4d2d0;
+        @media #{$md,$xs}{
+            margin: -1px 0 0 -1px;
+        }
+    }
+    &-area {
+        & .row {
+            [class*=col-]:first-child {
+                & .it-brand-item  {
+                    border-radius: 20px 0 0 20px;
+                    @media #{$md,$xs}{
+                        border-radius: 0;
+                    }
+                }
+            }
+            [class*=col-]:last-child {
+                & .it-brand-item  {
+                    border-radius: 0 20px 20px 0;
+                    @media #{$md,$xs}{
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}

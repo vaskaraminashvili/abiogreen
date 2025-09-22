@@ -1,0 +1,202 @@
+@use '../utils' as *;
+
+.it-custom-accordion {
+    & .accordion-items {
+        border-radius: 10px;
+        border: 1px solid rgba(98, 94, 88, 0.15);
+        @media #{$lg,$md,$xs} {
+            margin-bottom: 20px;
+        }
+    }
+
+    & .accordion-buttons {
+        position: relative;
+        text-align: left;
+        padding: 20px 35px;
+        padding-right: 65px;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--it-common-black);
+
+        @media #{$lg} {
+            font-size: 17px;
+            padding: 20px 25px;
+            padding-right: 65px;
+        }
+        @media #{$xs} {
+            font-size: 16px;
+            padding: 20px 25px;
+            padding-right: 65px;
+        }
+
+        @media #{$sm} {
+            font-size: 18px;
+        }
+
+        & span {
+            display: inline-block;
+            margin-right: 5px;
+
+            & svg {
+                width: 39px;
+                height: 40px;
+
+                @media #{$xs} {
+                    width: 25px;
+                }
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 5 Pro';
+            top: 50%;
+            right: 30px;
+            font-weight: 400;
+            font-size: 16px;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            text-align: center;
+            opacity: 1;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            color: var(--it-common-white);
+            background-color: var(--it-common-black);
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f067';
+            }
+        }
+
+        &:not(.collapsed) {
+            padding-bottom: 22px;
+            @media #{$lg,$md,$xs} {
+                padding-bottom: 12px;
+            }
+        }
+    }
+
+    & .accordion-body {
+        padding: 0 35px;
+        padding-bottom: 25px;
+        position: relative;
+        z-index: 1;
+        @media #{$lg,$xs} {
+            padding: 0 25px;
+            padding-bottom: 25px;
+        }
+        & p {
+            line-height: 1.6;
+            @media #{$lg,$md,$xs} {
+                font-size: 14px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.it-about-accordion {
+    margin-left: 80px;
+
+    @media #{$xl,$lg,$md,$xs} {
+        margin-left: 0;
+    }
+
+    & .accordion-items {
+        & .accordion-header {
+            line-height: 1;
+            font-size: 25px;
+        }
+    }
+
+    & .accordion-buttons {
+        padding: 0;
+        font-weight: 600;
+        font-size: 25px;
+        border-radius: 10px;
+        padding: 36px 40px;
+        width: 100%;
+        text-align: start;
+        position: relative;
+        overflow: hidden;
+        color: var(--it-common-black);
+        background: var(--it-gray-3);
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 29px 40px;
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -15px;
+            content: '';
+            width: 15px;
+            height: 0;
+            transition: .3s;
+            border-radius: 0 10px 0 0;
+            background-color: var(--it-theme-1);
+        }
+
+        @media #{$lg} {
+            font-size: 17px;
+        }
+
+        @media #{$md} {
+            font-size: 21px;
+        }
+
+        @media #{$xs} {
+            font-size: 19px;
+            padding-right: 50px;
+        }
+
+        @media #{$sm} {
+            padding-right: 45px;
+        }
+
+        &.collapsed {}
+
+        &:not(.collapsed) {
+            padding-bottom: 18px;
+            border-radius: 10px 10px 0 0;
+
+            &::after {
+                right: 0;
+                height: 15px;
+            }
+        }
+    }
+
+    & .accordion-body {
+        border-radius: 0 0 10px 10px;
+        padding: 0 40px 30px 40px;
+        background-color: var(--it-gray-3);
+
+        & p {
+            line-height: 2;
+            margin-bottom: 0;
+
+            @media #{$xl} {
+                margin-right: 20px;
+                font-size: 14px;
+            }
+
+            @media #{$lg,$md} {
+                margin-right: 0;
+            }
+
+            @media #{$xs} {
+                margin-right: 0;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  03. before-after css start
+/*----------------------------------------*/
+
+.before-after div div div {
+	height: 80px !important;
+	width: 80px !important;
+	line-height: 86px !important;
+    background-color: #fff !important;
+    z-index: 1 !important;
+    & i {
+        border-color: #161921 !important;
+        padding:0px !important;
+        margin: 0 8px !important;
+        background-color: var(--it-theme-1);
+        height: 18px;
+        width: 11px;
+        border: none;
+        transform: rotate(0);
+        clip-path: polygon(100% 50%, 0 0, 0 100%);
+        &:first-child{
+            clip-path: polygon(0 50%, 100% 0, 100% 100%);
+            background-color: #161921;
+        }
+    }
+}
+
+.before-after {
+    height: 600px;
+    width: 100%;
+    z-index: 1;
+    @media #{$xl,$lg,$md,$xs} {
+        height: 380px;
+    }
+    @media #{$xs} {
+        height: 300px;
+    } 
+    & img {
+        max-width: inherit;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        @media #{$xl,$lg,$md} {
+            height: 380px;
+        }
+        @media #{$xs} {
+            height: 300px;
+        }
+    }
+    &-area {
+        & .shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

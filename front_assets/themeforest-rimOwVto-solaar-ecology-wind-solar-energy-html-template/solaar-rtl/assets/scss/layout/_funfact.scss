@@ -1,0 +1,200 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  18. funfact css start
+/*----------------------------------------*/
+.it-funfact {
+    &-item {
+        padding: 49px 20px;
+        border-radius: 20px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        & span {
+            color: var(--it-common-white);
+        }
+    }
+    &-number {
+        font-weight: 600;
+        font-size: 45px;
+        margin-bottom: 15px;
+        color: var(--it-common-white);
+        & i {
+            font-style: normal;
+        }
+    }
+}
+.it-funfact-2 {
+    &-text {
+        & p {
+            color: rgba(246, 246, 246, 0.8);
+            @media #{$lg,$md,$xs}{
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-area {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &-right {
+        @media #{$md,$xs}{
+            margin-top: 50px;
+        }
+        & .it-funfact-item {
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--it-common-black);
+            background-color: var(--it-common-white);
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 50%;
+                border-radius: 50%;
+                opacity: 0;
+                transition: 0.5s ease;
+                background-color: var(--it-theme-1);
+            }
+            & span {
+                z-index: 1;
+                position: relative;
+                transition: .3s;
+                color: var(--it-common-black);
+            }
+            &.style-1 {
+                border-radius: 20px 0 0 0;
+                @media #{$xs}{
+                    border-radius: 0;         
+                }
+                &::after {
+                    border-radius: 20px 0 0 0;
+                     @media #{$xs}{
+                        border-radius: 0;         
+                    }
+                }    
+            }
+            &.style-2 {
+                left: auto;
+                right: 0;
+                border-radius: 0 20px 0 0;
+                 @media #{$xs}{
+                    border-radius: 0;         
+                }
+                &::after {
+                    border-radius: 0 20px 0 0;
+                     @media #{$xs}{
+                        border-radius: 0;         
+                    }
+                } 
+            }
+            &.style-3 {
+                border-radius: 0 0 0 20px;
+                 @media #{$xs}{
+                    border-radius: 0;         
+                }
+                &::after {
+                    border-radius: 0 0 0 20px;
+                     @media #{$xs}{
+                        border-radius: 0;         
+                    }
+                } 
+            }
+            &.style-4 {
+                left: auto;
+                right: 0;
+                border-radius: 0 0 20px 0;
+                 @media #{$xs}{
+                    border-radius: 0;         
+                }
+                &::after {
+                    border-radius: 0 0 20px 0;
+                     @media #{$xs}{
+                        border-radius: 0;         
+                    }
+                } 
+            }
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    width: 100%;
+                }
+                & span {
+                    color: var(--it-common-white);
+                }
+                & .it-funfact-number {
+                    color: var(--it-common-white);
+                }
+            }
+        }
+        & .it-funfact-number {
+            z-index: 1;
+            position: relative;
+            transition: .3s;
+            color: var(--it-common-black);
+        }
+    }
+}
+.it-funfact-3 {
+    &-area {
+        padding: 55px 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &-number {
+        font-weight: 600;
+        font-size: 45px;
+        color: var(--it-common-white);
+        @media #{$xl}{
+            font-size: 40px;
+        }
+        @media #{$lg,$xs}{
+            font-size: 32px;
+        }
+        & i {
+            font-style: normal;
+        }
+    }
+    &-item  {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & span {
+            font-weight: 600;
+            font-size: 20px;
+            color: #f6f6f6;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 14px;
+            margin-bottom: 38px;
+            text-transform: uppercase;
+            @media #{$lg,$xs}{
+                font-size: 14px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 116%;
+                height: 2px;
+                background-color: var(--it-common-white);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 28%;
+                height: 2px;
+                z-index: 1;
+                background: linear-gradient(270deg, #e0a300 0%, #2dc457 100%);
+            }
+        }
+    }
+}

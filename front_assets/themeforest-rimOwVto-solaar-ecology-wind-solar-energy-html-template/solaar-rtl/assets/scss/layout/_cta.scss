@@ -1,0 +1,80 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  13. cta css start
+/*----------------------------------------*/
+
+.it-cta {
+    &-overlay {
+        padding-top: 90px;
+        padding-bottom: 70px;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        @media #{$xs}{
+            padding: 100px 0;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: rgba(9, 18, 22, 0.8);
+        }
+    }
+    &-contant {
+        & p {
+            line-height: 2;
+            color: var(--it-common-white);
+            @media #{$md,$xs}{
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-btn {
+        @media #{$xs}{
+            margin-top: 40px;
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}
+.it-cta-2 {
+    &-wrap {
+        padding: 39px 75px;
+        margin-bottom: -75px;
+        @media #{$md,$xs}{
+            padding: 39px 35px;
+        }
+       
+        & .it-cta-2-title {
+            @media #{$md,$xs}{
+                font-size: 24px;
+            }
+        }
+    }
+    &-shape {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    &-btn {
+        @media #{$xs}{
+            margin-top: 30px;
+        } 
+    }
+}

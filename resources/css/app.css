@@ -1,11 +1,14 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    .logo_image {
+        max-height: 50px;
+    }
+@media (min-width: 1440px) { 
+    .it-slider-2-bg img{
+        width: 100%;
+    }
+    .logo_image{
+        max-height: 60px;
+    }
+    .it-service-item{
+        max-height: 400px;
+    }
 }
