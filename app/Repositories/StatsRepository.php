@@ -2,13 +2,13 @@
 
 namespace App\Repositories;
 
-use App\Models\Slide;
+use App\Models\Stats;
 use Illuminate\Database\Eloquent\Collection;
 
-class SlideRepository
+class StatsRepository
 {
     public function __construct(
-        protected Slide $model
+        protected Stats $model
     ) {}
 
     public function all(): Collection
@@ -21,24 +21,24 @@ class SlideRepository
         return $this->model->where('status', true)->orderBy('sort')->limit($limit)->get();
     }
 
-    public function find(int $id): ?Slide
+    public function find(int $id): ?Stats
     {
         return $this->model->find($id);
     }
 
-    public function create(array $data): Slide
+    public function create(array $data): Stats
     {
         return $this->model->create($data);
     }
 
-    public function update(Slide $slide, array $data): bool
+    public function update(Stats $stats, array $data): bool
     {
-        return $slide->update($data);
+        return $stats->update($data);
     }
 
-    public function delete(Slide $slide): bool
+    public function delete(Stats $stats): bool
     {
-        return $slide->delete();
+        return $stats->delete();
     }
 
     public function getNextSortOrder(): int
@@ -52,4 +52,4 @@ class SlideRepository
             $this->model->where('id', $id)->update(['sort' => $index + 1]);
         }
     }
-} 
+}
