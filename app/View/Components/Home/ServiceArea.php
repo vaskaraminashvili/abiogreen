@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Home;
 
+use App\Repositories\SubCompanyRepository;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,8 @@ class ServiceArea extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.home.service-area');
+        $subCompaniesRepository = resolve(SubCompanyRepository::class);
+        $subCompanies = $subCompaniesRepository->active(4);
+        return view('components.home.service-area', compact('subCompanies'));
     }
 }
