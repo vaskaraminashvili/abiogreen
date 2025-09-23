@@ -1,3 +1,8 @@
+@for $i from 100 through 1000 {
+    .min-height-#{$i} {
+        min-height: #{$i}px;
+    }
+}
     .logo_image {
         max-height: 50px;
     }
@@ -12,3 +17,10 @@
         max-height: 400px;
     }
 }
+
+.sub-company{
+    &__image{
+        max-height: 200px;
+    }
+}
+

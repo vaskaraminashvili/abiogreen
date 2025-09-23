@@ -14,7 +14,7 @@
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.scss', 'resources/js/app.js'])
     @endif
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo_icon.png') }}">
 
