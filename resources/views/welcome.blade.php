@@ -115,7 +115,6 @@
 
       <x-home.service-area />
 
-      <x-home.step-area />
 
       <x-home.project-area />
 
