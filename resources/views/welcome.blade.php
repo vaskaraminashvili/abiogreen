@@ -115,12 +115,13 @@
 
       <x-home.service-area />
 
-
       <x-home.project-area />
-
 
       <x-home.brand-area />
 
+      <x-home.solution-area />
+
+      <x-home.contact-area />
 
       <x-home.blog-area />
 
