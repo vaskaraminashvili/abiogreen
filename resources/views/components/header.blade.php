@@ -90,6 +90,9 @@
                                         <li>
                                             <a href="{{ route('team') }}">Team</a>
                                         </li>
+                                        <li>
+                                            <a href="{{ route('news.index') }}">News</a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>

@@ -55,4 +55,9 @@
         }
     }
 }
-
+.news-slider-item__image{
+    img{
+        max-height: 200px;
+        object-fit: cover;
+    }
+}

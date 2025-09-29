@@ -145,8 +145,8 @@
                     <div class="swiper news-slider p-relative">
                         <div class="swiper-wrapper">
                             @foreach ($news->getMedia('news') as $media)
-                                <div class="swiper-slide postbox-banner border-radius-20 mb-30">
-                                    <a href="{{ $media->getUrl() }}" data-fancybox="gallery" data-caption="Caption #1">
+                                <div class="swiper-slide news-slider-item__image postbox-banner border-radius-20 mb-30">
+                                    <a href="{{ $media->getUrl() }}" data-fancybox="gallery">
                                         <img class="w-100" src="{{ $media->getUrl() }}" alt="">
                                     </a>
                                 </div>

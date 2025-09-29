@@ -11,5 +11,5 @@ Route::get('/', function () {
 Route::get('/team', [TeamMemberController::class, 'index'])->name('team');
 Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('team.show');
 
-Route::get('news', [NewsController::class, 'index'])->name('news');
+Route::get('news', [NewsController::class, 'index'])->name('news.index');
 Route::get('news/{news:slug}', [NewsController::class, 'show'])->name('news.show');
