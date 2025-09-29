@@ -6,13 +6,17 @@
                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow img-anim-top" data-wow-duration="1.5s"
                        data-wow-delay="0.1s">
                        <div class="it-team-item fix mb-40">
-                           <div class="it-team-thumb p-relative border-radius-20">
-                               <img class="w-100 team-member-img" src="{{ $teamMember->getFirstMediaUrl('team', 'portrait') }}" alt="">
+                           <a class="d-inline-block w-100" href="{{ route('team.show', $teamMember->id) }}">
+                               <div class="it-team-thumb p-relative border-radius-20">
+                                   <img class="w-100 team-member-img"
+                                       src="{{ $teamMember->getFirstMediaUrl('team', 'portrait') }}" alt="">
 
-                           </div>
+                               </div>
+                           </a>
                            <div class="it-team-content">
                                <h4 class="it-team-title">
-                                   <a class="border-line" href="team-details.html">{{ $teamMember->full_name }}</a>
+                                   <a class="border-line"
+                                       href="{{ route('team.show', $teamMember->id) }}">{{ $teamMember->full_name }}</a>
                                </h4>
                                <span>{{ $teamMember->position }}</span>
                            </div>

@@ -80,22 +80,18 @@
                <div class="col-xl-6 col-lg-6">
                   <div class="it-team-details-right">
                      <div class="it-team-details-content">
-                        <h4 class="it-team-details-title">Ralph Edwards</h4>
-                        <span class="d-block mb-20">Founder & CEO</span>
+                        <h4 class="it-team-details-title">{{ $teamMember->full_name }}</h4>
+                        <span class="d-block mb-20">{{ $teamMember->position }}</span>
                         <p>
-                           An experienced solar energy strategist with a background in legal advisory, research, and
-                           finance.Passionate about driving sustainable energy <br> solutions through innovation, compliance, and
-                           investment planning in the renewable sector.
+                           {{ $teamMember->description }}
                         </p>
                         <div class="it-team-details-info mt-20 mb-30">
                            <h5 class="it-team-details-title-sm">More details</h5>
                            <ul>
-                              <li><span>Location <i>:</i></span> <strong>Germany</strong> </li>
-                              <li><span>Position <i>:</i></span> <strong>Founder & CEO</strong> </li>
-                              <li><span>Email <i>:</i></span> <strong>info@example.com</strong> </li>
-                              <li><span>Age <i>:</i></span> <strong>34</strong> </li>
-                              <li><span>Qualification <i>:</i></span> <strong>Master Degree</strong> </li>
-                              <li><span>Gender <i>:</i></span> <strong>Male</strong></li>
+                              
+                              @foreach ($teamMember->profile_data as $key => $data)
+                                 <li><span>{{ $key }} <i>:</i></span> <strong>{{ $data }}</strong> </li>
+                              @endforeach
                            </ul>
                         </div>
                         <div class="it-team-details-experience mb-25">
