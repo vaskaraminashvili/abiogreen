@@ -3,6 +3,7 @@
 namespace App\View\Components\Home;
 
 use Closure;
+use App\Repositories\NewsRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
@@ -21,6 +22,8 @@ class BlogArea extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.home.blog-area');
+        $newsRepo = resolve(NewsRepository::class);
+        $news = $newsRepo->active();
+        return view('components.home.blog-area', compact('news'));
     }
 }

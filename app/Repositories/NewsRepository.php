@@ -17,9 +17,9 @@ class NewsRepository
         return News::published()->orderBy('publish_date', 'desc')->get();
     }
 
-    public function active(): Collection
+    public function active($limit = 3): Collection
     {
-        return News::active()->orderBy('publish_date', 'desc')->get();
+        return News::active()->orderBy('publish_date', 'desc')->limit($limit)->get();
     }
 
     public function find(int $id): ?News

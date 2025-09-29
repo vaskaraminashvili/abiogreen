@@ -17,6 +17,11 @@ class EditNews extends EditRecord
         ];
     }
 
+    protected function getRedirectUrl(): string
+    {
+        return $this->previousUrl ?? $this->getResource()::getUrl('index');
+    }
+
     protected function mutateFormDataBeforeFill(array $data): array
     {
         // The form uses dot notation, so data is already in correct format
