@@ -10,7 +10,11 @@ class TeamMemberController extends Controller
 {
     public function index()
     {
-        return view('team');
+        $teamMemberRepository = resolve(TeamMemberRepository::class);
+        $teamMembers = $teamMemberRepository->activePaginate();
+        return view('team', [
+            'teamMembers' => $teamMembers,
+        ]);
     }
 
     public function show(TeamMember $teamMember)
