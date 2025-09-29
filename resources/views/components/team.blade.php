@@ -7,7 +7,7 @@
                        data-wow-delay="0.1s">
                        <div class="it-team-item fix mb-40">
                            <div class="it-team-thumb p-relative border-radius-20">
-                               <img class="w-100" src="{{ $teamMember->getFirstMediaUrl('team', 'portrait') }}" alt="">
+                               <img class="w-100 team-member-img" src="{{ $teamMember->getFirstMediaUrl('team', 'portrait') }}" alt="">
 
                            </div>
                            <div class="it-team-content">

@@ -9,8 +9,6 @@
 
       <x-home.partner-company />
 
-      <x-home.solution-area />
-
       <x-home.contact-area />
 
       <x-home.blog-area />
