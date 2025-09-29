@@ -21,7 +21,9 @@
         max-height: 400px;
     }
 }
-
+.it-brand-area .row [class*=col-]:last-child .it-brand-item {
+    border-radius: 20px !important;
+}
 .sub-company{
     &__image{
         max-height: 200px;
@@ -35,5 +37,15 @@
             object-fit: cover;
         }
     }
+}
+@media (min-width: 768px) {
+    img {
+        object-fit: cover;
+        max-height: 360px;
+    }
+}
+.team-member-image {
+    display: block;
+    margin: 0 auto;
 }
 

@@ -329,6 +329,17 @@
 		},
 	});
 
+
+	const partnerCompanySwiper = new Swiper('.partner-company-slider', {
+		slidesPerView: 6,
+		loop: true,
+		autoplay: true,
+		autoplay: {
+			delay: 4000,
+		},
+		spaceBetween: 25,
+	});
+
 	//  Custom Fraction Js
 	function updateCustomFraction(swiper) {
 
