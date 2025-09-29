@@ -48,4 +48,11 @@
     display: block;
     margin: 0 auto;
 }
+.sidebar-widget-post{
+    &--custom{  
+        ul li:not(:last-child){
+            border-bottom: none !important;
+        }
+    }
+}
 

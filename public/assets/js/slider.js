@@ -339,6 +339,17 @@
 		},
 		spaceBetween: 25,
 	});
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	});
+	const newsSwiper = new Swiper('.news-slider', {
+		slidesPerView: 3,
+		autoplay: true,
+		autoplay: {
+			delay: 4000,
+		},
+		spaceBetween: 25,
+	});
 
 	//  Custom Fraction Js
 	function updateCustomFraction(swiper) {
