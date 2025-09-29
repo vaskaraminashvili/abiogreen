@@ -50,7 +50,7 @@ class NewsResource extends Resource
 
                         SpatieMediaLibraryFileUpload::make('images')
                             ->label('News Images')
-                            ->collection('images')
+                            ->collection('news')
                             ->image()
                             ->imageEditor()
                             ->imageEditorAspectRatios([
@@ -129,7 +129,7 @@ class NewsResource extends Resource
             ->columns([
                 SpatieMediaLibraryImageColumn::make('images')
                     ->label('Images')
-                    ->collection('images')
+                    ->collection('news')
                     ->conversion('thumb')
                     ->size(60)
                     ->limit(3),
@@ -166,12 +166,9 @@ class NewsResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                Tables\Filters\TernaryFilter::make('status')
+                Tables\Filters\SelectFilter::make('status')
                     ->label('Status')
-                    ->boolean()
-                    ->trueLabel('Active')
-                    ->falseLabel('Inactive')
-                    ->native(false),
+                    ->options(NewsStatus::class),
 
                 Tables\Filters\Filter::make('published')
                     ->query(fn(Builder $query): Builder => $query->published())
@@ -213,7 +210,6 @@ class NewsResource extends Resource
         return [
             'index' => Pages\ListNews::route('/'),
             'create' => Pages\CreateNews::route('/create'),
-            'view' => Pages\ViewNews::route('/{record}'),
             'edit' => Pages\EditNews::route('/{record}/edit'),
         ];
     }
