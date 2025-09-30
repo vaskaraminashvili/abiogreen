@@ -13,3 +13,9 @@ Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('t
 
 Route::get('news', [NewsController::class, 'index'])->name('news.index');
 Route::get('news/{news:slug}', [NewsController::class, 'show'])->name('news.show');
+
+
+Route::view('about', 'about')->name('about');
+
+Route::view('contact', 'contact')->name('contact');
+
