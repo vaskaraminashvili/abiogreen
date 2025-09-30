@@ -3,13 +3,16 @@
 namespace App\Providers;
 
 use App\Repositories\GalleryRepository;
+use App\Repositories\InvestorsRepository;
 use App\Repositories\NewsRepository;
 use App\Repositories\PartnerCompanyRepository;
 use App\Repositories\ProjectRepository;
 use App\Repositories\SlideRepository;
 use App\Repositories\StatsRepository;
 use App\Repositories\SubCompanyRepository;
+use App\Repositories\SustainabilityRepository;
 use App\Repositories\TeamMemberRepository;
+use App\Repositories\WhatWeDoRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -27,6 +30,9 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(PartnerCompanyRepository::class, PartnerCompanyRepository::class);
         $this->app->bind(ProjectRepository::class, ProjectRepository::class);
         $this->app->bind(TeamMemberRepository::class, TeamMemberRepository::class);
+        $this->app->bind(WhatWeDoRepository::class, WhatWeDoRepository::class);
+        $this->app->bind(SustainabilityRepository::class, SustainabilityRepository::class);
+        $this->app->bind(InvestorsRepository::class, InvestorsRepository::class);
     }
 
     /**
