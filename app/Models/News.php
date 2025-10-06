@@ -38,7 +38,7 @@ class News extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('images')
+        $this->addMediaCollection('news')
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp']);
     }
 
@@ -98,6 +98,6 @@ class News extends Model implements HasMedia
 
     public function scopeActive($query)
     {
-        return $query->where('status', true);
+        return $query->where('status', NewsStatus::ACTIVE);
     }
 } 

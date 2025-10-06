@@ -5,8 +5,9 @@ namespace App\View\Components\Home;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Repositories\PartnerCompanyRepository;
 
-class BrandArea extends Component
+class PartnerCompany extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +22,8 @@ class BrandArea extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.home.brand-area');
+        $partnerCompanyRepository = resolve(PartnerCompanyRepository::class);
+        $partnerCompanies = $partnerCompanyRepository->active();
+        return view('components.home.partner-company', compact('partnerCompanies'));
     }
 }

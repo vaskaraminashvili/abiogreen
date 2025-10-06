@@ -30,46 +30,20 @@
                         <div class="it-project-2-wrapper p-relative">
                             <div class="swiper it-project-3-active">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="it-project-2-item z-index-1">
-                                            <img src="assets/img/project/project-4-1.jpg" alt="">
-                                            <div class="it-project-2-content">
-                                                <h4 class="it-project-2-title"><a class="border-line"
-                                                        href="project-details.html">Mountain OIl Solar</a></h4>
-                                                <span>Solar Energy</span>
+                                    @foreach ($projects as $project)
+                                        <div class="swiper-slide project-item">
+                                            <div class="it-project-2-item project-item__slide z-index-1">
+                                                <img src="{{ $project->getFirstMediaUrl('images') }}" alt="">
+                                                <div class="it-project-2-content">
+                                                    <h4 class="it-project-2-title"><a class="border-line"
+                                                            href="project-details.html">
+                                                            {{ $project->title }}
+                                                        </a></h4>
+                                                    <span>{{ $project->station_size }}</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="it-project-2-item z-index-1">
-                                            <img src="assets/img/project/project-4-2.jpg" alt="">
-                                            <div class="it-project-2-content">
-                                                <h4 class="it-project-2-title"><a class="border-line"
-                                                        href="project-details.html">Clean Energy Future</a></h4>
-                                                <span>Solar Energy</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="it-project-2-item z-index-1">
-                                            <img src="assets/img/project/project-4-3.jpg" alt="">
-                                            <div class="it-project-2-content">
-                                                <h4 class="it-project-2-title"><a class="border-line"
-                                                        href="project-details.html">Sun Technology</a></h4>
-                                                <span>Solar Energy</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="it-project-2-item z-index-1">
-                                            <img src="assets/img/project/project-4-4.jpg" alt="">
-                                            <div class="it-project-2-content">
-                                                <h4 class="it-project-2-title"><a class="border-line"
-                                                        href="project-details.html">Clean Future</a></h4>
-                                                <span>Solar Energy</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="it-project-2-arrow-wrap">

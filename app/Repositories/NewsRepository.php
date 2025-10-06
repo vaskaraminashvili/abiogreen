@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\News;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class NewsRepository
 {
@@ -17,9 +18,20 @@ class NewsRepository
         return News::published()->orderBy('publish_date', 'desc')->get();
     }
 
-    public function active(): Collection
+    public function active($limit = 3, $except = null): Collection
     {
-        return News::active()->orderBy('publish_date', 'desc')->get();
+        return News::active()
+            ->when($except, function ($query) use ($except) {
+                return $query->where('id', '!=', $except);
+            })
+            ->orderBy('publish_date', 'desc')
+            ->limit($limit)
+            ->get();
+    }
+
+    public function activePaginate($limit = 15): LengthAwarePaginator
+    {
+        return News::active()->orderBy('publish_date', 'desc')->paginate($limit);
     }
 
     public function find(int $id): ?News
@@ -46,4 +58,4 @@ class NewsRepository
     {
         return $news->delete();
     }
-} 
+}

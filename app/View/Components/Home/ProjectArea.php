@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Home;
 
+use App\Repositories\ProjectRepository;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,8 @@ class ProjectArea extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.home.project-area');
+        $projectsRepository = resolve(ProjectRepository::class);
+        $projects = $projectsRepository->active();
+        return view('components.home.project-area', compact('projects'));
     }
 }
