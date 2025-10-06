@@ -338,6 +338,39 @@
 			delay: 4000,
 		},
 		spaceBetween: 25,
+		breakpoints: {
+			'1400': {
+				slidesPerView: 6,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			
+			'0': {
+				slidesPerView: 2,
+			},
+		},
+	});
+	const serviceSwiper = new Swiper('.service-slider', {
+		slidesPerView: 3,
+		loop: true,
+		autoplay: true,
+		autoplay: {
+			delay: 4000,
+		},
+		spaceBetween: 25,
+		breakpoints: {
+			'1400': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+
+			'0': {
+				slidesPerView: 1,
+			},
+		},
 	});
 
 	const projectShowSwiper = new Swiper('.project-show-slider', {

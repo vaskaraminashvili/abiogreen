@@ -17,9 +17,7 @@
 />
 
     <!-- Styles / Scripts -->
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.scss', 'resources/js/app.js'])
-    @endif
+
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo_icon.png') }}">
 
     <!-- CSS here -->
@@ -30,8 +28,11 @@
     <link rel="stylesheet" href="{{ asset('./assets/css/swiper-bundle.css') }}">
     <link rel="stylesheet" href="{{ asset('./assets/css/font-awesome-pro.css') }}">
     <link rel="stylesheet" href="{{ asset('./assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('./assets/css/spacing.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('./assets/css/spacing.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('./assets/css/main.css') }}">
+        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/css/app.scss', 'resources/js/app.js'])
+    @endif
 </head>
 
 </html>

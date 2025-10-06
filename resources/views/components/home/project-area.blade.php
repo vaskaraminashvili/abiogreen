@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-xl-4 col-lg-5 col-md-4">
                             <div class="it-project-2-btn z-index-1 text-md-end">
-                                <a href="project.html" class="it-btn-theme">
+                                <a href="{{ route('projects.index') }}" class="it-btn-theme">
                                     <span>
                                         <span class="text-1">View All Project</span>
                                         <span class="text-2">View All Project</span>

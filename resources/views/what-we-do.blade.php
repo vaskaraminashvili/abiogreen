@@ -84,7 +84,7 @@
     <div class="it-funfact-3-area" data-background="assets/img/shape/funfact-3-bg.jpg">
         <div class="container">
             <div class="row gx-20">
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".5s">
+                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".5s">
                     <div class="it-funfact-3-item">
                         <span>Years Of Experience</span>
                         <h5 class="it-funfact-3-number">
@@ -92,7 +92,7 @@
                         </h5>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                <div class="col-lg-2 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                     <div class="it-funfact-3-item">
                         <span>Homes Powered</span>
                         <h5 class="it-funfact-3-number">
@@ -100,7 +100,7 @@
                         </h5>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".9s">
+                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".9s">
                     <div class="it-funfact-3-item">
                         <span>Solar Energy</span>
                         <h5 class="it-funfact-3-number">
@@ -108,7 +108,23 @@
                         </h5>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="1.1s">
+                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="1.1s">
+                    <div class="it-funfact-3-item">
+                        <span>Co2 Emissions Reduced</span>
+                        <h5 class="it-funfact-3-number">
+                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="1"></i>M+ Tons
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".9s">
+                    <div class="it-funfact-3-item">
+                        <span>Solar Energy</span>
+                        <h5 class="it-funfact-3-number">
+                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="50"></i>MW+
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="1.1s">
                     <div class="it-funfact-3-item">
                         <span>Co2 Emissions Reduced</span>
                         <h5 class="it-funfact-3-number">
@@ -247,6 +263,7 @@
     <!-- step-area-end -->
 
 
+    <x-service-area />
     <!-- contact-area-start -->
     <section class="it-contact-2-area z-index-1 black-bg pt-130 pb-130">
         <div class="it-contact-2-bg-1"><img src="assets/img/contact/bg-5-1.jpg" alt=""></div>
@@ -405,20 +422,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- filter -->
-                                                <div class="it-shop-widget mb-25">
-                                                    <div class="it-shop-widget-content">
-                                                        <div class="it-shop-widget-filter">
-                                                            <div
-                                                                class="it-shop-widget-filter-info d-flex align-items-center justify-content-between">
-                                                                <span class="title">Number of panelr</span>
-                                                                <span class="input-range text-end">
-                                                                    <input type="text" class="amount" readonly>
-                                                                </span>
-                                                            </div>
-                                                            <div class="slider-range"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+ 
                                                 <div class="it-contact-btn">
                                                     <button type="submit" class="it-btn-theme black-bg w-100">
                                                         <span>
@@ -786,83 +790,7 @@
     </section>
     <!-- contact-area-end -->
 
-    <!-- brand-area-start -->
-    <div class="it-brand-area pt-125 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="it-brand-content mb-55">
-                        <div class="text-center">
-                            <span>Trusted By 500+ Companies</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row gx-0">
-                <div class="col-xl-2 col-lg-2 col-md-4 col-6 col-sm-4">
-                    <div class="it-brand-item">
-                        <img src="assets/img/brand/brand-1-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-6 col-sm-4">
-                    <div class="it-brand-item">
-                        <img src="assets/img/brand/brand-1-2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-6 col-sm-4">
-                    <div class="it-brand-item">
-                        <img src="assets/img/brand/brand-1-3.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-6 col-sm-4">
-                    <div class="it-brand-item">
-                        <img src="assets/img/brand/brand-1-4.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-6 col-sm-4">
-                    <div class="it-brand-item">
-                        <img src="assets/img/brand/brand-1-5.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-6 col-sm-4">
-                    <div class="it-brand-item">
-                        <img src="assets/img/brand/brand-1-6.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- brand-area-end -->
+      <x-home.partner-company />
 
-    <!-- newsletter-area-start -->
-    <div class="it-newsletter-2-area">
-        <div class="container">
-            <div class="it-newsletter-2-wrap z-index-2">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="it-newsletter-2-left">
-                            <h4 class="it-newsletter-2-title">Sign Up today to get the
-                                latest inspiration & insights</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="it-newsletter-2-input-box">
-                            <form class="input-wrap p-relative" action="#">
-                                <input type="email" placeholder="Enter your Email Address">
-                                <button type="submit">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M15.4128 0.587602C15.1738 0.345687 14.8765 0.169506 14.5495 0.07608C14.2225 -0.0173459 13.8769 -0.0248582 13.5462 0.054269L2.8795 2.30094C2.26522 2.38518 1.68666 2.63925 1.20897 3.03454C0.731284 3.42983 0.373445 3.95064 0.175753 4.53831C-0.0219392 5.12598 -0.0516323 5.75718 0.0900176 6.36081C0.231668 6.96445 0.539034 7.51655 0.977503 7.95494L2.12284 9.0996C2.18483 9.16157 2.23399 9.23516 2.2675 9.31615C2.30102 9.39714 2.31824 9.48395 2.31817 9.5716V11.6836C2.31964 11.9806 2.388 12.2734 2.51817 12.5403L2.51284 12.5449L2.53017 12.5623C2.72551 12.955 3.04456 13.2727 3.43817 13.4663L3.4555 13.4836L3.46017 13.4783C3.72708 13.6084 4.01988 13.6768 4.31684 13.6783H6.42884C6.60554 13.6781 6.77507 13.7481 6.90017 13.8729L8.04484 15.0176C8.35185 15.328 8.71727 15.5746 9.12002 15.7431C9.52278 15.9117 9.95491 15.9988 10.3915 15.9996C10.7553 15.9991 11.1167 15.9397 11.4615 15.8236C12.0438 15.6324 12.5611 15.2823 12.955 14.8127C13.3489 14.3432 13.6038 13.7729 13.6908 13.1663L15.9408 2.47627C16.0241 2.1427 16.0192 1.79322 15.9266 1.46211C15.834 1.13101 15.657 0.829649 15.4128 0.587602ZM3.06684 8.15827L1.92084 7.0136C1.65398 6.75318 1.46695 6.42203 1.38169 6.05904C1.29644 5.69605 1.31649 5.31626 1.4395 4.96427C1.55877 4.60315 1.77924 4.28389 2.0747 4.04444C2.37016 3.805 2.72818 3.65546 3.10617 3.6136L13.6668 1.39027L3.65017 11.4083V9.5716C3.65118 9.30916 3.60014 9.04912 3.50002 8.80653C3.39989 8.56393 3.25266 8.3436 3.06684 8.15827ZM12.3808 12.9383C12.3296 13.3065 12.1768 13.6532 11.9396 13.9394C11.7023 14.2256 11.3899 14.44 11.0376 14.5585C10.6852 14.677 10.3068 14.695 9.94479 14.6104C9.58278 14.5258 9.25151 14.342 8.98817 14.0796L7.8415 12.9329C7.65642 12.7468 7.43626 12.5993 7.19378 12.4988C6.9513 12.3983 6.69131 12.3469 6.42884 12.3476H4.59217L14.6102 2.33294L12.3808 12.9383Z"
-                                            fill="#2DC457" />
-                                    </svg>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- newsletter-area-end -->
+
 </x-layout>

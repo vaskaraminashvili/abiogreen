@@ -1,11 +1,11 @@
         <!-- brand-area-start -->
-        <div class="it-brand-area gray-bg3 pb-130">
+        <div class="it-brand-area gray-bg3 pt-xl-40 pb-xl-70 pb-50">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="it-brand-content mb-55">
                             <div class="text-center">
-                                <span class="style-2">Trusted By 500+ Companies sad asd</span>
+                                <span class="style-2">Trusted By 500+ Companies</span>
                             </div>
                         </div>
                     </div>

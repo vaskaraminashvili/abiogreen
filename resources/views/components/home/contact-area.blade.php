@@ -1,5 +1,5 @@
   <!-- contact-area-start -->
-  <section class="it-contact-area it-contact-style-3 z-index-1 gray-bg3 pt-130 pb-130">
+  <section class="it-contact-area it-contact-style-3 z-index-1 gray-bg3 pt-xl-130 pb-xl-130 pt-40 pb-40">
       <div class="container">
           <div class="row align-items-center">
               <div class="col-xl-6 col-lg-6 wow itfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
