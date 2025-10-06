@@ -100,6 +100,9 @@
                                             <a href="{{ route('about') }}">About</a>
                                         </li>
                                         <li>
+                                            <a href="{{ route('what-we-do') }}">What We Do</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('contact') }}">Contact</a>
                                         </li>
                                     </ul>

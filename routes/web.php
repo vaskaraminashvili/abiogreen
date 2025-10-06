@@ -20,6 +20,7 @@ Route::get('projects/{project}', [ProjectController::class, 'show'])->name('proj
 
 
 Route::view('about', 'about')->name('about');
+Route::view('what-we-do', 'what-we-do')->name('what-we-do');
 
 Route::view('contact', 'contact')->name('contact');
 
