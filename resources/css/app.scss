@@ -7,8 +7,12 @@
         max-height: 50px;
     }
 @media (min-width: 1440px) { 
+    .it-slider-2-overlay{
+        height: 840px !important;
+    }
     .it-slider-2-bg img{
         width: 100%;
+        height: 840px !important;
     }
     .logo_image{
         max-height: 60px;
@@ -17,7 +21,9 @@
         max-height: 400px;
     }
 }
-
+.it-brand-area .row [class*=col-]:last-child .it-brand-item {
+    border-radius: 20px !important;
+}
 .sub-company{
     &__image{
         max-height: 200px;
@@ -32,4 +38,26 @@
         }
     }
 }
-
+@media (min-width: 768px) {
+    .team-member-img {
+        object-fit: cover;
+        height: 360px;
+    }
+}
+.team-member-image {
+    display: block;
+    margin: 0 auto;
+}
+.sidebar-widget-post{
+    &--custom{  
+        ul li:not(:last-child){
+            border-bottom: none !important;
+        }
+    }
+}
+.news-slider-item__image{
+    img{
+        max-height: 200px;
+        object-fit: cover;
+    }
+}
