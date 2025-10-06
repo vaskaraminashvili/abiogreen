@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,6 +14,9 @@ Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('t
 
 Route::get('news', [NewsController::class, 'index'])->name('news.index');
 Route::get('news/{news:slug}', [NewsController::class, 'show'])->name('news.show');
+
+Route::get('projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 
 
 Route::view('about', 'about')->name('about');

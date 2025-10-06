@@ -94,6 +94,9 @@
                                             <a href="{{ route('news.index') }}">News</a>
                                         </li>
                                         <li>
+                                            <a href="{{ route('projects.index') }}">Projects</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('about') }}">About</a>
                                         </li>
                                         <li>
