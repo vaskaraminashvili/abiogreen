@@ -19,6 +19,9 @@ class Project extends Model implements HasMedia
         'description',
         'station_size',
         'status',
+        'header_info',
+        'key_features',
+        'project_objectives',
     ];
 
     protected $translatable = [
@@ -32,6 +35,9 @@ class Project extends Model implements HasMedia
             'status' => 'boolean',
             'title' => 'array',
             'description' => 'array',
+            'header_info' => 'array',
+            'key_features' => 'array',
+            'project_objectives' => 'array',
         ];
     }
 

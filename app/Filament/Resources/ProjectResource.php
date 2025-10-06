@@ -6,6 +6,7 @@ use App\Filament\Resources\ProjectResource\Pages;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Tabs;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -13,6 +14,8 @@ use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Infolists\Components\RepeatableEntry;
+use Filament\Infolists\Components\TextEntry;
 
 class ProjectResource extends Resource
 {
@@ -44,19 +47,7 @@ class ProjectResource extends Resource
                             ->maxLength(255)
                             ->columnSpanFull(),
 
-                        SpatieMediaLibraryFileUpload::make('images')
-                            ->label('Project Images')
-                            ->collection('images')
-                            ->image()
-                            ->imageEditor()
-                            ->imageEditorAspectRatios([
-                                '16:9',
-                                '4:3',
-                                '1:1',
-                            ])
-                            ->multiple()
-                            ->reorderable()
-                            ->columnSpanFull(),
+                        
                     ])
                     ->columns(2),
 
@@ -98,6 +89,53 @@ class ProjectResource extends Resource
                         //     ]),
                     ])
                     ->columns(1),
+                    Tabs::make('tabs')
+                        ->tabs([
+                            Tabs\Tab::make('Header Info')
+                                ->schema([
+                                Forms\Components\KeyValue::make('header_info')
+                                    ->keyLabel('Attribute')
+                                    ->valueLabel('Value')
+                                    ->required()
+                                    ->columnSpanFull(),
+                                ]),
+                            Tabs\Tab::make('Project Objectives')
+                                ->schema([
+                                    Forms\Components\Repeater::make('project_objectives')
+                                        ->schema([
+                                            Forms\Components\TextInput::make('name'),
+                                        ])
+                                        ->defaultItems(4)
+                                        ->grid(2),
+                                ]),
+                            Tabs\Tab::make('Key Features')
+                                ->schema([
+                                     Forms\Components\Repeater::make('key_features')
+                                        ->schema([
+                                            Forms\Components\TextInput::make('name'),
+                                        ])
+                                        ->defaultItems(4)
+                                        ->grid(2),
+                                ]),
+
+                        ])
+                        ->columnSpanFull(),
+                        Forms\Components\Section::make('Project Images')
+                            ->schema([
+                                SpatieMediaLibraryFileUpload::make('images')
+                                        ->label('Project Images')
+                                        ->collection('images')
+                                        ->image()
+                                        ->imageEditor()
+                                        ->imageEditorAspectRatios([
+                                            '16:9',
+                                            '4:3',
+                                            '1:1',
+                                        ])
+                                        ->multiple()
+                                        ->reorderable()
+                                        ->columnSpanFull(),
+                            ]),
             ]);
     }
 
