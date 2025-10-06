@@ -339,6 +339,21 @@
 		},
 		spaceBetween: 25,
 	});
+
+	const projectShowSwiper = new Swiper('.project-show-slider', {
+		speed: 1500,
+		slidesPerView: 2,
+		spaceBetween: 35,
+		// centeredSlides: true,
+		autoplay: true,
+		autoplay: {
+			delay: 4000,
+		},
+		navigation: {
+			prevEl: '.arrow-prev',
+			nextEl: '.arrow-next',
+		},
+	});
 	Fancybox.bind("[data-fancybox]", {
 		// Your custom options
 	});
