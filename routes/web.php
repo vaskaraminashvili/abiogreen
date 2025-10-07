@@ -25,6 +25,8 @@ Route::get('holdings/{subCompany}', [SubCompanyController::class, 'show'])->name
 
 Route::view('about', 'about')->name('about');
 Route::view('what-we-do', 'what-we-do')->name('what-we-do');
+Route::view('sustainability', 'sustainability')->name('sustainability');
+Route::view('investors', 'investors')->name('investors');
+
 
 Route::view('contact', 'contact')->name('contact');
-

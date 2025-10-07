@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('sub_companies', function (Blueprint $table) {
             $table->string('external_link')->after('description')->nullable();
+            $table->string('email')->after('external_link')->nullable();
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('sub_companies', function (Blueprint $table) {
             $table->dropColumn('external_link');
+            $table->dropColumn('email');
         });
     }
 };

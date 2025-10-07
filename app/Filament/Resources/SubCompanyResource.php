@@ -70,7 +70,12 @@ class SubCompanyResource extends Resource
                             ->label('Short Description (English)')
                             ->required(),
                         Forms\Components\TextInput::make('external_link')
+                            ->url()
                             ->label('External Link'),
+                        Forms\Components\TextInput::make('email')
+                            ->email()
+                            ->required()
+                            ->label('Email'),
 
                         // Forms\Components\Textarea::make('short_desc.ka')
                         //     ->label('Short Description (Georgian)')

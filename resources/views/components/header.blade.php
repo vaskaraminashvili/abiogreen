@@ -4,9 +4,9 @@
         <div class="it-header-top-area  white-bg it-header-top-ptb">
             <div class="container container-1650">
                 <div class="row align-items-center">
-                    <div class="col-xxl-7 col-xl-8 col-lg-7 col-md-6 col-sm-5 mx-xxl-auto">
+                    <div class="col-xxl-12 col-xl-8 col-lg-7 col-md-6 col-sm-5 mx-xxl-auto">
                         <div
-                            class="it-header-top-contact-wrap d-flex justify-content-center justify-content-sm-end align-items-center">
+                            class="it-header-top-contact-wrap d-flex justify-content-center align-items-center">
                             <ul>
                                 <li class="d-none d-xxl-inline-block">
                                     <div class="it-header-top-contact d-flex align-items-center">
@@ -69,7 +69,7 @@
 
         <!-- header-area-start -->
         <div id="header-sticky" class="it-header-area it-header-ptb it-header-style black-bg">
-            <div class="container container-1650">
+            <div class="container">
                 <div class="p-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-2 col-lg-6 col-md-6 col-6">
@@ -80,10 +80,10 @@
                                 <a href="{{ route('home') }}"><img class="logo_image" src="{{ asset('images/logo_icon.png') }}" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-xxl-7 col-xl-7 d-none d-xl-block">
+                        <div class="col-xxl-10 col-xl-7 d-none d-xl-block">
                             <div class="it-header-menu it-header-dropdown">
                                 <nav class="it-menu-content">
-                                    <ul>
+                                    <ul class=>
                                         <li>
                                             <a href="{{ route('home') }}">Home</a>
                                         </li>
@@ -101,6 +101,12 @@
                                         </li>
                                         <li>
                                             <a href="{{ route('what-we-do') }}">What We Do</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('sustainability') }}">Sustainability</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('investors') }}">Investors</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('contact') }}">Contact</a>

@@ -14,7 +14,7 @@ class SubCompanyRepository
 
     public function active($limit = null): Collection
     {
-        return SubCompany::active()->orderBy('created_at', 'desc')->limit($limit)->get();
+        return SubCompany::active()->orderBy('id', 'asc')->limit($limit)->get();
     }
 
     public function find(int $id): ?SubCompany
