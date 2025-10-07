@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\TeamMemberController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SubCompanyController;
+use App\Http\Controllers\TeamMemberController;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,6 +19,8 @@ Route::get('news/{news:slug}', [NewsController::class, 'show'])->name('news.show
 
 Route::get('projects', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
+
+Route::get('holdings/{subCompany}', [SubCompanyController::class, 'show'])->name('holdings.show');
 
 
 Route::view('about', 'about')->name('about');

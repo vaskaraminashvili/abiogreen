@@ -17,17 +17,18 @@
                                 data-wow-duration=".9s" data-wow-delay=".3s">
                                 <div class="row h-100 w-100 m-0">
                                     <div class="col-xl-12 col-lg-12">
-                                        <img class="w-100 sub-company__image mb-3"
+                                        <a href="{{ route('holdings.show', $subCompany->id) }}">
+                                            <img class="w-100 sub-company__image mb-3"
                                             src="{{ $subCompany->getFirstMediaUrl('images') }}" alt="">
                                         <div class="sub-company__title">
                                             <h5 class="it-service-title mb-2"><a class="border-line"
-                                                    href="service-details.html">{{ $subCompany->title }}</a></h5>
+                                                    href="{{ route('holdings.show', $subCompany->id) }}">{{ $subCompany->title }}</a></h5>
                                         </div>
                                         <div class="sub-company__description">
                                             <p>
                                                 {{ $subCompany->short_desc }}
                                             </p>
-                                             <a href="service-details.html" class="it-btn-theme black-bg">
+                                             <a href="{{ route('holdings.show', $subCompany->id) }}" class="it-btn-theme black-bg">
                                                     <span>
                                                         <span class="text-1">More Details</span>
                                                         <span class="text-2">More Details</span>

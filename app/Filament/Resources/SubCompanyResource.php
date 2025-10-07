@@ -66,11 +66,11 @@ class SubCompanyResource extends Resource
                         //     ->label('Title (Georgian)')
                         //     ->maxLength(255),
 
-                        Forms\Components\Textarea::make('short_desc.en')
+                        Forms\Components\TextInput::make('short_desc.en')
                             ->label('Short Description (English)')
-                            ->required()
-                            ->rows(3)
-                            ->maxLength(500),
+                            ->required(),
+                        Forms\Components\TextInput::make('external_link')
+                            ->label('External Link'),
 
                         // Forms\Components\Textarea::make('short_desc.ka')
                         //     ->label('Short Description (Georgian)')
@@ -88,7 +88,8 @@ class SubCompanyResource extends Resource
                                 'link',
                                 'undo',
                                 'redo',
-                            ]),
+                            ])
+                            ->columnSpanFull(),
 
                         // Forms\Components\RichEditor::make('description.ka')
                         //     ->label('Description (Georgian)')

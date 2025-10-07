@@ -3,7 +3,7 @@
 
       <x-home.about-us />
 
-      <x-home.service-area />
+      <x-home.sub-company-area />
 
       <x-home.project-area />
 

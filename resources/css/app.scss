@@ -109,6 +109,9 @@
         height: 400px;
         object-fit: cover;
     }
+    &__image--contain {
+        object-fit: contain;
+    }
 
     &__image--details {
         width: 100%;

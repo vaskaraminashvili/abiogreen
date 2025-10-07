@@ -263,7 +263,10 @@
     <!-- step-area-end -->
 
 
-    <x-service-area />
+    <x-sub-company-area />
+
+    <x-home.partner-company />
+
     <!-- contact-area-start -->
     <section class="it-contact-2-area z-index-1 black-bg pt-130 pb-130">
         <div class="it-contact-2-bg-1"><img src="assets/img/contact/bg-5-1.jpg" alt=""></div>
@@ -422,7 +425,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- filter -->
- 
+    
                                                 <div class="it-contact-btn">
                                                     <button type="submit" class="it-btn-theme black-bg w-100">
                                                         <span>
@@ -790,7 +793,5 @@
     </section>
     <!-- contact-area-end -->
 
-      <x-home.partner-company />
-
-
+    
 </x-layout>
