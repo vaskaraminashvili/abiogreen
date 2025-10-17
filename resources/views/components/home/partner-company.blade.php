@@ -5,7 +5,7 @@
                     <div class="col-12">
                         <div class="it-brand-content mb-55">
                             <div class="text-center">
-                                <span class="style-2">Trusted By 500+ Companies</span>
+                                <span class="style-2">Abio — trusted by leading companies worldwide.</span>
                             </div>
                         </div>
                     </div>

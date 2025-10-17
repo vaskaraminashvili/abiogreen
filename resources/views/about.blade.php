@@ -8,8 +8,7 @@
                        <div class="col-xl-12 col-lg-7">
                            <div class="it-about-section-title-box">
                                <span class="it-section-subtitle">Who We Are</span>
-                               <h4 class="it-section-title fz-45 it-split-text it-split-in-right">We provide reliable,
-                                   clean wind energy solutions for a sustainable future.</h4>
+                               <h4 class="it-section-title fz-45 it-split-text it-split-in-right">We combine technology, innovation, and purpose to shape the future of clean energy.</h4>
                            </div>
                        </div>
 

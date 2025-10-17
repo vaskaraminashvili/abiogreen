@@ -5,9 +5,8 @@
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-lg-7 col-md-8">
                             <div class="it-project-2-section-title-box">
-                                <span class="it-section-subtitle">Project</span>
-                                <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Latest Projects,
-                                    Solutions <br> And Energy Supplies</h4>
+                                <span class="it-section-subtitle">NOTABLE PROJECTS</span>
+                                <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Abio’s latest projects advancing clean and smart energy.</h4>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-5 col-md-4">

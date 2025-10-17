@@ -6,9 +6,9 @@
                 <div class="row align-items-end">
                     <div class="col-xl-6 col-lg-7">
                         <div class="it-about-section-title-box">
-                            <span class="it-section-subtitle">Who We Are</span>
-                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">We provide reliable, clean
-                                wind energy solutions for a sustainable future.</h4>
+                            <span class="it-section-subtitle">WHAT WE DO</span>
+                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">From Development to Power
+                                Trading — We Drive Renewables</h4>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5">
@@ -39,40 +39,13 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 wow itfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
                     <div class="it-about-4-right">
-                        <p>We are a clean energy company specializing in advanced wind power systems. With a focus on
-                            sustainability a help reduce dependency on <br> fossil fuels through high-efficiency wind
-                            turbine solutions.</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-5 col-sm-6">
-                                <div class="it-about-mission">
-                                    <span>Our Vision</span>
-                                    <p>Deliver clean, efficient wind energy <br>solutions that reduce carbon</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-5 col-sm-6">
-                                <div class="it-about-mission">
-                                    <span>Our Mission</span>
-                                    <p>Deliver clean, efficient wind energy <br>solutions that reduce carbon</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="it-about-btn d-sm-flex align-items-center">
-                            <a href="about-us-v1.html" class="it-btn-theme mr-30">
-                                <span>
-                                    <span class="text-1">More About Us</span>
-                                    <span class="text-2">More About Us</span>
-                                </span>
-                            </a>
-                            <div class="it-about-author d-flex align-items-center">
-                                <div class="it-about-author-avater">
-                                    <img src="assets/img/about/avater.png" alt="">
-                                </div>
-                                <div class="it-about-author-designation">
-                                    <i>Trusteed By</i>
-                                    <span>World Leading Customer</span>
-                                </div>
-                            </div>
-                        </div>
+                        <p>We transform ideas into clean energy realities — developing, funding, and building projects
+                            that harness the power of nature. Through innovation and collaboration, we bring together
+                            technology, finance, and expertise to create sustainable energy systems. From project
+                            conception to electricity trading, we connect every stage of the renewable value chain,
+                            driving progress toward a cleaner, smarter, and more independent energy future.</p>
+
+
                     </div>
                 </div>
             </div>
@@ -144,16 +117,16 @@
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-lg-6">
                         <div class="it-step-section-title-box">
-                            <span class="it-section-subtitle">Why Choose us</span>
-                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Reliable solar power.
-                                <br>Trusted for years.</h4>
+                            <span class="it-section-subtitle">HOW WE CREATE VALUE</span>
+                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Turning Renewable Ideas into Powerful, Profitable Energy Solutions
+                            </h4>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="it-step-top-content-wrap d-flex justify-content-lg-end">
                             <div class="it-step-top-content gray-bg3 d-inline-flex align-items-center">
-                                <h5>6k+</h5>
-                                <p>Successfully Completed <br> Business Project</p>
+                                <h5>30+</h5>
+                                <p>Succesfully completed business projects.</p>
                             </div>
                         </div>
                     </div>
@@ -183,9 +156,8 @@
                                 </span>
                             </div>
                             <div class="it-step-content">
-                                <h5 class="it-step-title">25 Years System Warranty</h5>
-                                <p>Solaar Request Your Free Solar Quote Today Fast, <br>Affordable, and Eco-Friendly
-                                    Energy Solutions!</p>
+                                <h5 class="it-step-title">Project Development</h5>
+                                <p>We develop renewable projects from concept to RTB stage. Our global partnerships and rigorous due diligence ensure financial security and long-term project success.</p>
                             </div>
                         </div>
                         <div class="it-step-item acive d-inline-flex mb-35">
@@ -200,9 +172,8 @@
                                 </span>
                             </div>
                             <div class="it-step-content">
-                                <h5 class="it-step-title">Battery Storage Included</h5>
-                                <p>Solaar Request Your Free Solar Quote Today Fast, <br>Affordable, and Eco-Friendly
-                                    Energy Solutions!</p>
+                                <h5 class="it-step-title">Project Funding</h5>
+                                <p>We finance our projects through an EU-regulated fund and trusted investors, guaranteeing transparency, stability, and full compliance with international standards.</p>
                             </div>
                         </div>
                         <div class="it-step-item d-inline-flex mb-35">
@@ -217,9 +188,8 @@
                                 </span>
                             </div>
                             <div class="it-step-content">
-                                <h5 class="it-step-title">Flexible Financing</h5>
-                                <p>Solaar Request Your Free Solar Quote Today Fast, <br>Affordable, and Eco-Friendly
-                                    Energy Solutions!</p>
+                                <h5 class="it-step-title">Project Construction</h5>
+                                <p>Our experienced engineering teams deliver top-quality EPC services with precision, safety, and efficiency — turning clean energy concepts into operational assets.</p>
                             </div>
                         </div>
                         <div class="it-step-item d-inline-flex">
@@ -245,9 +215,8 @@
                                 </span>
                             </div>
                             <div class="it-step-content">
-                                <h5 class="it-step-title">Free Maintenance</h5>
-                                <p>Solaar Request Your Free Solar Quote Today Fast, <br>Affordable, and Eco-Friendly
-                                    Energy Solutions!</p>
+                                <h5 class="it-step-title">Energy Trading</h5>
+                                <p>We trade renewable electricity from our assets and partners using advanced analytics and technology to maximize value and energy efficiency.</p>
                             </div>
                         </div>
                     </div>

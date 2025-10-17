@@ -7,10 +7,10 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="it-contact-2-left">
                         <div class="it-testimonial-section-title-box mb-35">
-                            <span class="it-section-subtitle">Contact Us</span>
-                            <h4 class="it-section-title fz-45 text-white it-split-text it-split-in-right">Complete Your
-                                Project <br>
-                                Within a Budget</h4>
+                            <span class="it-section-subtitle">CONTACT US</span>
+                            <h4 class="it-section-title fz-45 text-white it-split-text it-split-in-right">
+                                Choose Your Company
+                            </h4>
                         </div>
                         <div class="it-contact-2-nav-box">
                             <ul class="nav nav-tab" id="myTab" role="tablist">
@@ -43,7 +43,7 @@
                             <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="contact-{{ $subCompany->id }}" role="tabpanel"
                                 aria-labelledby="{{ $subCompany->id }}-tab">
                                 <div class="it-contact-2-form-box text-center">
-                                    <h4 class="it-contact-form-title text-white mb-xl-40 mb-10">Contact {{ $subCompany->title }}</h4>
+                                    <h4 class="it-contact-form-title text-white mb-xl-40 mb-10">Connect with Abio’s Experts </h4>
                                     
                                     <form action="#">
                                         <div class="it-contact-input-wrap">

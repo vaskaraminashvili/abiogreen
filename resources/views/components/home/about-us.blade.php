@@ -17,21 +17,19 @@
                                         <div class="col-lg-6 col-md-5 col-sm-6">
                                             <div class="it-about-mission">
                                                 <span>Our Vision</span>
-                                                <p>Et purus duis sollicitudin dignissim ha. <br> Egest nulla quis
-                                                    venenatis cras sed</p>
+                                                <p>To drive a cleaner and more sustainable future by making renewable energy accessible, efficient, and reliable for communities and businesses worldwide.</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-5 col-sm-6">
                                             <div class="it-about-mission">
                                                 <span>Our Mission</span>
-                                                <p>Et purus duis sollicitudin dignissim ha. <br> Egest nulla quis
-                                                    venenatis cras sed</p>
+                                                <p>To design, build, and operate advanced solar, storage, and energy management solutions that empower progress while protecting the planet.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="it-about-btn">
-                                    <a href="about-us-v1.html" class="it-btn-theme">
+                                    <a href="{{ route('about') }}" class="it-btn-theme">
                                         <span>
                                             <span class="text-1">More About Us</span>
                                             <span class="text-2">More About Us</span>

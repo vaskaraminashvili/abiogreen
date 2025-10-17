@@ -4,9 +4,8 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="it-service-section-title-box text-center mb-70">
-                            <span class="it-section-subtitle">Services</span>
-                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Our Energy Solution
-                                empowers <br> sustainable energy.</h4>
+                            <span class="it-section-subtitle">OUR COMPANIES</span>
+                            
                         </div>
                     </div>
                 </div>
