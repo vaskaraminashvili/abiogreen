@@ -8,19 +8,16 @@
                         <div class="it-sv-details-thumb border-radius-20 mb-25">
                             <img src="assets/img/service/details-4.jpg" alt="">
                         </div>
-                        <h4 class="it-inner-title"><a href="#">Solar Panel Cleaning</a></h4>
+                        <h4 class="it-inner-title"><a href="#">Investing in the Future of Clean Energy</a></h4>
                         <div class="postbox-dsc mb-45">
-                            <p class="mb-5">Nutmeal is a nutritious category of food that includes various types of
-                                ground nuts, such as almonds, walnuts, and peanuts These ground nuts can be used in a
-                                variety of recipes, including smoothies, baked goods, and savory dishes Nutmeal is a
-                                versatile ingredient Nutmeal is a nutritious category of food that includes various
-                                types of
-                                ground nuts, such as almonds, walnuts, and peanuts These ground nuts can be used in a
-                                variety of recipes</p>
-                            <p>Nutmeal is a versatile ingredient Nutmeal is a nutritious category of food that includes
-                                various types of
-                                ground nuts, such as almonds, walnuts, and peanuts These ground nuts can be used in a
-                                variety of recipes</p>
+                            <p>Abio offers investors a transparent and secure path to participate in the global
+                                renewable energy transition. Through our EU-regulated fund, we develop, finance, and
+                                operate high-performing solar, wind, and hydro projects supported by advanced energy
+                                storage systems. Each investment is guided by rigorous due diligence, ESG principles,
+                                and long-term stability. Our integrated model &mdash; from development to electricity
+                                trading &mdash; ensures consistent returns while contributing to a sustainable,
+                                low-carbon future. At Abio, investing in clean energy means investing in progress,
+                                resilience, and global impact.</p>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-xxl-5 col-xl-6 col-lg-12">
@@ -31,9 +28,9 @@
                             <div class="col-xxl-7 col-xl-6 col-lg-12">
                                 <div class="postbox-details-wrapper">
                                     <div class="it-sv-details-list list-style-2">
-                                        <h5 class="it-inner-title mb-10">Customer Benefits</h5>
-                                        <P>Catalysts for change before fully tested markets are maintain wireless
-                                            scenarios after intermandated applications predominate revolutionary.</P>
+                                        <h5 class="it-inner-title mb-10">Investor Advantages</h5>
+                                        <P>Partnering with Abio means investing in growth, stability, and
+                                            sustainability.</P>
                                         <ul class="mt-20">
                                             <li>
                                                 <span>
@@ -44,7 +41,11 @@
                                                             fill="currentcolor" />
                                                     </svg>
                                                 </span>
-                                                We use the latest diagnostic equipment
+                                                <p class="fw-bold text-black">EU-Regulated Fund -
+                                                    <span class="fw-normal position-relative">Investments backed by
+                                                        strict compliance,
+                                                        transparency, and accountability.</span>
+                                                </p>
                                             </li>
                                             <li>
                                                 <span>
@@ -55,7 +56,12 @@
                                                             fill="currentcolor" />
                                                     </svg>
                                                 </span>
-                                                We are a member of Professional Service
+                                                <p class="fw-bold text-black">Diversified Portfolio —
+                                                    <span class="fw-normal position-relative">Exposure across solar,
+                                                        wind, hydro, and energy
+                                                        storage assets.
+                                                    </span>
+                                                </p>
                                             </li>
                                             <li>
                                                 <span>
@@ -66,8 +72,43 @@
                                                             fill="currentcolor" />
                                                     </svg>
                                                 </span>
-                                                Automotive service our clients receive
+                                                <p class="fw-bold text-black">Proven Track Record —
+                                                    <span class="fw-normal position-relative">Years of successful
+                                                        project delivery and reliable
+                                                        financial performance.</span>
+                                                </p>
                                             </li>
+                                            <li>
+                                                <span>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM9.92417 12.8492C9.60167 13.1717 9.1775 13.3325 8.75167 13.3325C8.32583 13.3325 7.8975 13.17 7.57167 12.845L5.25333 10.5983L6.41417 9.40083L8.74167 11.6567L13.5825 6.90583L14.7525 8.09333L9.92417 12.8492Z"
+                                                            fill="currentcolor" />
+                                                    </svg>
+                                                </span>
+                                                <p class="fw-bold text-black">Long-Term Stability —
+                                                    <span class="fw-normal position-relative">Revenue from energy
+                                                        generation, trading, and long-term power agreements.</span>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM9.92417 12.8492C9.60167 13.1717 9.1775 13.3325 8.75167 13.3325C8.32583 13.3325 7.8975 13.17 7.57167 12.845L5.25333 10.5983L6.41417 9.40083L8.74167 11.6567L13.5825 6.90583L14.7525 8.09333L9.92417 12.8492Z"
+                                                            fill="currentcolor" />
+                                                    </svg>
+                                                </span>
+                                                <p class="fw-bold text-black">Sustainability Impact —
+                                                    <span class="fw-normal position-relative">Each project contributes
+                                                        to
+                                                        a cleaner, more resilient global energy system, driving progress
+                                                        while protecting the planet.</span>
+                                                </p>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -79,17 +120,17 @@
                             <div class="row">
                                 <div class="col-xl-8 col-lg-6">
                                     <div class="it-step-wrap">
-                                        <h5 class="it-inner-title mb-10">4 Steps to Process</h5>
-                                        <P class="mb-35">Catalysts for change before fully tested markets are maintain
-                                            wireless scenarios after intermandated</P>
+                                        <h5 class="it-inner-title mb-10">4 Steps to Invest with Abio</h5>
+                                        <P class="mb-35">A transparent, guided process designed to ensure confidence
+                                            and clarity at every stage.</P>
                                         <div class="it-step-item d-inline-flex mb-35">
                                             <div class="it-step-number">
                                                 <span>01</span>
                                             </div>
                                             <div class="it-step-content">
-                                                <h5 class="it-step-title">Request a Quote</h5>
-                                                <p>Solaar Request Your Free Solar Quote Today Fast,Affordable, and
-                                                    Eco-Friendly Energy Solutions!</p>
+                                                <h5 class="it-step-title">Inquiry & Consultation</h5>
+                                                <p>Connect with our investment team to explore available opportunities
+                                                    within Abio’s renewable portfolio.</p>
                                             </div>
                                         </div>
                                         <div class="it-step-item acive d-inline-flex mb-35">
@@ -97,9 +138,9 @@
                                                 <span>02</span>
                                             </div>
                                             <div class="it-step-content">
-                                                <h5 class="it-step-title">Site Evaluation</h5>
-                                                <p>Solaar Site Evaluation Expert Solar Assessment for Maximum Energy
-                                                    Efficiency & Cost Savings</p>
+                                                <h5 class="it-step-title">Due Diligence & Agreement</h5>
+                                                <p>We provide detailed project data, performance models, and compliance
+                                                    reports before finalizing investment terms.</p>
                                             </div>
                                         </div>
                                         <div class="it-step-item d-inline-flex mb-35">
@@ -107,9 +148,9 @@
                                                 <span>03</span>
                                             </div>
                                             <div class="it-step-content">
-                                                <h5 class="it-step-title">Installation</h5>
-                                                <p>Expert Solar Panel Installation by Solaar - Precision, Safety &
-                                                    Optimal Performance Guaranteed for</p>
+                                                <h5 class="it-step-title">Fund Allocation</h5>
+                                                <p>Invest through our EU-regulated fund structure, ensuring full
+                                                    transparency, legal security, and ESG compliance.</p>
                                             </div>
                                         </div>
                                         <div class="it-step-item d-inline-flex">
@@ -117,9 +158,9 @@
                                                 <span>04</span>
                                             </div>
                                             <div class="it-step-content">
-                                                <h5 class="it-step-title">Activation</h5>
-                                                <p>Solaar System Activation Fast, Seamless Switch-On with Expert
-                                                    Guidance & Performance</p>
+                                                <h5 class="it-step-title">Growth & Reporting</h5>
+                                                <p>Track your investment through regular performance updates, financial
+                                                    reports, and measurable sustainability impact.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -134,105 +175,111 @@
                         <!-- step-area-end -->
 
                         <!-- faq-area-start -->
-                        <h5 class="it-inner-title mb-15">Have a Question? we’ve got <br> The Answers you need</h5>
-                        <p class="mb-30">Nutmeal is a versatile ingredient Nutmeal is a nutritious category of food
-                            that includes various types of
-                            ground nuts, such as almonds, walnuts, and peanuts These ground nuts can be used in a
-                            variety of recipes</p>
+                        <h5 class="it-inner-title mb-15">FAQ’s for Investors</h5>
+                        <p class="mb-30">Investing in renewable energy can raise important questions — from project
+                            structure and timelines to risk management and returns.
+                            At Abio, we value transparency and clarity, ensuring every investor has a full understanding
+                            of how their investment contributes to a cleaner and more profitable energy future.
+                        </p>
                         <div class="it-custom-accordion">
                             <div class="accordion" id="accordionExample">
-                                <div class="accordion-items mb-30">
-                                    <h4 class="accordion-header" id="headingOne2">
-                                        <button class="accordion-buttons " type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne2" aria-expanded="true"
-                                            aria-controls="collapseOne2">
-                                            Are your services available globally?
+                                <div class="accordion-items">
+                                    <h4 class="accordion-header" id="headingOne">
+                                        <button class="accordion-buttons" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            How can I invest with Abio?
                                         </button>
                                     </h4>
-                                    <div id="collapseOne2" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne2" data-bs-parent="#accordionExample">
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p class="mb-0">Yes, we operate in North America, Europe, the Middle
-                                                East, and Asia,
-                                                with localized teams for compliance and logistics.</p>
+                                            <p class="mb-0">Investors can participate through direct project
+                                                investments or structured partnerships across our renewable energy
+                                                portfolio.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-items mb-30">
-                                    <h4 class="accordion-header" id="headingTwo3">
+
+                                <!-- Accordion Item 2 -->
+                                <div class="accordion-items">
+                                    <h4 class="accordion-header" id="headingTwo">
                                         <button class="accordion-buttons collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo3"
-                                            aria-expanded="false" aria-controls="collapseTwo3">
-                                            Will solar reduce electricity bills?
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            What projects do you focus on?
                                         </button>
                                     </h4>
-                                    <div id="collapseTwo3" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo3" data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p class="mb-0">Yes, we operate in North America, Europe, the Middle
-                                                East, and Asia,
-                                                with localized teams for compliance and logistics.</p>
+                                            <p class="mb-0">We develop and operate solar parks, wind farms, hydro
+                                                plants, and battery energy storage systems.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-items mb-30">
-                                    <h4 class="accordion-header" id="headingFour4">
+
+                                <!-- Accordion Item 3 -->
+                                <div class="accordion-items">
+                                    <h4 class="accordion-header" id="headingThree">
                                         <button class="accordion-buttons collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour4"
-                                            aria-expanded="false" aria-controls="collapseFour4">
-                                            Is solar energy really free?
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            How are investor returns generated?
                                         </button>
                                     </h4>
-                                    <div id="collapseFour4" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour4" data-bs-parent="#accordionExample">
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p class="mb-0">Yes, we operate in North America, Europe, the Middle
-                                                East, and Asia,
-                                                with localized teams for compliance and logistics.</p>
+                                            <p class="mb-0">Returns come from electricity generation, energy trading,
+                                                and long-term Power Purchase Agreements (PPAs).</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-items mb-30">
-                                    <h4 class="accordion-header" id="headingFour5">
+
+                                <!-- Accordion Item 4 -->
+                                <div class="accordion-items">
+                                    <h4 class="accordion-header" id="headingFour">
                                         <button class="accordion-buttons collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour5"
-                                            aria-expanded="false" aria-controls="collapseFour4">
-                                            Do solar panels need maintenance?
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Is my investment secure?
                                         </button>
                                     </h4>
-                                    <div id="collapseFour5" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour5" data-bs-parent="#accordionExample">
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p class="mb-0">Yes, we operate in North America, Europe, the Middle
-                                                East, and Asia,
-                                                with localized teams for compliance and logistics.</p>
+                                            <p class="mb-0">Yes. Each project follows strict compliance and
+                                                transparent reporting standards, ensuring financial safety and
+                                                accountability.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-items mb-30">
-                                    <h4 class="accordion-header" id="headingSix5">
+
+                                <!-- Accordion Item 5 -->
+                                <div class="accordion-items">
+                                    <h4 class="accordion-header" id="headingFive">
                                         <button class="accordion-buttons collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseSix5"
-                                            aria-expanded="false" aria-controls="collapseSix5">
-                                            Do solar panels need maintenance?
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            Why choose Abio for investment?
                                         </button>
                                     </h4>
-                                    <div id="collapseSix5" class="accordion-collapse collapse"
-                                        aria-labelledby="headingSix5" data-bs-parent="#accordionExample">
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p class="mb-0">Yes, we operate in North America, Europe, the Middle
-                                                East, and Asia,
-                                                with localized teams for compliance and logistics.</p>
+                                            <p class="mb-0">Abio offers a proven model combining innovation,
+                                                experience, and sustainability — delivering long-term value and
+                                                measurable impact.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- faq-area-end -->
                         </div>
-                        <!-- faq-area-end -->
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- service-area-end -->
 

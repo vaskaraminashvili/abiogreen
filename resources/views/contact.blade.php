@@ -26,7 +26,7 @@
                                 <div class="it-contact-list">
                                     <span>Phone Line</span>
                                     <p>Make a call for your general enquiries.</p>
-                                    <a class="border-line" href="tel:+35722278877">(357) 22 278877</a>
+                                    <a class="border-line" href="tel:+35722278877">+357 22 278877</a>
                                 </div>
                             </div>
                             <div class="it-contact-list-box d-flex align-items-center mb-30 wow itfadeUp"
