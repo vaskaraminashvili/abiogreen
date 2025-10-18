@@ -19,6 +19,8 @@ class SubCompany extends Model implements HasMedia
         'short_desc',
         'description',
         'status',
+        'external_link',
+        'email',
     ];
 
     protected $translatable = [

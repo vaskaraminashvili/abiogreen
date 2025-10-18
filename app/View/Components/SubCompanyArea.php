@@ -1,13 +1,13 @@
 <?php
 
-namespace App\View\Components\Home;
+namespace App\View\Components;
 
 use App\Repositories\SubCompanyRepository;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class ServiceArea extends Component
+class SubCompanyArea extends Component
 {
     /**
      * Create a new component instance.
@@ -23,7 +23,7 @@ class ServiceArea extends Component
     public function render(): View|Closure|string
     {
         $subCompaniesRepository = resolve(SubCompanyRepository::class);
-        $subCompanies = $subCompaniesRepository->active(4);
-        return view('components.home.service-area', compact('subCompanies'));
+        $subCompanies = $subCompaniesRepository->active();
+        return view('components.sub-company-area', compact('subCompanies'));
     }
 }

@@ -4,9 +4,8 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="it-blog-section-title-box text-center mb-65">
-                            <span class="it-section-subtitle">Our Recent post</span>
-                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Read Our Latest News &
-                                Blog</h4>
+                            <span class="it-section-subtitle">OUR INSIGHTS</span>
+                            <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Stay updated with Abio’s latest news, innovations, and clean energy breakthroughs.</h4>
                         </div>
                     </div>
                 </div>
@@ -30,7 +29,7 @@
                                             {{ $item->title }}
                                         </a>
                                     </h4>
-                                    <p>{{ Str::limit($item->description, 100) }}</p>
+                                    <p>{{ strip_tags(Str::limit($item->description, 100)) }}</p>
                                     <a class="it-blog-link" href="blog-details.html">
                                         <span>
                                             <span class="text-1">Explore More

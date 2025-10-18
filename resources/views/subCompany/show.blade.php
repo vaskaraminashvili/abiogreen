@@ -1,27 +1,24 @@
    <x-layout>
-
        <!-- about-area-start -->
-       <section class="it-about-4-area pt-120 pb-130">
+       <section class="it-about-4-area pt-xl-60 pb-xl-130">
            <div class="container">
-               <div class="it-about-4-top-wrap mb-80">
-                   <div class="row align-items-end">
-                       <div class="col-xl-12 col-lg-7">
-                           <div class="it-about-section-title-box">
-                               <span class="it-section-subtitle">Who We Are</span>
-                               <h4 class="it-section-title fz-45 it-split-text it-split-in-right">We combine technology, innovation, and purpose to shape the future of clean energy.</h4>
-                           </div>
-                       </div>
-
-                   </div>
-               </div>
-               <div class="row align-items-center">
-                   <div class="col-xl-6 col-lg-6">
-                       <div class="it-about-thumb border-radius-30">
-                           <img src="assets/img/about/thumb-5-3.jpg" alt="">
+               <div class="row align-items-center project-item">
+                   <div class="col-xl-8 offset-xl-2 col-lg-6 offset-lg-2">
+                       <div class=" border-radius-30 mb-20 mb-xl-40">
+                           <img class="d-block mx-auto project-item__image project-item__image--contain"
+                               src="{{ $subCompany->getFirstMediaUrl('images') }}" alt="">
                        </div>
                    </div>
-                   <div class="col-xl-6 col-lg-6 wow itfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
-                       <div class="it-about-4-right">
+                   <div class="col-xl-8 offset-xl-2 col-lg-7 offset-lg-2">
+                       <div class="it-about-section-title-box mb-20 mb-xl-40">
+                           <h4 class="it-section-title fz-45">
+                               {{ $subCompany->title }}
+                           </h4>
+                       </div>
+                   </div>
+                   <div class="col-xl-8 offset-xl-2 col-lg-6 offset-lg-2 wow itfadeRight" data-wow-duration=".9s"
+                       data-wow-delay=".7s">
+                       <div class="">
                            <p class="s4">At Abio Green, we are committed to accelerating the global transition from
                                polluting, expensive fossil fuels to clean, renewable energy. Recognizing the urgent need
                                to combat climate change, we harness state-of-the-art technologies to generate, store,
@@ -42,6 +39,16 @@
                            <p class="s4">At Abio Green, we don&rsquo;t just deliver energy &mdash; we combine
                                renewable power, innovative technologies, EV charging, and green finance to drive
                                sustainable progress.</p>
+                       </div>
+                       <div class="mt-20">
+                           @if ($subCompany->external_link)
+                               <a href="{{ $subCompany->external_link }}" class="it-btn-theme black-bg" target="_blank">
+                                   <span>
+                                       <span class="text-1">Visit Website</span>
+                                       <span class="text-2">Visit Website</span>
+                                   </span>
+                               </a>
+                           @endif
                        </div>
                    </div>
                </div>

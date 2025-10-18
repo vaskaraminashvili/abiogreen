@@ -5,14 +5,13 @@
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-lg-7 col-md-8">
                             <div class="it-project-2-section-title-box">
-                                <span class="it-section-subtitle">Project</span>
-                                <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Latest Projects,
-                                    Solutions <br> And Energy Supplies</h4>
+                                <span class="it-section-subtitle">NOTABLE PROJECTS</span>
+                                <h4 class="it-section-title fz-45 it-split-text it-split-in-right">Abio’s latest projects advancing clean and smart energy.</h4>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-5 col-md-4">
                             <div class="it-project-2-btn z-index-1 text-md-end">
-                                <a href="project.html" class="it-btn-theme">
+                                <a href="{{ route('projects.index') }}" class="it-btn-theme">
                                     <span>
                                         <span class="text-1">View All Project</span>
                                         <span class="text-2">View All Project</span>

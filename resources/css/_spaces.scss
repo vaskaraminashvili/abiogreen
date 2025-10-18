@@ -1,0 +1,141 @@
+// Define breakpoints (same as Bootstrap 5)
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// Spacing values from 5 to 200 in increments of 5
+$spacing-values: (
+);
+
+@for $i from 1 through 40 {
+    $spacing-values: append($spacing-values, $i * 5);
+}
+
+// Directions and properties
+$directions: (
+    t: top,
+    b: bottom,
+    l: left,
+    r: right
+);
+
+// Generate base utility classes (mobile-first)
+@each $size in $spacing-values {
+    .mt-#{$size} {
+        margin-top: #{$size}px;
+    }
+
+    .mb-#{$size} {
+        margin-bottom: #{$size}px;
+    }
+
+    .ml-#{$size} {
+        margin-left: #{$size}px;
+    }
+
+    .mr-#{$size} {
+        margin-right: #{$size}px;
+    }
+
+    .pt-#{$size} {
+        padding-top: #{$size}px;
+    }
+
+    .pb-#{$size} {
+        padding-bottom: #{$size}px;
+    }
+
+    .pl-#{$size} {
+        padding-left: #{$size}px;
+    }
+
+    .pr-#{$size} {
+        padding-right: #{$size}px;
+    }
+}
+
+// Generate responsive utility classes
+@each $breakpoint, $value in $breakpoints {
+    @if $breakpoint !=xs {
+        @media (min-width: $value) {
+            @each $size in $spacing-values {
+                .mt-#{$breakpoint}-#{$size} {
+                    margin-top: #{$size}px;
+                }
+
+                .mb-#{$breakpoint}-#{$size} {
+                    margin-bottom: #{$size}px;
+                }
+
+                .ml-#{$breakpoint}-#{$size} {
+                    margin-left: #{$size}px;
+                }
+
+                .mr-#{$breakpoint}-#{$size} {
+                    margin-right: #{$size}px;
+                }
+
+                .pt-#{$breakpoint}-#{$size} {
+                    padding-top: #{$size}px;
+                }
+
+                .pb-#{$breakpoint}-#{$size} {
+                    padding-bottom: #{$size}px;
+                }
+
+                .pl-#{$breakpoint}-#{$size} {
+                    padding-left: #{$size}px;
+                }
+
+                .pr-#{$breakpoint}-#{$size} {
+                    padding-right: #{$size}px;
+                }
+            }
+        }
+    }
+}
+
+// Special case for !important utilities (you can make these responsive too if needed)
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.pt-5 {
+    padding-top: 5px !important;
+}
+
+.pb-5 {
+    padding-bottom: 5px !important;
+}
+
+// Generate responsive !important versions if needed
+@each $breakpoint, $value in $breakpoints {
+    @if $breakpoint !=xs {
+        @media (min-width: $value) {
+            .mt-#{$breakpoint}-5 {
+                margin-top: 5px !important;
+            }
+
+            .mb-#{$breakpoint}-5 {
+                margin-bottom: 5px !important;
+            }
+
+            .pt-#{$breakpoint}-5 {
+                padding-top: 5px !important;
+            }
+
+            .pb-#{$breakpoint}-5 {
+                padding-bottom: 5px !important;
+            }
+        }
+    }
+}
