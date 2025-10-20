@@ -12,8 +12,9 @@ class EmailController extends Controller
 {
     public function submitForm(GeneralEmaiRequest $request)
     {
+        $email = $request->has('sub_company_email') ? $request->sub_company_email : 'info@abio.com';
         try {
-            Mail::to('info@abio.com')->send(new GeneralMail(
+            Mail::to($email)->send(new GeneralMail(
                 $request->name,
                 $request->email,
                 $request->text
