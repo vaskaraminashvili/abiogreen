@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SubCompanyController;
@@ -27,6 +28,8 @@ Route::view('about', 'about')->name('about');
 Route::view('what-we-do', 'what-we-do')->name('what-we-do');
 Route::view('sustainability', 'sustainability')->name('sustainability');
 Route::view('investors', 'investors')->name('investors');
+
+Route::post('/contact-us', [EmailController::class, 'submitForm'])->name('email.submit');
 
 
 Route::view('contact', 'contact')->name('contact');

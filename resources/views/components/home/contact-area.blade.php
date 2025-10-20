@@ -6,9 +6,12 @@
                   <div class="it-contact-left">
                       <div class="it-contact-section-title-box mb-25">
                           <span class="it-section-subtitle">CONTACT US</span>
-                          <h4 class="it-section-title text-black it-split-text it-split-in-right">Your message matters</h4>
+                          <h4 class="it-section-title text-black it-split-text it-split-in-right" id="CONTACTUS">Your
+                              message matters
+                          </h4>
                       </div>
-                      <p class="text-black">Abio is here to power your vision with sustainable energy solutions and expert support worldwide.</p>
+                      <p class="text-black">Abio is here to power your vision with sustainable energy solutions and
+                          expert support worldwide.</p>
                       <div class="row gx-0">
                           <div class="col-lg-6 col-md-6 col-sm-6">
                               <div class="it-contact-info-features mb-50">
@@ -95,12 +98,16 @@
                       <div class="it-contact-2-form-box">
                           <h4 class="it-contact-form-title text-white mb-15">Request A Quote</h4>
                           <p class="mb-55">Plan Your Future Savings in seconds</p>
-                          <form action="#">
+                          <form action="{{ route('email.submit') }}" method="POST">
+                              @csrf
                               <div class="it-contact-input-wrap">
                                   <div class="row gx-20">
                                       <div class="col-12 mb-15">
                                           <div class="it-contact-2-input-box p-relative">
-                                              <input type="text" placeholder="Your Name">
+                                              <input type="text" name="name" placeholder="Your Name">
+                                              @error('name')
+                                                  <span class="text-danger">{{ $message }}</span>
+                                              @enderror
                                               <button>
                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +130,10 @@
                                       </div>
                                       <div class="col-12 mb-15">
                                           <div class="it-contact-2-input-box p-relative">
-                                              <input type="email" placeholder="Email Address">
+                                              <input type="email" name="email" placeholder="Email Address">
+                                              @error('email')
+                                                  <span class="text-danger">{{ $message }}</span>
+                                              @enderror
                                               <button>
                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +146,10 @@
                                       </div>
                                       <div class="col-12 mb-20">
                                           <div class="it-contact-2-input-box">
-                                              <textarea placeholder="Message..."></textarea>
+                                              <textarea name="text" placeholder="Message..."></textarea>
+                                              @error('text')
+                                                  <span class="text-danger">{{ $message }}</span>
+                                              @enderror
                                           </div>
                                       </div>
                                       <div class="it-contact-btn">
@@ -157,3 +170,48 @@
       </div>
   </section>
   <!-- contact-area-end -->
+
+
+  @if (session('success'))
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script>
+          Toastify({
+              text: "Email was sent successfully",
+              className: "success",
+          }).showToast();
+      </script>
+  @endif
+
+  @if (session('error'))
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script>
+          Toastify({
+              text: "There was an error sending your email",
+              className: "danger",
+             
+          }).showToast();
+      </script>
+  @endif
+
+  @if ($errors->any())
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              // Scroll to form on validation errors
+              const formElement = document.getElementById('CONTACTUS');
+              if (formElement) {
+                  formElement.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center'
+                  });
+
+                  // Optional: Add focus to first error field
+                  const firstErrorInput = formElement.querySelector('input:invalid, textarea:invalid');
+                  if (firstErrorInput) {
+                      firstErrorInput.focus();
+                  }
+              }
+          });
+      </script>
+  @endif
