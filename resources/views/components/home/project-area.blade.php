@@ -35,7 +35,7 @@
                                                 <img src="{{ $project->getFirstMediaUrl('images') }}" alt="">
                                                 <div class="it-project-2-content">
                                                     <h4 class="it-project-2-title"><a class="border-line"
-                                                            href="project-details.html">
+                                                            href="{{ route('projects.show', $project->id) }}">
                                                             {{ $project->title }}
                                                         </a></h4>
                                                     <span>{{ $project->station_size }}</span>
