@@ -53,62 +53,7 @@
     </section>
     <!-- about-area-end -->
 
-    <!-- funfact-area-start -->
-    <div class="it-funfact-3-area" data-background="assets/img/shape/funfact-3-bg.jpg">
-        <div class="container">
-            <div class="row gx-20">
-                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".5s">
-                    <div class="it-funfact-3-item">
-                        <span>Years Of Experience</span>
-                        <h5 class="it-funfact-3-number">
-                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="600"></i>+
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                    <div class="it-funfact-3-item">
-                        <span>Homes Powered</span>
-                        <h5 class="it-funfact-3-number">
-                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="58456"></i>+
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".9s">
-                    <div class="it-funfact-3-item">
-                        <span>Solar Energy</span>
-                        <h5 class="it-funfact-3-number">
-                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="50"></i>MW+
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="1.1s">
-                    <div class="it-funfact-3-item">
-                        <span>Co2 Emissions Reduced</span>
-                        <h5 class="it-funfact-3-number">
-                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="1"></i>M+ Tons
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInDown" data-wow-duration=".9s" data-wow-delay=".9s">
-                    <div class="it-funfact-3-item">
-                        <span>Solar Energy</span>
-                        <h5 class="it-funfact-3-number">
-                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="50"></i>MW+
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="1.1s">
-                    <div class="it-funfact-3-item">
-                        <span>Co2 Emissions Reduced</span>
-                        <h5 class="it-funfact-3-number">
-                            <i class="purecounter" data-purecounter-duration="1" data-purecounter-end="1"></i>M+ Tons
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- funfact-area-end -->
+    <x-timeline />
 
     <!-- step-area-start -->
     <section class="it-step-area it-step-inner-style pt-130 pb-130">

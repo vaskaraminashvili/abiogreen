@@ -10,6 +10,7 @@ use App\Repositories\SlideRepository;
 use App\Repositories\StatsRepository;
 use App\Repositories\SubCompanyRepository;
 use App\Repositories\TeamMemberRepository;
+use App\Repositories\TimelineEventRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -27,6 +28,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(PartnerCompanyRepository::class, PartnerCompanyRepository::class);
         $this->app->bind(ProjectRepository::class, ProjectRepository::class);
         $this->app->bind(TeamMemberRepository::class, TeamMemberRepository::class);
+        $this->app->bind(TimelineEventRepository::class, TimelineEventRepository::class);
     }
 
     /**
