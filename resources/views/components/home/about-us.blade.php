@@ -2,7 +2,7 @@
         <section class="it-about-area pt-120 pb-130">
             <div class="container">
                 <div class="mb-80">
-                    <div class="row align-items-end">
+                    <div class="row">
                         <div class="col-xl-6 col-lg-12">
                             <div class="it-about-section-title-box text-center text-xl-start">
                                 <span class="it-section-subtitle">Who We Are</span>

@@ -5,6 +5,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="it-pro-details-wrap project-item">
+                        @if ($project->header_info != null)
+                        
                         <div class="it-pro-details-more-box">
                             @foreach ($project->header_info as $key => $value)
                                 <div class="it-pro-details-more-info">
@@ -16,6 +18,7 @@
                             @endforeach
 
                         </div>
+                        @endif
                         <div class="it-pro-details-thumb gray-bg3 mb-25">
                             <img class="w-100 border-radius-20 project-item__image--details"
                                 src="{{ $project->getFirstMediaUrl('images') }}" alt="">
@@ -62,6 +65,7 @@
 
                         <div class="postbox-details-wrapper postbox-style-2">
                             <div class="row">
+                                @if ($project->project_objectives != null)
                                 <div class="col-lg-6 col-md-6">
                                     <div class="it-sv-details-list mb-55">
                                         <h5 class="it-inner-title">Project Objectives</h5>
@@ -82,6 +86,9 @@
                                         </ul>
                                     </div>
                                 </div>
+                                @endif
+
+                                @if ($project->key_features != null)
                                 <div class="col-lg-6 col-md-6">
                                     <div class="it-sv-details-list mb-55">
                                         <h5 class="it-inner-title">Key Features</h5>
@@ -103,6 +110,8 @@
                                         </ul>
                                     </div>
                                 </div>
+                                @endif
+
                             </div>
 
                         </div>

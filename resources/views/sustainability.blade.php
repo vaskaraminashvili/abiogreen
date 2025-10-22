@@ -326,7 +326,7 @@
                                     <button class="accordion-buttons collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false"
                                         aria-controls="collapseTen">
-                                        Why should companies trust Abio as their energy partner?
+                                        Why should companies trust Abio as their partner?
                                     </button>
                                 </h4>
                                 <div id="collapseTen" class="accordion-collapse collapse"

@@ -15,7 +15,7 @@
                             <div class="it-blog-item mb-30">
                                 <div class="it-blog-thumb p-relative mb-30 border-radius-20 wow img-anim-top"
                                     data-wow-duration="1.5s" data-wow-delay="0.1s">
-                                    <a href="blog-details.html">
+                                    <a href="{{ route('news.show', $item->slug) }}">
                                         <img class="w-100" src="{{ $item->getFirstMediaUrl('news', 'thumb') }}" alt="">
                                         <img class="w-100" src="{{ $item->getFirstMediaUrl('news', 'thumb') }}" alt="">
                                     </a>
@@ -25,12 +25,12 @@
                                 </div>
                                 <div class="it-blog-content">
                                     <h4 class="it-blog-title mb-15">
-                                        <a class="border-line" href="blog-details.html">
+                                        <a class="border-line" href="{{ route('news.show', $item->slug) }}">
                                             {{ $item->title }}
                                         </a>
                                     </h4>
                                     <p>{{ strip_tags(Str::limit($item->description, 100)) }}</p>
-                                    <a class="it-blog-link" href="blog-details.html">
+                                    <a class="it-blog-link" href="{{ route('news.show', $item->slug) }}">
                                         <span>
                                             <span class="text-1">Explore More
                                                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
