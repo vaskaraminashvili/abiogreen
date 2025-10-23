@@ -16,7 +16,6 @@ class TimelineEventResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-clock';
 
-    protected static ?string $navigationGroup = 'Content Management';
 
     protected static ?int $navigationSort = 5;
 
