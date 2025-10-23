@@ -8,9 +8,9 @@
                    </div><!-- /.col-md-12 -->
 
                    <div class="container">
-                       <div class="row">
+                       <div class="row team-row gx-3">
                            @foreach ($teamMembers as $teamMember)
-                               <div class="col-md-4">
+                               <div class="col-md-2 team-col">
                                    <div class="team-member">
                                        <figure>
                                             <img src="{{ $teamMember->getFirstMediaUrl('team', 'portrait') }}"
@@ -23,7 +23,7 @@
                                        <h4>{{ $teamMember->full_name }}</h4>
                                        <p>{{ $teamMember->position }}</p>
                                    </div><!-- /.team-member-->
-                               </div><!-- /.col-md-4 -->
+                               </div><!-- /.col-md-2 -->
                            @endforeach
                        </div><!-- /.row -->
                    </div><!-- /.container -->

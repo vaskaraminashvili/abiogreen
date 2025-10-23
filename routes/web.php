@@ -12,7 +12,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/team', [TeamMemberController::class, 'index'])->name('team');
-Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('team.show');
+// Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('team.show');
 
 Route::get('news', [NewsController::class, 'index'])->name('news.index');
 Route::get('news/company/{company}', [NewsController::class, 'company'])->name('news.company');

@@ -78,17 +78,17 @@ class TeamMemberResource extends Resource
                     ])
                     ->columns(3),
 
-                Forms\Components\Section::make('Profile Data')
-                    ->schema([
-                        Forms\Components\KeyValue::make('profile_data')
-                            ->keyLabel('Attribute') // e.g., "Location"
-                            ->valueLabel('Value')   // e.g., "Germany"
-                            ->addable(false)        // Remove if you want to allow adding new fields
-                            ->deletable(false)      // Remove if you want to allow deleting fields
-                            ->editableKeys(false)   // Prevent editing the keys
-                            ->required()
-                            ->columnSpanFull(),
-                    ]),
+                // Forms\Components\Section::make('Profile Data')
+                //     ->schema([
+                //         Forms\Components\KeyValue::make('profile_data')
+                //             ->keyLabel('Attribute') // e.g., "Location"
+                //             ->valueLabel('Value')   // e.g., "Germany"
+                //             ->addable(false)        // Remove if you want to allow adding new fields
+                //             ->deletable(false)      // Remove if you want to allow deleting fields
+                //             ->editableKeys(false)   // Prevent editing the keys
+                //             ->required()
+                //             ->columnSpanFull(),
+                //     ]),
             ]);
     }
 

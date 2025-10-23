@@ -6,6 +6,34 @@
     margin: 40px;
 }
 
+.team-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+// .team-row:has(.team-col:nth-child(6n):hover) .team-col {
+//    transform: translateX(-16.666667%);
+// }
+
+.team-col {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.team-col:hover {
+    flex: 0 0 20%;
+    max-width: 20%;
+    z-index: 10;
+}
+
+// .team-col:nth-child(6n){
+//     &:hover {
+//         margin-left: -16.666667%;
+//     }
+// }
+
 .team-member {
     margin: 15px 0;
     padding: 0;
@@ -16,6 +44,7 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
+    border-radius: 5px
 }
 
 .team-member figure img {
