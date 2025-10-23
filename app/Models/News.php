@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\NewsStatus;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
@@ -14,7 +13,7 @@ use Spatie\Translatable\HasTranslations;
 
 class News extends Model implements HasMedia
 {
-    use SoftDeletes, InteractsWithMedia, HasTranslations;
+    use HasTranslations, InteractsWithMedia, SoftDeletes;
 
     protected $fillable = [
         'title',
@@ -22,6 +21,7 @@ class News extends Model implements HasMedia
         'description',
         'status',
         'publish_date',
+        'sub_company_id',
     ];
 
     protected $translatable = [
@@ -42,7 +42,7 @@ class News extends Model implements HasMedia
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp']);
     }
 
-    public function registerMediaConversions(Media $media = null): void
+    public function registerMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('thumb')
             ->width(300)
@@ -79,7 +79,7 @@ class News extends Model implements HasMedia
         }
 
         while ($query->exists()) {
-            $slug = $originalSlug . '-' . $counter;
+            $slug = $originalSlug.'-'.$counter;
             $query = static::where('slug', $slug);
             if ($excludeId) {
                 $query->where('id', '!=', $excludeId);
@@ -93,11 +93,16 @@ class News extends Model implements HasMedia
     public function scopePublished($query)
     {
         return $query->where('status', true)
-                    ->where('publish_date', '<=', now());
+            ->where('publish_date', '<=', now());
     }
 
     public function scopeActive($query)
     {
         return $query->where('status', NewsStatus::ACTIVE);
     }
-} 
+
+    public function subCompany()
+    {
+        return $this->belongsTo(SubCompany::class);
+    }
+}

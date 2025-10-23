@@ -57,4 +57,9 @@ class SubCompany extends Model implements HasMedia
     {
         return $query->where('status', true);
     }
+
+    public function news()
+    {
+        return $this->hasMany(News::class);
+    }
 }

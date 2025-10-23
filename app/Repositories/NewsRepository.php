@@ -10,17 +10,18 @@ class NewsRepository
 {
     public function all(): Collection
     {
-        return News::orderBy('created_at', 'desc')->get();
+        return News::with('subCompany')->orderBy('created_at', 'desc')->get();
     }
 
     public function published(): Collection
     {
-        return News::published()->orderBy('publish_date', 'desc')->get();
+        return News::with('subCompany')->published()->orderBy('publish_date', 'desc')->get();
     }
 
     public function active($limit = 3, $except = null): Collection
     {
-        return News::active()
+        return News::with('subCompany')
+            ->active()
             ->when($except, function ($query) use ($except) {
                 return $query->where('id', '!=', $except);
             })
@@ -31,17 +32,26 @@ class NewsRepository
 
     public function activePaginate($limit = 15): LengthAwarePaginator
     {
-        return News::active()->orderBy('publish_date', 'desc')->paginate($limit);
+        return News::with('subCompany')->active()->orderBy('publish_date', 'desc')->paginate($limit);
+    }
+
+    public function activeBySubCompany(int $subCompanyId, $limit = 15): LengthAwarePaginator
+    {
+        return News::with('subCompany')
+            ->active()
+            ->where('sub_company_id', $subCompanyId)
+            ->orderBy('publish_date', 'desc')
+            ->paginate($limit);
     }
 
     public function find(int $id): ?News
     {
-        return News::find($id);
+        return News::with('subCompany')->find($id);
     }
 
     public function findBySlug(string $slug): ?News
     {
-        return News::where('slug', $slug)->first();
+        return News::with('subCompany')->where('slug', $slug)->first();
     }
 
     public function create(array $data): News
