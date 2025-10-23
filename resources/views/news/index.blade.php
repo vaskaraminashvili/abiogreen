@@ -2,6 +2,15 @@
       <!-- blog-area-start -->
    <section class="it-blog-area it-blog-style-3 pt-130 pb-130">
       <div class="container">
+         @if(isset($subCompany))
+         <div class="row mb-40">
+            <div class="col-12">
+               <div class="it-section-title-box text-center">
+                  <h2 class="it-section-title">News from {{ $subCompany->title }}</h2>
+               </div>
+            </div>
+         </div>
+         @endif
          <div class="row gx-35">
             @foreach ($news as $newsItem)
             <div class="col-xl-4 col-lg-6 col-md-6 wow itfadeUp" data-wow-duration=".9s"

@@ -39,104 +39,25 @@
                 </div>
                 <div class="col-xl-4 col-lg-4">
                     <div class="sidebar-right">
+
                         <div class="sidebar-widget mb-60">
-                            <h4 class="sidebar-widget-title mb-25">Search here:</h4>
-                            <div class="sidebar-search-box p-relative">
-                                <div class="sidebar-search-input">
-                                    <input type="text" placeholder="Search keywords">
-                                </div>
-                                <div class="sidebar-search-button">
-                                    <button type="submit">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget mb-60">
-                            <h4 class="sidebar-widget-title mb-25">Category</h4>
-                            <a href="#">
-                                <div class="sidebar-widget-list mb-15">
-                                    Solar Circuit replacement
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="sidebar-widget-list active mb-15">
-                                    Solar Energy Distribution
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="sidebar-widget-list mb-15">
-                                    Household solar panel
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="sidebar-widget-list mb-15">
-                                    Solar Power System
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="sidebar-widget-list mb-15">
-                                    Solar Panel Installation
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="sidebar-widget-list">
-                                    Solar Maintenance
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                fill="currentcolor" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </a>
+                            <h4 class="sidebar-widget-title mb-25">News By Company</h4>
+                            @foreach ($companies as $company)
+                                <a href="{{ route('news.company', $company->id) }}">
+                                    <div class="sidebar-widget-list mb-15">
+                                        {{ $company->title }}
+                                        <span>
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
+                                                    fill="currentcolor" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            @endforeach
+                            
                         </div>
 
                     </div>

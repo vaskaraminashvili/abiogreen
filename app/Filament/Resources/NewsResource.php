@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\NewsResource\Pages;
-use App\Filament\Resources\NewsResource\RelationManagers;
 use App\Models\News;
 use App\NewsStatus;
 use Filament\Forms;
@@ -14,7 +13,6 @@ use Filament\Tables;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class NewsResource extends Resource
 {
@@ -48,6 +46,14 @@ class NewsResource extends Resource
                             ->required()
                             ->columnSpanFull(),
 
+                        Forms\Components\Select::make('sub_company_id')
+                            ->label('Sub Company')
+                            ->relationship('subCompany', 'title')
+                            ->searchable()
+                            ->preload()
+                            ->nullable()
+                            ->columnSpanFull(),
+
                         SpatieMediaLibraryFileUpload::make('images')
                             ->label('News Images')
                             ->collection('news')
@@ -61,7 +67,6 @@ class NewsResource extends Resource
                             ->multiple()
                             ->reorderable()
                             ->columnSpanFull(),
-
 
                     ])
                     ->columns(2),
@@ -86,8 +91,6 @@ class NewsResource extends Resource
                                     $set('slug', \Illuminate\Support\Str::slug($state));
                                 }
                             }),
-
-
 
                         Forms\Components\TextInput::make('title.ka')
                             ->label('Title (Georgian)')
@@ -137,13 +140,24 @@ class NewsResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->label('Title')
                     ->getStateUsing(
-                        fn(News $record): string =>
-                        $record->getTranslation('title', app()->getLocale()) ??
+                        fn (News $record): string => $record->getTranslation('title', app()->getLocale()) ??
                             $record->getTranslation('title', 'en') ??
                             'No title'
                     )
                     ->searchable()
                     ->wrap(),
+
+                Tables\Columns\TextColumn::make('subCompany.title')
+                    ->label('Sub Company')
+                    ->getStateUsing(
+                        fn (News $record): ?string => $record->subCompany
+                            ? ($record->subCompany->getTranslation('title', app()->getLocale()) ??
+                               $record->subCompany->getTranslation('title', 'en'))
+                            : null
+                    )
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
 
                 Tables\Columns\TextColumn::make('slug')
                     ->label('Slug')
@@ -170,8 +184,14 @@ class NewsResource extends Resource
                     ->label('Status')
                     ->options(NewsStatus::class),
 
+                Tables\Filters\SelectFilter::make('sub_company_id')
+                    ->label('Sub Company')
+                    ->relationship('subCompany', 'title')
+                    ->searchable()
+                    ->preload(),
+
                 Tables\Filters\Filter::make('published')
-                    ->query(fn(Builder $query): Builder => $query->published())
+                    ->query(fn (Builder $query): Builder => $query->published())
                     ->label('Published Only'),
                 Tables\Filters\TrashedFilter::make(),
             ])
