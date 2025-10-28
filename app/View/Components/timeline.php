@@ -7,14 +7,17 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class timeline extends Component
+class Timeline extends Component
 {
+    public $events;
+
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $timelineEventRepository = resolve(TimelineEventRepository::class);
+        $this->events = $timelineEventRepository->active();
     }
 
     /**
@@ -22,9 +25,6 @@ class timeline extends Component
      */
     public function render(): View|Closure|string
     {
-        $timelineEventRepository = resolve(TimelineEventRepository::class);
-        $timelineEvents = $timelineEventRepository->active();
-
-          return view('components.timeline', ['timelineEvents' => $timelineEvents]);
+        return view('components.timeline');
     }
 }
