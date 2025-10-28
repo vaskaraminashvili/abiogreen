@@ -12,4 +12,6 @@
 
       <x-home.blog-area />
 
+      <x-timeline />
+
 </x-layout>
