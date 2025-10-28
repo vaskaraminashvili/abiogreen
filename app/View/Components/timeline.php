@@ -25,6 +25,6 @@ class timeline extends Component
         $timelineEventRepository = resolve(TimelineEventRepository::class);
         $timelineEvents = $timelineEventRepository->active();
 
-        return view('components.timeline', compact('timelineEvents'));
+          return view('components.timeline', ['timelineEvents' => $timelineEvents]);
     }
 }
