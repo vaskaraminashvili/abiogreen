@@ -3,7 +3,7 @@
             <div class="events-wrapper">
                 <div class="events">
                     <ol>
-                        @foreach ($timelineEvents as $index => $event)
+                        @foreach ($events as $index => $event)
                             <li>
                                 <a href="#0" data-date="{{ $event->event_date->format('d/m/Y') }}"
                                     {{ $index === 0 ? 'class=selected' : '' }}>
@@ -25,7 +25,7 @@
 
         <div class="events-content">
             <ol>
-                @foreach ($timelineEvents as $index => $event)
+                @foreach ($events as $index => $event)
                     <li {{ $index === 0 ? 'class=selected' : '' }} data-date="{{ $event->event_date->format('d/m/Y') }}">
                         <h2>{{ $event->title }}</h2>
                         <em>{{ $event->event_date->format('F, Y') }}</em>

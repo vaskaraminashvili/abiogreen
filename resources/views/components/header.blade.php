@@ -21,22 +21,22 @@
                                             <a href="{{ route('home') }}">Home</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('team') }}">Team</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('news.index') }}">News</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('projects.index') }}">Projects</a>
-                                        </li>
-                                        <li>
                                             <a href="{{ route('about') }}">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('team') }}">Team</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('what-we-do') }}">What We Do</a>
                                         </li>
                                         <li>
+                                            <a href="{{ route('projects.index') }}">Projects</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('sustainability') }}">Sustainability</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('news.index') }}">News</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('investors') }}">Investors</a>
