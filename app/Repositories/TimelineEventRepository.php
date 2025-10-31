@@ -15,7 +15,6 @@ class TimelineEventRepository
     public function active(): Collection
     {
         return TimelineEvent::where('is_active', true)
-            ->orderBy('order')
             ->orderBy('event_date')
             ->get();
     }
