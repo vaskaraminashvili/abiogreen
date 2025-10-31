@@ -1,4 +1,3 @@
-<a href='#CONTACTUS'>test</a>
         <!-- about-area-start -->
         <section class="it-about-area pt-120 pb-130">
             <div class="container">
