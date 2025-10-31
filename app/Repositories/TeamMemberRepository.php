@@ -19,7 +19,7 @@ class TeamMemberRepository
     }
     public function activePaginate($limit = 15): LengthAwarePaginator
     {
-        return TeamMember::active()->orderBy('created_at', 'desc')->paginate($limit);
+        return TeamMember::active()->orderBy('id', 'asc')->paginate($limit);
     }
 
     public function find(int $id): ?TeamMember
