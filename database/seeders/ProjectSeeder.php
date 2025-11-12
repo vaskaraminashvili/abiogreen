@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Project;
+use App\Repositories\ProjectRepository;
 use Illuminate\Database\Seeder;
 
 class ProjectSeeder extends Seeder
@@ -63,8 +63,13 @@ class ProjectSeeder extends Seeder
             ],
         ];
 
-        foreach ($projects as $projectData) {
-            Project::create($projectData);
+        $projectRepository = app(ProjectRepository::class);
+
+        foreach ($projects as $index => $projectData) {
+            $projectRepository->create([
+                ...$projectData,
+                'sort' => $index + 1,
+            ]);
         }
     }
 }

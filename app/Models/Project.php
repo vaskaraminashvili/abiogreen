@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -19,6 +20,7 @@ class Project extends Model implements HasMedia
         'description',
         'station_size',
         'status',
+        'sort',
         'header_info',
         'key_features',
         'project_objectives',
@@ -33,6 +35,7 @@ class Project extends Model implements HasMedia
     {
         return [
             'status' => 'boolean',
+            'sort' => 'integer',
             'title' => 'array',
             'description' => 'array',
             'header_info' => 'array',
@@ -55,8 +58,18 @@ class Project extends Model implements HasMedia
             ->sharpen(10);
     }
 
-    public function scopeActive($query)
+    public function scopeActive(Builder $query): Builder
     {
         return $query->where('status', true);
+    }
+
+    protected function getSortOrderAttribute(): int
+    {
+        return (int) $this->sort;
+    }
+
+    protected function setSortOrderAttribute(int $value): void
+    {
+        $this->attributes['sort'] = $value;
     }
 }
