@@ -17,10 +17,10 @@
                 </div> <!-- .events -->
             </div> <!-- .events-wrapper -->
 
-            <ul class="cd-timeline-navigation">
+            {{-- <ul class="cd-timeline-navigation">
                 <li><a href="#0" class="prev inactive">Prev</a></li>
                 <li><a href="#0" class="next">Next</a></li>
-            </ul> <!-- .cd-timeline-navigation -->
+            </ul> <!-- .cd-timeline-navigation --> --}}
         </div> <!-- .timeline -->
 
         <div class="events-content">
@@ -65,6 +65,8 @@
                         setDatePosition(timelineComponents, eventsMinDistance);
                         //assign a width to the timeline
                         var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
+                        // console.log(timelineTotWidth);
+                        
                         //the timeline has been initialize - show it
                         timeline.addClass('loaded');
 
@@ -180,14 +182,13 @@
                 }
 
                 function setDatePosition(timelineComponents, min) {
+                    var totalWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
+                    var left_point = (totalWidth - timelineComponents['timelineDates'].length * 80 ) / 2;
                     for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
-                        var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents[
-                                'timelineDates'][i]),
-                            distanceNorm = Math.round(distance / timelineComponents['eventsMinLapse']) + 2;
-                        timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm * min + 'px');
+                        timelineComponents['timelineEvents'].eq(i).css('left', left_point + (i * min) + 'px');
                     }
                 }
-
+                
                 function setTimelineWidth(timelineComponents, width) {
                     var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][
                             timelineComponents['timelineDates'].length - 1
@@ -195,6 +196,7 @@
                         timeSpanNorm = timeSpan / timelineComponents['eventsMinLapse'],
                         timeSpanNorm = Math.round(timeSpanNorm) + 4,
                         totalWidth = timeSpanNorm * width;
+                        
                     timelineComponents['eventsWrapper'].css('width', totalWidth + 'px');
                     updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'],
                         totalWidth);
