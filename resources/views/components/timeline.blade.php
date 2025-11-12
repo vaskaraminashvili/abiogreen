@@ -41,7 +41,7 @@
             jQuery(document).ready(function($) {
                 console.log('OGG')
                 var timelines = $('.cd-horizontal-timeline'),
-                    eventsMinDistance = 70;
+                    eventsMinDistance = 85;
 
                 (timelines.length > 0) && initTimeline(timelines);
 
@@ -66,7 +66,7 @@
                         //assign a width to the timeline
                         var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
                         // console.log(timelineTotWidth);
-                        
+
                         //the timeline has been initialize - show it
                         timeline.addClass('loaded');
 
@@ -183,21 +183,20 @@
 
                 function setDatePosition(timelineComponents, min) {
                     var totalWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
-                    var left_point = (totalWidth - timelineComponents['timelineDates'].length * 80 ) / 2;
+                    var left_point = (totalWidth - timelineComponents['timelineDates'].length * 80) / 2;
                     for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
                         timelineComponents['timelineEvents'].eq(i).css('left', left_point + (i * min) + 'px');
                     }
                 }
-                
+
                 function setTimelineWidth(timelineComponents, width) {
                     var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][
                             timelineComponents['timelineDates'].length - 1
                         ]),
                         timeSpanNorm = timeSpan / timelineComponents['eventsMinLapse'],
                         timeSpanNorm = Math.round(timeSpanNorm) + 4,
-                        totalWidth = timeSpanNorm * width;
-                        
-                    timelineComponents['eventsWrapper'].css('width', totalWidth + 'px');
+                        totalWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
+
                     updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'],
                         totalWidth);
 
@@ -207,8 +206,7 @@
                 function updateVisibleContent(event, eventsContent) {
                     var eventDate = event.data('date'),
                         visibleContent = eventsContent.find('.selected'),
-                        selectedContent = eventsContent.find('[data-date="' + eventDate + '"]'),
-                        selectedContentHeight = selectedContent.height();
+                        selectedContent = eventsContent.find('[data-date="' + eventDate + '"]');
 
                     if (selectedContent.index() > visibleContent.index()) {
                         var classEnetering = 'selected enter-right',
@@ -217,6 +215,7 @@
                         var classEnetering = 'selected enter-left',
                             classLeaving = 'leave-right';
                     }
+                    var selectedContentHeight = visibleContent.height();
 
                     selectedContent.attr('class', classEnetering);
                     visibleContent.attr('class', classLeaving).one(
