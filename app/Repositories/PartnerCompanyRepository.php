@@ -7,24 +7,41 @@ use Illuminate\Database\Eloquent\Collection;
 
 class PartnerCompanyRepository
 {
+    public function __construct(
+        protected PartnerCompany $model
+    ) {}
+
     public function all(): Collection
     {
-        return PartnerCompany::orderBy('created_at', 'desc')->get();
+        return $this->model
+            ->orderBy('sort')
+            ->orderByDesc('created_at')
+            ->get();
     }
 
     public function active($limit = null): Collection
     {
-        return PartnerCompany::active()->orderBy('created_at', 'desc')->limit($limit)->get();
+        $query = $this->model
+            ->newQuery()
+            ->active()
+            ->orderBy('sort')
+            ->orderByDesc('created_at');
+
+        if ($limit !== null) {
+            $query->limit($limit);
+        }
+
+        return $query->get();
     }
 
     public function find(int $id): ?PartnerCompany
     {
-        return PartnerCompany::find($id);
+        return $this->model->find($id);
     }
 
     public function create(array $data): PartnerCompany
     {
-        return PartnerCompany::create($data);
+        return $this->model->create($data);
     }
 
     public function update(PartnerCompany $partnerCompany, array $data): bool
@@ -35,5 +52,19 @@ class PartnerCompanyRepository
     public function delete(PartnerCompany $partnerCompany): bool
     {
         return $partnerCompany->delete();
+    }
+
+    public function getNextSortOrder(): int
+    {
+        return ($this->model->max('sort') ?? 0) + 1;
+    }
+
+    public function reorder(array $sortedIds): void
+    {
+        foreach ($sortedIds as $index => $id) {
+            $this->model
+                ->whereKey($id)
+                ->update(['sort' => $index + 1]);
+        }
     }
 }

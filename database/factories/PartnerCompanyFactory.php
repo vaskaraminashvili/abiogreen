@@ -12,6 +12,8 @@ class PartnerCompanyFactory extends Factory
 {
     protected $model = PartnerCompany::class;
 
+    protected static int $sortOrder = 1;
+
     /**
      * Define the model's default state.
      *
@@ -25,6 +27,7 @@ class PartnerCompanyFactory extends Factory
                 'ka' => $this->faker->company(),
             ],
             'status' => $this->faker->boolean(80), // 80% chance of being active
+            'sort' => static::$sortOrder++,
         ];
     }
 

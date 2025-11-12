@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\PartnerCompany;
+use App\Repositories\PartnerCompanyRepository;
 use Illuminate\Database\Seeder;
 
 class PartnerCompanySeeder extends Seeder
@@ -43,8 +43,13 @@ class PartnerCompanySeeder extends Seeder
             ],
         ];
 
-        foreach ($partnerCompanies as $partnerData) {
-            PartnerCompany::create($partnerData);
+        $partnerCompanyRepository = app(PartnerCompanyRepository::class);
+
+        foreach ($partnerCompanies as $index => $partnerData) {
+            $partnerCompanyRepository->create([
+                ...$partnerData,
+                'sort' => $index + 1,
+            ]);
         }
     }
 }

@@ -13,12 +13,24 @@ class StatsRepository
 
     public function all(): Collection
     {
-        return $this->model->orderBy('sort')->get();
+        return $this->model
+            ->orderBy('sort')
+            ->orderByDesc('created_at')
+            ->get();
     }
 
     public function active($limit = null): Collection
     {
-        return $this->model->where('status', true)->orderBy('sort')->limit($limit)->get();
+        $query = $this->model
+            ->newQuery()
+            ->where('status', true)
+            ->orderBy('sort');
+
+        if ($limit !== null) {
+            $query->limit($limit);
+        }
+
+        return $query->get();
     }
 
     public function find(int $id): ?Stats
@@ -43,13 +55,15 @@ class StatsRepository
 
     public function getNextSortOrder(): int
     {
-        return $this->model->max('sort') + 1;
+        return ($this->model->max('sort') ?? 0) + 1;
     }
 
     public function reorder(array $sortedIds): void
     {
         foreach ($sortedIds as $index => $id) {
-            $this->model->where('id', $id)->update(['sort' => $index + 1]);
+            $this->model
+                ->whereKey($id)
+                ->update(['sort' => $index + 1]);
         }
     }
 }

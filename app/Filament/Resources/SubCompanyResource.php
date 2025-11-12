@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SubCompanyResource\Pages;
 use App\Models\SubCompany;
+use App\Repositories\SubCompanyRepository;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
@@ -38,6 +39,13 @@ class SubCompanyResource extends Resource
                             ->label('Status')
                             ->default(true)
                             ->columnSpanFull(),
+
+                        Forms\Components\TextInput::make('sort')
+                            ->label('Sort Order')
+                            ->numeric()
+                            ->minValue(1)
+                            ->default(fn (): int => app(SubCompanyRepository::class)->getNextSortOrder())
+                            ->required(),
 
                         SpatieMediaLibraryFileUpload::make('images')
                             ->label('Sub Company Images')
@@ -117,6 +125,12 @@ class SubCompanyResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('sort')
+                    ->label('#')
+                    ->sortable()
+                    ->alignCenter()
+                    ->size('sm'),
+
                 SpatieMediaLibraryImageColumn::make('images')
                     ->label('Image')
                     ->collection('images')
@@ -187,7 +201,8 @@ class SubCompanyResource extends Resource
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('id', 'desc');
+            ->reorderable('sort')
+            ->defaultSort('sort');
     }
 
     public static function getRelations(): array

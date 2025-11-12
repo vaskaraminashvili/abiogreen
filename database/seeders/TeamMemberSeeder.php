@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\TeamMember;
+use App\Repositories\TeamMemberRepository;
 use Illuminate\Database\Seeder;
 
 class TeamMemberSeeder extends Seeder
@@ -93,8 +93,13 @@ class TeamMemberSeeder extends Seeder
             ],
         ];
 
-        foreach ($teamMembers as $memberData) {
-            TeamMember::create($memberData);
+        $teamMemberRepository = app(TeamMemberRepository::class);
+
+        foreach ($teamMembers as $index => $memberData) {
+            $teamMemberRepository->create([
+                ...$memberData,
+                'sort' => $index + 1,
+            ]);
         }
     }
 }

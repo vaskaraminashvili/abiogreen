@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TeamMemberResource\Pages;
 use App\Models\TeamMember;
+use App\Repositories\TeamMemberRepository;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
@@ -38,6 +39,13 @@ class TeamMemberResource extends Resource
                             ->label('Status')
                             ->default(true)
                             ->columnSpanFull(),
+
+                        Forms\Components\TextInput::make('sort')
+                            ->label('Sort Order')
+                            ->numeric()
+                            ->minValue(1)
+                            ->default(fn (): int => app(TeamMemberRepository::class)->getNextSortOrder())
+                            ->required(),
 
                         SpatieMediaLibraryFileUpload::make('image')
                             ->label('Team Member Image')
@@ -96,6 +104,12 @@ class TeamMemberResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('sort')
+                    ->label('#')
+                    ->sortable()
+                    ->alignCenter()
+                    ->size('sm'),
+
                 SpatieMediaLibraryImageColumn::make('image')
                     ->label('Image')
                     ->collection('team')
@@ -175,7 +189,8 @@ class TeamMemberResource extends Resource
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('id', 'desc');
+            ->reorderable('sort')
+            ->defaultSort('sort');
     }
 
     public static function getRelations(): array
