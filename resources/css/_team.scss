@@ -21,12 +21,35 @@
     position: relative;
     z-index: 1;
 }
-
 .team-col:hover {
     flex: 0 0 20%;
     max-width: 20%;
     z-index: 10;
 }
+
+@media (max-width: 768px) {
+    .team {
+        margin: 20px;
+    }
+    .team-row {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .team-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .team-col:hover {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .team-member-img {
+        object-fit: cover;
+        height: 360px;
+    }
+}
+
+
 
 // .team-col:nth-child(6n){
 //     &:hover {
