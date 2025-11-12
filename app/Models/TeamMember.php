@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -21,6 +22,7 @@ class TeamMember extends Model implements HasMedia
         'description',
         'profile_data',
         'status',
+        'sort',
     ];
 
     protected $translatable = [
@@ -34,6 +36,7 @@ class TeamMember extends Model implements HasMedia
     {
         return [
             'status' => 'boolean',
+            'sort' => 'integer',
             'name' => 'array',
             'surname' => 'array',
             'position' => 'array',
@@ -62,13 +65,23 @@ class TeamMember extends Model implements HasMedia
             ->sharpen(10);
     }
 
-    public function scopeActive($query)
+    public function scopeActive(Builder $query): Builder
     {
         return $query->where('status', true);
     }
 
     public function getFullNameAttribute()
     {
-        return $this->name . ' ' . $this->surname;
+        return $this->name.' '.$this->surname;
+    }
+
+    protected function getSortOrderAttribute(): int
+    {
+        return (int) $this->sort;
+    }
+
+    protected function setSortOrderAttribute(int $value): void
+    {
+        $this->attributes['sort'] = $value;
     }
 }

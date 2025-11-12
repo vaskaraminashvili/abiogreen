@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class SubCompanyFactory extends Factory
 {
+    protected static int $sortOrder = 1;
+
     /**
      * Define the model's default state.
      *
@@ -34,6 +36,7 @@ class SubCompanyFactory extends Factory
                 'ka' => 'დეტალური აღწერა: '.$description,
             ],
             'status' => fake()->boolean(80), // 80% chance of being active
+            'sort' => static::$sortOrder++,
         ];
     }
 

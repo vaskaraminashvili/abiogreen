@@ -12,6 +12,8 @@ class TeamMemberFactory extends Factory
 {
     protected $model = TeamMember::class;
 
+    protected static int $sortOrder = 1;
+
     /**
      * Define the model's default state.
      *
@@ -44,6 +46,7 @@ class TeamMemberFactory extends Factory
                 'Phone' => $this->faker->phoneNumber(),
             ],
             'status' => $this->faker->boolean(85), // 85% chance of being active
+            'sort' => static::$sortOrder++,
         ];
     }
 

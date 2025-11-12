@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\SubCompany;
+use App\Repositories\SubCompanyRepository;
 use Illuminate\Database\Seeder;
 
 class SubCompanySeeder extends Seeder
@@ -60,8 +60,13 @@ class SubCompanySeeder extends Seeder
             ],
         ];
 
-        foreach ($subCompanies as $subCompanyData) {
-            SubCompany::create($subCompanyData);
+        $subCompanyRepository = app(SubCompanyRepository::class);
+
+        foreach ($subCompanies as $index => $subCompanyData) {
+            $subCompanyRepository->create([
+                ...$subCompanyData,
+                'sort' => $index + 1,
+            ]);
         }
     }
 }

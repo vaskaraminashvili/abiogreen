@@ -4,13 +4,12 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\StatsResource\Pages;
 use App\Models\Stats;
+use App\Repositories\StatsRepository;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use IbrahimBougaoua\FilamentSortOrder\Actions\DownStepAction;
-use IbrahimBougaoua\FilamentSortOrder\Actions\UpStepAction;
 
 class StatsResource extends Resource
 {
@@ -76,9 +75,9 @@ class StatsResource extends Resource
                         Forms\Components\TextInput::make('sort')
                             ->label('Sort Order')
                             ->numeric()
-                            ->default(fn () => Stats::max('sort') + 1)
+                            ->default(fn (): int => app(StatsRepository::class)->getNextSortOrder())
                             ->required()
-                            ->minValue(0),
+                            ->minValue(1),
                     ])
                     ->columns(1),
             ]);

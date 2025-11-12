@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Models\Project;
+use App\Repositories\ProjectRepository;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Tabs;
@@ -14,8 +15,6 @@ use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Infolists\Components\RepeatableEntry;
-use Filament\Infolists\Components\TextEntry;
 
 class ProjectResource extends Resource
 {
@@ -42,12 +41,18 @@ class ProjectResource extends Resource
                             ->default(true)
                             ->columnSpanFull(),
 
+                        Forms\Components\TextInput::make('sort')
+                            ->label('Sort Order')
+                            ->numeric()
+                            ->minValue(1)
+                            ->default(fn (): int => app(ProjectRepository::class)->getNextSortOrder())
+                            ->required(),
+
                         Forms\Components\TextInput::make('station_size')
                             ->label('Station Size')
                             ->maxLength(255)
                             ->columnSpanFull(),
 
-                        
                     ])
                     ->columns(2),
 
@@ -89,53 +94,53 @@ class ProjectResource extends Resource
                         //     ]),
                     ])
                     ->columns(1),
-                    Tabs::make('tabs')
-                        ->tabs([
-                            Tabs\Tab::make('Header Info')
-                                ->schema([
+                Tabs::make('tabs')
+                    ->tabs([
+                        Tabs\Tab::make('Header Info')
+                            ->schema([
                                 Forms\Components\KeyValue::make('header_info')
                                     ->keyLabel('Attribute')
                                     ->valueLabel('Value')
                                     ->required()
                                     ->columnSpanFull(),
-                                ]),
-                            Tabs\Tab::make('Project Objectives')
-                                ->schema([
-                                    Forms\Components\Repeater::make('project_objectives')
-                                        ->schema([
-                                            Forms\Components\TextInput::make('name'),
-                                        ])
-                                        ->defaultItems(4)
-                                        ->grid(2),
-                                ]),
-                            Tabs\Tab::make('Key Features')
-                                ->schema([
-                                     Forms\Components\Repeater::make('key_features')
-                                        ->schema([
-                                            Forms\Components\TextInput::make('name'),
-                                        ])
-                                        ->defaultItems(4)
-                                        ->grid(2),
-                                ]),
-
-                        ])
-                        ->columnSpanFull(),
-                        Forms\Components\Section::make('Project Images')
-                            ->schema([
-                                SpatieMediaLibraryFileUpload::make('images')
-                                        ->label('Project Images')
-                                        ->collection('images')
-                                        ->image()
-                                        ->imageEditor()
-                                        ->imageEditorAspectRatios([
-                                            '16:9',
-                                            '4:3',
-                                            '1:1',
-                                        ])
-                                        ->multiple()
-                                        ->reorderable()
-                                        ->columnSpanFull(),
                             ]),
+                        Tabs\Tab::make('Project Objectives')
+                            ->schema([
+                                Forms\Components\Repeater::make('project_objectives')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name'),
+                                    ])
+                                    ->defaultItems(4)
+                                    ->grid(2),
+                            ]),
+                        Tabs\Tab::make('Key Features')
+                            ->schema([
+                                Forms\Components\Repeater::make('key_features')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name'),
+                                    ])
+                                    ->defaultItems(4)
+                                    ->grid(2),
+                            ]),
+
+                    ])
+                    ->columnSpanFull(),
+                Forms\Components\Section::make('Project Images')
+                    ->schema([
+                        SpatieMediaLibraryFileUpload::make('images')
+                            ->label('Project Images')
+                            ->collection('images')
+                            ->image()
+                            ->imageEditor()
+                            ->imageEditorAspectRatios([
+                                '16:9',
+                                '4:3',
+                                '1:1',
+                            ])
+                            ->multiple()
+                            ->reorderable()
+                            ->columnSpanFull(),
+                    ]),
             ]);
     }
 
@@ -143,6 +148,12 @@ class ProjectResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('sort')
+                    ->label('#')
+                    ->sortable()
+                    ->alignCenter()
+                    ->size('sm'),
+
                 SpatieMediaLibraryImageColumn::make('images')
                     ->label('Images')
                     ->collection('images')
@@ -207,7 +218,8 @@ class ProjectResource extends Resource
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('id', 'desc');
+            ->reorderable('sort')
+            ->defaultSort('sort');
     }
 
     public static function getRelations(): array

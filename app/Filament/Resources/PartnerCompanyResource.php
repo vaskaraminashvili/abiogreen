@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PartnerCompanyResource\Pages;
 use App\Models\PartnerCompany;
+use App\Repositories\PartnerCompanyRepository;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
@@ -39,6 +40,13 @@ class PartnerCompanyResource extends Resource
                             ->default(true)
                             ->columnSpanFull(),
 
+                        Forms\Components\TextInput::make('sort')
+                            ->label('Sort Order')
+                            ->numeric()
+                            ->minValue(1)
+                            ->default(fn (): int => app(PartnerCompanyRepository::class)->getNextSortOrder())
+                            ->required(),
+
                         SpatieMediaLibraryFileUpload::make('image')
                             ->label('Partner Company Image')
                             ->collection('partners')
@@ -70,6 +78,12 @@ class PartnerCompanyResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('sort')
+                    ->label('#')
+                    ->sortable()
+                    ->alignCenter()
+                    ->size('sm'),
+
                 SpatieMediaLibraryImageColumn::make('image')
                     ->label('Image')
                     ->collection('partners')
@@ -129,7 +143,8 @@ class PartnerCompanyResource extends Resource
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('id', 'desc');
+            ->reorderable('sort')
+            ->defaultSort('sort');
     }
 
     public static function getRelations(): array

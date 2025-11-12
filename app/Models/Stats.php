@@ -25,15 +25,14 @@ class Stats extends Model
 
     public $translatable = ['title', 'text'];
 
-
     // For the filament-sort-order package
-    protected function getSortOrderAttribute()
+    protected function getSortOrderAttribute(): int
     {
-        return $this->sort;
+        return (int) $this->sort;
     }
 
-    protected function setSortOrderAttribute($value)
+    protected function setSortOrderAttribute(int $value): void
     {
-        $this->sort = $value;
+        $this->attributes['sort'] = $value;
     }
 }

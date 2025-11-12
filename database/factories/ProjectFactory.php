@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ProjectFactory extends Factory
 {
+    protected static int $sortOrder = 1;
+
     /**
      * Define the model's default state.
      *
@@ -42,6 +44,7 @@ class ProjectFactory extends Factory
             ],
             'station_size' => $stationSize,
             'status' => fake()->boolean(85), // 85% chance of being active
+            'sort' => static::$sortOrder++,
         ];
     }
 

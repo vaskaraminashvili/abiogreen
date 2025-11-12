@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -17,6 +18,7 @@ class PartnerCompany extends Model implements HasMedia
     protected $fillable = [
         'title',
         'status',
+        'sort',
     ];
 
     protected $translatable = [
@@ -27,6 +29,7 @@ class PartnerCompany extends Model implements HasMedia
     {
         return [
             'status' => 'boolean',
+            'sort' => 'integer',
             'title' => 'array',
         ];
     }
@@ -46,8 +49,18 @@ class PartnerCompany extends Model implements HasMedia
             ->sharpen(10);
     }
 
-    public function scopeActive($query)
+    public function scopeActive(Builder $query): Builder
     {
         return $query->where('status', true);
+    }
+
+    protected function getSortOrderAttribute(): int
+    {
+        return (int) $this->sort;
+    }
+
+    protected function setSortOrderAttribute(int $value): void
+    {
+        $this->attributes['sort'] = $value;
     }
 }
