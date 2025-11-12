@@ -1,4 +1,4 @@
-    <section class="cd-horizontal-timeline pt-50 pb-50 gray-bg3">
+    <section class="cd-horizontal-timeline pt-50 pb-10 mb-10 mb-lg-50 pb-lg-50 gray-bg3">
         <div class="timeline">
             <div class="events-wrapper">
                 <div class="events">

@@ -1,6 +1,6 @@
 <x-layout>
     <!-- about-area-start -->
-    <section class="it-about-4-area pt-120 pb-130">
+    <section class="it-about-4-area pt-50 pb-10 pt-lg-120 pb-lg-130">
         <div class="container">
             <div class="it-about-4-top-wrap mb-80">
                 <div class="row align-items-end">
@@ -55,7 +55,7 @@
 
     <x-timeline />
     <!-- step-area-start -->
-    <section class="it-step-area it-step-inner-style pt-130 pb-130">
+    <section class="it-step-area it-step-inner-style pt-50 pb-50 pt-lg-120 pb-lg-130">
         <div class="container">
             <div class="mb-80">
                 <div class="row align-items-center">

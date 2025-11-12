@@ -27,35 +27,35 @@ $directions: (
 // Generate base utility classes (mobile-first)
 @each $size in $spacing-values {
     .mt-#{$size} {
-        margin-top: #{$size}px;
+        margin-top: #{$size}px !important;
     }
 
     .mb-#{$size} {
-        margin-bottom: #{$size}px;
+        margin-bottom: #{$size}px !important;
     }
 
     .ml-#{$size} {
-        margin-left: #{$size}px;
+        margin-left: #{$size}px !important;
     }
 
     .mr-#{$size} {
-        margin-right: #{$size}px;
+        margin-right: #{$size}px !important;
     }
 
     .pt-#{$size} {
-        padding-top: #{$size}px;
+        padding-top: #{$size}px !important;
     }
 
     .pb-#{$size} {
-        padding-bottom: #{$size}px;
+        padding-bottom: #{$size}px !important;
     }
 
     .pl-#{$size} {
-        padding-left: #{$size}px;
+        padding-left: #{$size}px !important;
     }
 
     .pr-#{$size} {
-        padding-right: #{$size}px;
+        padding-right: #{$size}px !important;
     }
 }
 
@@ -65,35 +65,35 @@ $directions: (
         @media (min-width: $value) {
             @each $size in $spacing-values {
                 .mt-#{$breakpoint}-#{$size} {
-                    margin-top: #{$size}px;
+                    margin-top: #{$size}px !important;
                 }
 
                 .mb-#{$breakpoint}-#{$size} {
-                    margin-bottom: #{$size}px;
+                    margin-bottom: #{$size}px !important;
                 }
 
                 .ml-#{$breakpoint}-#{$size} {
-                    margin-left: #{$size}px;
+                    margin-left: #{$size}px !important;
                 }
 
                 .mr-#{$breakpoint}-#{$size} {
-                    margin-right: #{$size}px;
+                    margin-right: #{$size}px !important;
                 }
 
                 .pt-#{$breakpoint}-#{$size} {
-                    padding-top: #{$size}px;
+                    padding-top: #{$size}px !important;
                 }
 
                 .pb-#{$breakpoint}-#{$size} {
-                    padding-bottom: #{$size}px;
+                    padding-bottom: #{$size}px !important;
                 }
 
                 .pl-#{$breakpoint}-#{$size} {
-                    padding-left: #{$size}px;
+                    padding-left: #{$size}px !important;
                 }
 
                 .pr-#{$breakpoint}-#{$size} {
-                    padding-right: #{$size}px;
+                    padding-right: #{$size}px !important;
                 }
             }
         }

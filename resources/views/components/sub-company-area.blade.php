@@ -1,11 +1,11 @@
         <!-- service-area-start -->
-        <section class="it-service-area it-service-style-2 z-index-1 gray-bg3 pt-130 pb-130">
+        <section class="it-service-area it-service-style-2 z-index-1 gray-bg3 pt-50 pb-10 pt-lg-120 pb-lg-130">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="it-service-section-title-box text-center mb-70">
+                        <div class="it-service-section-title-box text-center mb-5 mb-lg-70">
                             <span class="it-section-subtitle">OUR COMPANIES</span>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -20,7 +20,8 @@
                                             <div class="col-xl-12 col-lg-12">
                                                 <a href="{{ route('holdings.show', $subCompany->id) }}">
                                                     <img class="w-100 sub-company__image mb-3"
-                                                        src="{{ $subCompany->getFirstMediaUrl('images') }}" alt="">
+                                                        src="{{ $subCompany->getFirstMediaUrl('images') }}"
+                                                        alt="">
                                                 </a>
                                                 <div class="sub-company__title">
                                                     <h5 class="it-service-title mb-2"><a class="border-line"
@@ -31,7 +32,8 @@
                                                     <p>
                                                         {{ $subCompany->short_desc }}
                                                     </p>
-                                                    <a href="{{ route('holdings.show', $subCompany->id) }}" class="it-btn-theme black-bg">
+                                                    <a href="{{ route('holdings.show', $subCompany->id) }}"
+                                                        class="it-btn-theme black-bg">
                                                         <span>
                                                             <span class="text-1">More Details</span>
                                                             <span class="text-2">More Details</span>
