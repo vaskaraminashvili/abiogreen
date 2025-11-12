@@ -50,11 +50,15 @@
 .cd-horizontal-timeline .events-wrapper::after {
     right: 0;
 }
-
+ol{
+    list-style: none;
+}
 .cd-horizontal-timeline .events ol {
+    list-style: none;
     list-style-type: none;
 }
 .cd-horizontal-timeline .events {
+    width: 100%;
     /* this is the grey line/timeline */
     position: absolute;
     z-index: 1;
