@@ -1,9 +1,9 @@
 <x-layout>
     <!-- postbox area start  -->
-    <div class="postbox-area pt-130 pb-130">
+    <div class="postbox-area pt-40 pb-10 pt-lg-70 pb-lg-80">
         <div class="container">
             <div class="row gx-35">
-                <div class="col-xl-8 col-lg-8">
+                <div class="col-xl-8 mx-auto col-lg-8 offset-lg-2">
                     <div class="postbox-details-wrapper">
                         <article>
                             <div class="postbox-main-thumb border-radius-20 mb-40">
@@ -27,7 +27,7 @@
 
                                     </div>
                                 </div>
-                                <h4 class="it-section-title fz-45 pb-20">
+                                <h4 class="it-section-title pb-20">
                                     {{ $news->title }}
                                 </h4>
                             </div>
@@ -37,46 +37,27 @@
                         </article>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="sidebar-right">
-
-                        <div class="sidebar-widget mb-60">
-                            <h4 class="sidebar-widget-title mb-25">News By Company</h4>
-                            @foreach ($companies as $company)
-                                <a href="{{ route('news.company', $company->id) }}">
-                                    <div class="sidebar-widget-list mb-15">
-                                        {{ $company->title }}
-                                        <span>
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59097 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"
-                                                    fill="currentcolor" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </a>
-                            @endforeach
-                            
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="swiper news-slider p-relative">
-                        <div class="swiper-wrapper">
-                            @foreach ($news->getMedia('news') as $media)
-                                <div class="swiper-slide news-slider-item__image postbox-banner border-radius-20 mb-30">
-                                    <a href="{{ $media->getUrl() }}" data-fancybox="gallery">
-                                        <img class="w-100" src="{{ $media->getUrl() }}" alt="">
-                                    </a>
-                                </div>
-                            @endforeach
+                @if ($news->getMedia('news')->count() > 1)
+                    <div class="col-xl-8 mx-auto">
+                        <div class="swiper news-slider p-relative">
+                            <div class="swiper-wrapper">
+                                @foreach ($news->getMedia('news') as $media)
+                                    @if ($loop->index > 0)
+                                    <div
+                                        class="swiper-slide news-slider-item__image postbox-banner border-radius-20 mb-30">
+                                            <a href="{{ $media->getUrl() }}" data-fancybox="gallery">
+                                                <img class="w-100" src="{{ $media->getUrl() }}" alt="">
+                                            </a>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
+
                 <div class="col-12">
-                    <div class="sidebar-widget mb-60">
+                    <div class="sidebar-widget">
                         <h4 class="sidebar-widget-title mb-25">Recent post</h4>
                         <div class="sidebar-widget-content">
                             <div class="sidebar-widget-post sidebar-widget-post--custom">
@@ -86,7 +67,8 @@
                                             <div class="rc-post">
                                                 <div class="rc-post-thumb mb-30">
                                                     <a href="{{ route('news.show', $recentNewsItem->slug) }}">
-                                                        <img src="{{ $recentNewsItem->getFirstMediaUrl('news', 'thumb') }}" alt="">
+                                                        <img src="{{ $recentNewsItem->getFirstMediaUrl('news', 'thumb') }}"
+                                                            alt="">
                                                     </a>
                                                 </div>
                                                 <div class="rc-post-content">
@@ -97,7 +79,8 @@
                                                         </span>
                                                     </div>
                                                     <h5 class="rc-post-title">
-                                                        <a class="border-line" href="{{ route('news.show', $recentNewsItem->slug) }}">{{ $recentNewsItem->title }}</a>
+                                                        <a class="border-line"
+                                                            href="{{ route('news.show', $recentNewsItem->slug) }}">{{ $recentNewsItem->title }}</a>
                                                     </h5>
                                                 </div>
                                             </div>

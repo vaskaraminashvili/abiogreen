@@ -15,7 +15,7 @@
                         <div class="partner-company-wrapper swiper partner-company-slider p-relative">
                             <div class="swiper-wrapper">
                                 @foreach ($partnerCompanies as $partnerCompany)
-                                    <div class="swiper-slide it-brand-item">
+                                    <div class="swiper-slide it-brand-item bg-white">
                                         <img src="{{ $partnerCompany->getFirstMediaUrl('partners') }}" alt="">
                                     </div>
                                 @endforeach
