@@ -14,8 +14,18 @@
 .logo_image {
     max-height: 50px;
 }
+@media (max-width: 768px) {
+    .itoffcanvas__logo{
+        margin-bottom: 20px;
+        .logo_image {
+            max-height: fit-content;
+        }
+    }
+}
 
-
+.it-section-title{
+    font-size: 35px;
+}
 
 .it-funfact-3-item span::after {
     width: 100%;

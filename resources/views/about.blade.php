@@ -1,7 +1,7 @@
    <x-layout>
 
        <!-- about-area-start -->
-       <section class="it-about-4-area pt-120 pb-130">
+       <section class="it-about-4-area pt-40 pb-10 pt-lg-70 pb-lg-80">
            <div class="container">
                <div class="it-about-4-top-wrap mb-80">
                    <div class="row align-items-end">
@@ -17,7 +17,7 @@
                <div class="row align-items-center">
                    <div class="col-xl-6 col-lg-6">
                        <div class="it-about-thumb border-radius-30">
-                           <img src="assets/img/about/thumb-5-3.jpg" alt="">
+                           <img src="{{ asset('images/static_images/About, Optimized, 678x500.png') }}" alt="">
                        </div>
                    </div>
                    <div class="col-xl-6 col-lg-6 wow itfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">

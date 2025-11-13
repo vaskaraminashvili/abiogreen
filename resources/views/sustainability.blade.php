@@ -6,7 +6,7 @@
                 <div class="col-12">
                     <div class="it-sv-details-right">
                         <div class="it-sv-details-thumb border-radius-20 mb-25">
-                            <img src="assets/img/service/details-4.jpg" alt="">
+                            <img src="{{ asset('images/static_images/Sustainebility, 1328x608.jpg') }}" alt="">
                         </div>
                         <h4 class="it-inner-title">Building a Cleaner Future, Responsibly</h4>
                         <div class="postbox-dsc mb-50">
@@ -31,7 +31,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-5 col-lg-6">
                                 <div class="it-sv-details-thumb-sm border-radius-20">
-                                    <img src="assets/img/service/details-5.jpg" alt="">
+                                    <img src="{{ asset('images/static_images/Sustainebility, 642x463.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-6">
