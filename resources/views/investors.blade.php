@@ -6,7 +6,7 @@
                 <div class="col-xl-12 col-lg-8 order-0 order-lg-1">
                     <div class="it-sv-details-right">
                         <div class="it-sv-details-thumb border-radius-20 mb-25">
-                            <img src="assets/img/service/details-4.jpg" alt="">
+                            <img src="{{ asset('images/static_images/Investors, 1328x608.png') }}" alt="">
                         </div>
                         <h4 class="it-inner-title"><a href="#">Investing in the Future of Clean Energy</a></h4>
                         <div class="postbox-dsc mb-45">
@@ -22,7 +22,7 @@
                         <div class="row align-items-center">
                             <div class="col-xxl-5 col-xl-6 col-lg-12">
                                 <div class="it-sv-details-thumb-sm border-radius-20">
-                                    <img class="w-100" src="assets/img/service/details-5.jpg" alt="">
+                                    <img class="w-100" src="{{ asset('images/static_images/Investors 2, 608.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-xxl-7 col-xl-6 col-lg-12">
