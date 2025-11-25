@@ -2,7 +2,7 @@
     <!-- about-area-start -->
     <section class="it-about-4-area pt-40 pb-10 pt-lg-70 pb-lg-80">
         <div class="container">
-            <div class="it-about-4-top-wrap mb-80">
+            <div class="it-about-4-top-wrap mb-xl-80 mb-20">
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-lg-7">
                         <div class="it-about-section-title-box">
@@ -14,16 +14,16 @@
                     <div class="col-xl-6 col-lg-5">
                         <div class="it-about-4-thumb-wrap d-flex justify-content-end">
                             <div class="row gx-20">
-                                <div class="col-md-6 col-sm-6">
+                                <div class="col-md-6 col-sm-6 col-6">
                                     <div class="it-about-4-thumb wow img-anim-left h-100" data-wow-duration="1.5s"
                                         data-wow-delay="0.1s">
-                                        <img class="h-100" src="{{ asset('images/static_images/What we do 1, 678x500.jpg') }}" alt="">
+                                        <img class="h-100" src="{{ asset('images/static_images/What we do, 274x219 - ზედა.png') }}" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="it-about-4-thumb wow img-anim-right" data-wow-duration="1.5s"
+                                <div class="col-md-6 col-sm-6 col-6">
+                                    <div class="it-about-4-thumb wow img-anim-right h-100" data-wow-duration="1.5s"
                                         data-wow-delay="0.1s">
-                                        <img src="{{ asset('images/static_images/What we do 2, 678X526.jpg') }}" alt="">
+                                        <img class="h-100" src="{{ asset('images/static_images/What we do, 273x219 - ზედა.avif') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="it-about-thumb border-radius-30">
-                        <img class="w-100" src="{{ asset('images/static_images/What we do, 273x219 - ზედა.avif') }}" alt="">
+                        <img class="w-100" src="{{ asset('images/static_images/What we do 1, 678x500.jpg') }}" alt="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 wow itfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
@@ -167,7 +167,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 wow itfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
                     <div class="it-step-thumb border-radius-20">
-                        <img src="{{ asset('images/static_images/What we do, 274x219 - ზედა.png') }}" alt="">
+                        <img src="{{ asset('images/static_images/What we do 2, 678X526.jpg') }}" alt="">
                     </div>
                 </div>
             </div>

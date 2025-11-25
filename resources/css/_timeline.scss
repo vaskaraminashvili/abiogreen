@@ -30,6 +30,7 @@
     height: 100%;
     margin: 0 40px;
     overflow: hidden;
+
     @media (max-width: 768px) {
         overflow: auto;
     }
@@ -53,18 +54,23 @@
 .cd-horizontal-timeline .events-wrapper::after {
     right: 0;
 }
-ol{
+
+ol {
     list-style: none;
 }
+
 .cd-horizontal-timeline .events ol {
     list-style: none;
     list-style-type: none;
 }
+
 .cd-horizontal-timeline .events {
     width: 820px;
+
     @media (max-width: 768px) {
-        width: calc(100% + 250px);
+        width: 100%;
     }
+
     /* this is the grey line/timeline */
     position: absolute;
     z-index: 1;
