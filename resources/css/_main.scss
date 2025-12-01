@@ -43,6 +43,8 @@
     &__image {
         height: 200px;
         object-fit: contain;
+        background-color: #fff;
+        border-radius: 20px;
     }
 
     &__description {

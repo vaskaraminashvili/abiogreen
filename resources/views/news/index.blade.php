@@ -1,6 +1,6 @@
 <x-layout>
       <!-- blog-area-start -->
-   <section class="it-blog-area it-blog-style-3 pt-130 pb-130">
+   <section class="it-blog-area it-blog-style-3 pt-50 pb-10 pt-lg-130 pb-lg-130">
       <div class="container">
          @if(isset($subCompany))
          <div class="row mb-40">

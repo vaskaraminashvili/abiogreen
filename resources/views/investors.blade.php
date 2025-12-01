@@ -1,6 +1,6 @@
 <x-layout>
     <!-- service-area-start -->
-    <section class="it-sv-details-area pt-130 pb-100">
+    <section class="it-sv-details-area pt-50 pb-10 pt-lg-130 pb-lg-100">
         <div class="container">
             <div class="row gx-35">
                 <div class="col-xl-12 col-lg-8 order-0 order-lg-1">

@@ -1,5 +1,5 @@
    <!-- solution-area-start -->
-   <div class="it-solution-area pt-130 pb-130 align-items-center">
+   <div class="it-solution-area pt-50 pb-10 pt-lg-130 pb-lg-130 align-items-center">
        <div class="container">
            <div class="row align-items-center">
                <div class="col-xl-7 col-lg-7">

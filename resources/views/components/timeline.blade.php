@@ -184,8 +184,22 @@
                 function setDatePosition(timelineComponents, min) {
                     var totalWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
                     var left_point = (totalWidth - timelineComponents['timelineDates'].length * 80) / 2;
+                    // if left_point is negative, set it to 0
+                    if (left_point < 0) {
+                        left_point = 0;
+                    }
+                    var offset = 0;
                     for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
-                        timelineComponents['timelineEvents'].eq(i).css('left', left_point + (i * min) + 'px');
+                        offset = left_point + (i * min);
+                        timelineComponents['timelineEvents'].eq(i).css('left', offset + 'px');
+                    }
+                    //gett mobile screen width
+                    var mobile_width = window.innerWidth;
+                    if (mobile_width < 800) {
+
+                        var eventsElement = timelineComponents['eventsWrapper'];
+                        eventsElement.css('width', (offset + 80) + 'px');
+
                     }
                 }
 

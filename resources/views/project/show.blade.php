@@ -1,6 +1,6 @@
 <x-layout>
     <!-- details-area-start -->
-    <div class="it-pro-details-area pt-130 pb-120">
+    <div class="it-pro-details-area pt-50 pb-10 pt-lg-130 pb-lg-120">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -66,7 +66,7 @@
                         <div class="postbox-details-wrapper postbox-style-2">
                             <div class="row">
                                 @if ($project->project_objectives != null)
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-6">
                                     <div class="it-sv-details-list mb-55">
                                         <h5 class="it-inner-title">Project Objectives</h5>
                                         <ul class="mt-20">
@@ -89,7 +89,7 @@
                                 @endif
 
                                 @if ($project->key_features != null)
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-6">
                                     <div class="it-sv-details-list mb-55">
                                         <h5 class="it-inner-title">Key Features</h5>
                                         <ul class="mt-20">
