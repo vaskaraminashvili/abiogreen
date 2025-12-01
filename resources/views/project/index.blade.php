@@ -1,6 +1,6 @@
 <x-layout>
     <!-- project-area-start -->
-    <section class="it-project-2-area it-project-2-style-2 pt-130 pb-130">
+    <section class="it-project-2-area it-project-2-style-2 pt-50 pb-10 pt-lg-130 pb-lg-130">
         <div class="container">
             <div class="row gx-35">
                 @foreach ($projects as $project)

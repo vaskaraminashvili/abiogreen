@@ -1,5 +1,5 @@
        <!-- team-area-start -->
-       <section class="it-team-area gray-bg3 pt-130 pb-110">
+       <section class="it-team-area gray-bg3 pt-50 pb-10 pt-lg-130 pb-lg-110">
            <div class="container">
                <div class="row">
                    <div class="col-xxl-3 col-xl-4 col-lg-4">

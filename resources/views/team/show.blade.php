@@ -1,6 +1,6 @@
 <x-layout>
           <!-- details-area-start -->
-      <div class="it-team-details-area pt-130 pb-130">
+      <div class="it-team-details-area pt-50 pb-10 pt-lg-130 pb-lg-130">
          <div class="container">
             <div class="row">
                <div class="col-xl-6 col-lg-6">

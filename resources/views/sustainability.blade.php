@@ -1,6 +1,6 @@
 <x-layout>
     <!-- service-area-start -->
-    <section class="it-sv-details-area it-sv-details-style-2 pt-130 pb-130">
+    <section class="it-sv-details-area it-sv-details-style-2 pt-50 pb-10 pt-lg-130 pb-lg-130">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -139,7 +139,7 @@
     <!-- service-area-end -->
 
     <!-- faq-area-area -->
-    <div class="it-faq-area gray-bg3 pt-130 pb-100">
+    <div class="it-faq-area gray-bg3 pt-50 pb-10 pt-lg-130 pb-lg-100">
         <div class="container">
             <div class="it-price-section-title-box text-center mb-70">
                 <span class="it-section-subtitle">FAQ’s</span>

@@ -1,5 +1,5 @@
         <!-- project-area-start -->
-        <section class="it-project-3-area fraction-wrapper pt-120 pb-120">
+        <section class="it-project-3-area fraction-wrapper pt-50 pb-10 pt-lg-120 pb-lg-120">
             <div class="container">
                 <div class="mb-70">
                     <div class="row align-items-center">

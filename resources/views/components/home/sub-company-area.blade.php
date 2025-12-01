@@ -1,5 +1,5 @@
         <!-- service-area-start -->
-        <section class="it-service-area it-service-style-2 z-index-1 gray-bg3 pt-130 pb-130">
+        <section class="it-service-area it-service-style-2 z-index-1 gray-bg3 pt-50 pb-10 pt-lg-130 pb-lg-130">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">

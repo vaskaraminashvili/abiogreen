@@ -1,6 +1,6 @@
 <x-layout>
     <!-- contact-area-start -->
-    <div class="it-contact-area it-contact-inner-style z-index-1 pt-125 pb-130">
+    <div class="it-contact-area it-contact-inner-style z-index-1 pt-50 pb-10 pt-lg-125 pb-lg-130">
         <div class="container">
             <div class="row">
                 <div class="col-xl-5 col-lg-5">

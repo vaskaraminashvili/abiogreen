@@ -1,5 +1,5 @@
         <!-- blog-area-start -->
-        <section class="it-blog-area it-blog-style-3 pt-125 pb-90">
+        <section class="it-blog-area it-blog-style-3 pt-50 pb-10 pt-lg-125 pb-lg-90">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">

@@ -1,5 +1,5 @@
         <!-- step-area-start -->
-        <section class="it-step-area it-step-style-2 p-relative pt-130 pb-140">
+        <section class="it-step-area it-step-style-2 p-relative pt-50 pb-10 pt-lg-130 pb-lg-140">
             <img class="shape" src="assets/img/shape/line.png" alt="">
             <div class="container">
                 <div class="mb-80">

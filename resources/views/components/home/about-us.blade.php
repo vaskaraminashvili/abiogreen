@@ -1,5 +1,5 @@
         <!-- about-area-start -->
-        <section class="it-about-area pt-120 pb-130">
+        <section class="it-about-area pt-50 pb-10 pt-lg-120 pb-lg-130">
             <div class="container">
                 <div class="mb-80">
                     <div class="row">

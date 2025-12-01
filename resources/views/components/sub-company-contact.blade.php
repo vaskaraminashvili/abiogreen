@@ -1,5 +1,5 @@
     <!-- contact-area-start -->
-    <section class="it-contact-2-area z-index-1 black-bg pt-130 pb-130">
+    <section class="it-contact-2-area z-index-1 black-bg pt-50 pb-10 pt-lg-130 pb-lg-130">
         <div class="it-contact-2-bg-1"><img src="assets/img/contact/bg-5-1.jpg" alt=""></div>
         <div class="it-contact-2-bg-2"><img src="assets/img/contact/bg-5-2.jpg" alt=""></div>
         <div class="container">

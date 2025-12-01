@@ -3,7 +3,7 @@
         <section class="it-footer-wrap it-footer-style-2 it-footer-style-5 z-index-1 black-bg"
             data-background="assets/img/shape/footer-bg-4.jpg">
 
-            <div class="it-footer-area p-relative pt-100 pb-20">
+            <div class="it-footer-area p-relative pt-50 pb-10 pt-lg-100 pb-lg-20">
                 <div class="container">
                     <div class="row">
                         <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 mb-50 wow itfadeUp" data-wow-duration=".9s"
