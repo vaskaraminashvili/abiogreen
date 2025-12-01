@@ -3,10 +3,10 @@
        <!-- about-area-start -->
        <section class="it-about-4-area pt-40 pb-10 pt-lg-70 pb-lg-80">
            <div class="container">
-               <div class="it-about-4-top-wrap mb-80">
+               <div class="it-about-4-top-wrap mb-20 mb-lg-80">
                    <div class="row align-items-end">
                        <div class="col-xl-12 col-lg-7">
-                           <div class="it-about-section-title-box">
+                           <div class="it-about-section-title-box mb-20 mb-lg-0">
                                <span class="it-section-subtitle">Who We Are</span>
                                <h4 class="it-section-title fz-45 it-split-text it-split-in-right">We combine technology, innovation, and purpose to shape the future of clean energy.</h4>
                            </div>
